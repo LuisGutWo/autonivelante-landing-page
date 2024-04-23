@@ -11,7 +11,8 @@
           "-webkit-tap-highlight-color",
           "text-decoration-skip-ink",
           "text-align: -webkit-match-parent",
-          "overflow-anchor"
+          "overflow-anchor",
+          "user-select"
         ]
       }
     ]
