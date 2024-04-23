@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout"
 import About from "@/components/sections/home3/About"
-import Banner from "@/components/sections/home3/Banner"
+import Banner from "@/components/sections/Banner"
 import Services from "@/components/sections/home3/Services"
 import Projects from "@/components/sections/home3/Projects"
 import Features from "@/components/sections/home3/Features"

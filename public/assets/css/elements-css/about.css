@@ -1,6 +1,11 @@
 
 .about-section{
 	padding: 150px 0px;
+	background-image: url(../../images/resource/about-bg-image-.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #f3f5f7;
 }
 
 .image_block_one .image-box{

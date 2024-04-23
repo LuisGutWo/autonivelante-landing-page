@@ -12,7 +12,8 @@
           "text-decoration-skip-ink",
           "text-align: -webkit-match-parent",
           "overflow-anchor",
-          "user-select"
+          "user-select",
+          "backdrop-filter"
         ]
       }
     ]

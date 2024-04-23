@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Button from 'react-bootstrap/Button';
 import { Image } from "react-bootstrap"
 
@@ -8,14 +7,11 @@ export default function Features() {
         <>
 
             <section className="feature-section bg-color-1 sec-pad centred">
-                <div className="pattern-layer">
-                    <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-2.png)' }}></div>
-                    <div className="pattern-2" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
-                </div>
+                
                 <div className="auto-container">
                     <div className="content-box">
                         <div className="feature-block">
-                            <div className="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div className="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
                                 <div className="inner-box">
                                     <figure className="image-box">
                                         <Image src="assets/images/banner/banner-productos.png" alt="" />

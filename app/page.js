@@ -1,11 +1,10 @@
 import Layout from "@/components/layout/Layout"
-import About from "@/components/sections/home1/About"
-import Banner from "@/components/sections/home3/Banner"
-import Services from "@/components/sections/home1/Services"
-import Features from "@/components/sections/home1/Features"
-import Funfacts from "@/components/sections/home1/Funfacts"
-import Expertise from "@/components/sections/home1/Expertise"
-import WhyChooseUs from "@/components/sections/home1/WhyChooseUs"
+import About from "@/components/sections/About"
+import Banner from "@/components/sections/Banner"
+import Services from "@/components/sections/Services"
+import Features from "@/components/sections/Features"
+import Expertise from "@/components/sections/Expertise"
+import WhyChooseUs from "@/components/sections/WhyChooseUs"
 export default function Home() {
 
     return (
@@ -16,7 +15,6 @@ export default function Home() {
                 <Services />
                 <About />
                 <WhyChooseUs />
-                <Funfacts />
                 <Expertise />
             </Layout>
         </>

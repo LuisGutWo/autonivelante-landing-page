@@ -1,18 +1,41 @@
 'use client'
 import Link from "next/link"
-import { Button, Col, Container, Image, Row } from "react-bootstrap"
+import { Button, Col, Container, Row } from "react-bootstrap"
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation, Pagination, Keyboard, Autoplay } from 'swiper/modules';
 
 
-export default function Pricing() {
+export default function Services() {
     return (
         <>
-            <section id="services-section" className="service-section p_relative centred bg-color-1 sec-pad">
-
+            <section id="services-section" className="service-section p_relative centred bg-color-1 sec-pad pt-0 pb-0">
                 <div className="container py-4">
                     <article className="postcard">
-                        <Link className="postcard__img_link" href="#">
-                            <div className="postcard__img" style={{ backgroundImage: "url(assets/images/services-banner-image.jpg)" }}></div>
-                        </Link>
+                        <Swiper
+                            modules={[Autoplay, Navigation, Pagination, Keyboard]}
+                            slidesPerView={1}
+                            spaceBetween={0}
+                            loop={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            autoplay={{
+                                delay: 4000,
+                                disableOnInteraction: false,
+                            }}
+                            navigation={true}
+                            className="mySwiper"
+                            keyboard={true}
+                        >
+                            <SwiperSlide className="postcard__img" style={{ backgroundImage: "url(assets/images/banner/services-banner-image.jpg)" }}></SwiperSlide>
+                            <SwiperSlide className="postcard__img" style={{ backgroundImage: "url(assets/images/banner/patio-foster-banner.jpg)" }}></SwiperSlide>
+                        </Swiper>
+
+
                         <div className="postcard__text">
                             <h1 className="postcard__title blue text-light text-start"><Link href="#">somos Autonivelante
                                 <br />by Instafloor </Link></h1>
@@ -22,7 +45,7 @@ export default function Pricing() {
                                 Especialistas en instalación y reparación en toda la gama de pisos vinilicos en rollos y en palmetas.
                             </div>
 
-                            <Container fluid="md" className="mb-5 text-center">
+                            <Container fluid className="mb-5 text-center">
                                 <Row>
                                     <Col>
                                         <div className="postcard__content">
