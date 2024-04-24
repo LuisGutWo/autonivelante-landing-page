@@ -1,6 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { Image } from "react-bootstrap"
 export default function Home() {
 
     return (
@@ -136,7 +137,7 @@ export default function Home() {
                                             <li>
                                                 <div className="single-box clearfix">
                                                 <figure className="image-box">
-                                                    <img src="assets/images/shop/cart-1.png" alt="" />
+                                                    <Image src="assets/images/shop/cart-1.png" alt="" />
                                                 </figure>
                                                 <p>Wooden Tea Table x 1</p>
                                                 <span>$19:20</span>
@@ -145,7 +146,7 @@ export default function Home() {
                                             <li>
                                                 <div className="single-box clearfix">
                                                 <figure className="image-box">
-                                                    <img src="assets/images/shop/cart-2.png" alt="" />
+                                                    <Image src="assets/images/shop/cart-2.png" alt="" />
                                                 </figure>
                                                 <p>Armchair Black Leather x 1</p>
                                                 <span>$19:20</span>
@@ -154,7 +155,7 @@ export default function Home() {
                                             <li>
                                                 <div className="single-box clearfix">
                                                 <figure className="image-box">
-                                                    <img src="assets/images/shop/cart-3.png" alt="" />
+                                                    <Image src="assets/images/shop/cart-3.png" alt="" />
                                                 </figure>
                                                 <p>Nordic Kitchen Teapot x 1</p>
                                                 <span>$19:20</span>

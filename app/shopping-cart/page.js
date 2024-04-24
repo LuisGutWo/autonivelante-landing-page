@@ -2,6 +2,7 @@
 import QuantityInput from "@/components/elements/QuantityInput"
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { Image } from "react-bootstrap"
 export default function Home() {
 
     return (
@@ -33,7 +34,7 @@ export default function Home() {
                                                             <i className="icon-40"></i>
                                                         </div>
                                                         <div className="prod-thumb">
-                                                            <img src="assets/images/shop/cart-1.png" alt="" />
+                                                            <Image src="assets/images/shop/cart-1.png" alt="" />
                                                         </div>
                                                         <div className="prod-title">
                                                             <h4>Wooden Tea Table</h4>
@@ -55,7 +56,7 @@ export default function Home() {
                                                             <i className="icon-40"></i>
                                                         </div>
                                                         <div className="prod-thumb">
-                                                            <img src="assets/images/shop/cart-2.png" alt="" />
+                                                            <Image src="assets/images/shop/cart-2.png" alt="" />
                                                         </div>
                                                         <div className="prod-title">
                                                             <h4>Armchair Black Leather</h4>
@@ -77,7 +78,7 @@ export default function Home() {
                                                             <i className="icon-40"></i>
                                                         </div>
                                                         <div className="prod-thumb">
-                                                            <img src="assets/images/shop/cart-3.png" alt="" />
+                                                            <Image src="assets/images/shop/cart-3.png" alt="" />
                                                         </div>
                                                         <div className="prod-title">
                                                             <h4>Nordic Kitchen Teapot</h4>

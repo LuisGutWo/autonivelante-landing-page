@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout"
 import TestimonialSlider4 from "@/components/slider/TestimonialSlider4"
 import Link from "next/link"
 import { useState } from "react"
+import { Image } from "react-bootstrap"
 import 'swiper/css/thumbs'
 import { Autoplay, Navigation, Thumbs } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -50,7 +51,7 @@ export default function Home() {
                                             <div className="col-lg-5 col-md-12 col-sm-12 image-column">
                                                 <figure className="image-box">
                                                     <Link href="assets/images/shop/shop-10.png" className="lightbox-image" data-fancybox="gallery">
-                                                        <img src="assets/images/shop/shop-10.png" alt="" />
+                                                        <Image src="assets/images/shop/shop-10.png" alt="" />
                                                     </Link>
                                                 </figure>
                                             </div>
@@ -134,7 +135,7 @@ export default function Home() {
                                                                             <h4 className="p_relative d_block fs_20 lh_30 fw_medium fw_bold mb_40">Chicken & vegetable fry</h4>
                                                                             <div className="comment-box p_relative d_block pl_110">
                                                                                 <figure className="comment-thumb p_absolute l_0 t_0 w_80 h_80 b_radius_55">
-                                                                                    <img src="assets/images/shop/comment-1.jpg" alt="" />
+                                                                                    <Image src="assets/images/shop/comment-1.jpg" alt="" />
                                                                                 </figure>
                                                                                 <h5 className="d_block fs_18 lh_20 fw_sbold">Keanu Reeves<span className="d_iblock fs_16 font_family_poppins"> - May 1, 2021</span></h5>
                                                                                 <ul className="rating clearfix mb_15">
@@ -202,7 +203,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-1.png" alt="" />
+                                                                <Image src="assets/images/shop/shop-1.png" alt="" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -228,7 +229,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-2.png" alt="" />
+                                                                <Image src="assets/images/shop/shop-2.png" alt="" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -254,7 +255,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-3.png" alt="" />
+                                                                <Image src="assets/images/shop/shop-3.png" alt="" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
