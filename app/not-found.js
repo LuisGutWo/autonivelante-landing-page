@@ -2,6 +2,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { Image } from "react-bootstrap"
 export default function Error404() {
 
     return (
@@ -11,7 +12,7 @@ export default function Error404() {
                 <div className="auto-container">
                     <div className="inner-box">
                         <figure className="error-image">
-                            <img src="assets/images/icons/error-1.png" alt="" />
+                            <Image src="assets/images/icons/error-1.png" alt="" />
                         </figure>
                         <h2>Oops! Esta pagina no se<br />Encontró.</h2>
                         <Link href="/" className="theme-btn-one">
