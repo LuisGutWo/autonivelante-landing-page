@@ -6,7 +6,7 @@ export default function About() {
         <>
             <section className="about-section p_relative">
                 <div className="auto-container">
-                    <div className="row clearfix">
+                    <div className="row clearfix mb_80">
                         <div className="col-lg-6 col-md-12 col-sm-12 image-column ml_60">
                             <div className="image_block_one">
                                 <div className="image-box p_relative p_0 ml_30">

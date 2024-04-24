@@ -19,7 +19,7 @@
 @import url("elements-css/about.css");
 @import url("elements-css/service.css");
 @import url("elements-css/service-details.css");
-@import url("elements-css/chooseus.css");
+@import url("elements-css/mainfeatures.css");
 @import url("elements-css/projects.css");
 @import url("elements-css/testimonial.css");
 @import url("elements-css/working-process.css");
@@ -66,7 +66,7 @@
 
 body {
   font-size: 16px;
-  color: #6e6e6e;
+  color: #015c93;
   line-height: 28px;
   font-weight: 400;
   background: #f0f2f3;
@@ -427,7 +427,7 @@ img {
 }
 
 .theme-btn-one:hover {
-  background: #0f1abd;
+  background: #015c93;
 }
 
 .theme-btn-one:before {
@@ -439,7 +439,7 @@ img {
   top: 0px;
   z-index: -1;
   transform: scale(0, 0);
-  background: #0b165f;
+  background: #013e64;
   transition: all 500ms ease;
 }
 
@@ -904,16 +904,17 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly;  
 }
 
 .main-header .outer-box .logo-box {
   position: relative;
   padding: 0px 0px;
+  
 }
 
 .main-header .outer-box .logo-box .logo {
-  max-width: 184px;
+  max-width: 15em;
 }
 
 .main-header .outer-box .logo-box .logo img {
@@ -1290,7 +1291,7 @@ img {
 }
 
 .sticky-header .logo-box {
-  padding: 12px 0px 20px 0px;
+  padding: 15px 0px 20px 0px;
 }
 
 /** megamenu-style **/
@@ -2066,7 +2067,7 @@ div#mCSB_1_container {
   width: 100%;
   background: rgba(255, 255, 255, 0.052);
   backdrop-filter: blur(1px);
-  border-bottom: #17141f5d solid 1px;
+  border-bottom: #f1f1f16a solid 1px;
 }
 
 .header-style-three .outer-container {

@@ -30,11 +30,13 @@
 }
 
 .banner-carousel .content-box h2 {
-  font-size: 35px;
-  line-height: 38px;
+  font-size: 40px;
+  line-height: 40px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 25px;
+  margin-top: 50px;
+  padding-top: 20px;
 }
 
 .banner-section .banner-carousel .owl-nav {
@@ -134,7 +136,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.864));
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.893));
 }
 
 .banner-style-two.alternat-2 .banner-carousel .slide-item:before {
@@ -188,7 +190,7 @@
 .banner-style-two.alternat-2 .swiper-slide-active .banner-image {
   height: 100%;
   bottom: 0px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .banner-style-two.alternat-2 .owl-dots {

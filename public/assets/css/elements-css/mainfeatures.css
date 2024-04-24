@@ -1,0 +1,210 @@
+.mainfeat-section {
+	margin: 9rem 0 6rem 0;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 5px;
+}
+.mainfeat__bar-2 {
+	width: 50px;
+	height: 7px;
+	margin: 10px 0;
+	border-radius: 2.5px;
+	background-color: #d7d9d9;
+	transition: width 0.2s ease;
+  }
+
+
+.mainfeat-section .content-box {
+  padding: 50px 0px 140px 0;
+  height: 40rem;
+}
+
+.content_block_two .content-box {
+  display: block;
+}
+
+.content_block_two .content-box .sec-title p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 24px;
+}
+
+.content_block_two .content-box .inner-box .single-item {
+  position: relative;
+  display: block;
+  padding: 0px 0px 0px 80px;
+  margin-bottom: 28px;
+}
+
+.content_block_two .content-box .inner-box .single-item:last-child {
+  margin-bottom: 0px;
+}
+
+.content_block_two .content-box .inner-box .single-item .icon-box {
+  position: absolute;
+  display: inline-block;
+  left: 0px;
+  top: 4px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.content_block_two .content-box .inner-box .single-item h3 {
+  display: block;
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.content_block_two .content-box .inner-box .single-item p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* main features main card */
+
+.featcard__text {
+  padding: 2rem;
+  text-align: left;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
+
+  &:hover .mainfeat__bar {
+    width: 100px;
+  }
+}
+
+.featcard__title {
+  font-size: 2.5em;
+}
+.featcard__content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  gap: 11px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.featcard__content p {
+  font-size: 100%;
+}
+
+.mainfeat-section .outer-box h2 {
+  display: block;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #222;
+}
+.mainfeat__bar {
+  width: 50px;
+  height: 7px;
+  margin: 10px 0;
+  border-radius: 2.5px;
+  background-color: #015c93;
+  transition: width 0.2s ease;
+}
+
+.mainfeat-section .outer-box .theme-btn-one {
+  background: #241e2f;
+  box-shadow: #fff;
+  box-shadow: none;
+}
+
+.mainfeat-section .outer-box .theme-btn-one:before {
+  background: #fff;
+}
+
+.mainfeat-section .outer-box .theme-btn-one:hover {
+  color: #241e2f !important;
+}
+
+.mainfeat-section .bg-layer {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: calc(100% - 220px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4rem;
+
+  &:hover .mainfeat__bar-2 {
+    width: 100px;
+  }
+}
+
+.mainfeat-section .outer-box {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 50%;
+  padding: 70px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  background-color: #d7d9d9;
+
+  &:hover .mainfeat__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .featcard__text {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .media.featcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #18151f;
+    top: -20%;
+    height: 130%;
+    width: 55px;
+  }
+
+  &:nth-child(2n + 1) {
+    flex-direction: row;
+  }
+
+  &:nth-child(2n + 0) {
+    flex-direction: row-reverse;
+  }
+
+  &:nth-child(2n + 1) .postcard__text::before {
+    right: -12px !important;
+    transform: rotate(4deg);
+  }
+
+  &:nth-child(2n + 0) .postcard__text::before {
+    right: -12px !important;
+    transform: rotate(-4deg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .featcard__text {
+    padding: 4.2rem 0.5rem 1rem 4rem;
+  }
+
+  .featcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+
+    top: -20%;
+    height: 130%;
+    width: 55px;
+  }
+}
