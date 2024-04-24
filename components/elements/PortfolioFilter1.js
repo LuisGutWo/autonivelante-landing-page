@@ -3,6 +3,7 @@
 import Isotope from "isotope-layout"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
+import { Image } from "react-bootstrap"
 
 export default function PortfolioFilter1() {
     // Isotope
@@ -59,7 +60,7 @@ export default function PortfolioFilter1() {
                     <div className="project-block-one">
                         <div className="inner-box">
                             <figure className="image-box">
-                                <img src="assets/images/project/project-4.jpg" alt="" />
+                                <Image src="assets/images/project/project-4.jpg" alt="" />
                             </figure>
                             <div className="content-box">
                                 <div className="inner">
@@ -80,7 +81,7 @@ export default function PortfolioFilter1() {
                     <div className="project-block-one">
                         <div className="inner-box">
                             <figure className="image-box">
-                                <img src="assets/images/project/project-5.jpg" alt="" />
+                                <Image src="assets/images/project/project-5.jpg" alt="" />
                             </figure>
                             <div className="content-box">
                                 <div className="inner">
@@ -101,7 +102,7 @@ export default function PortfolioFilter1() {
                     <div className="project-block-one">
                         <div className="inner-box">
                             <figure className="image-box">
-                                <img src="assets/images/project/project-6.jpg" alt="" />
+                                <Image src="assets/images/project/project-6.jpg" alt="" />
                             </figure>
                             <div className="content-box">
                                 <div className="inner">
@@ -122,7 +123,7 @@ export default function PortfolioFilter1() {
                     <div className="project-block-one">
                         <div className="inner-box">
                         <figure className="image-box">
-                            <img src="assets/images/project/project-7.jpg" alt="" />
+                            <Image src="assets/images/project/project-7.jpg" alt="" />
                         </figure>
                         <div className="content-box">
                             <div className="inner">
@@ -143,7 +144,7 @@ export default function PortfolioFilter1() {
                     <div className="project-block-one">
                         <div className="inner-box">
                             <figure className="image-box">
-                                <img src="assets/images/project/project-8.jpg" alt="" />
+                                <Image src="assets/images/project/project-8.jpg" alt="" />
                             </figure>
                             <div className="content-box">
                                 <div className="inner">
@@ -164,7 +165,7 @@ export default function PortfolioFilter1() {
                     <div className="project-block-one">
                         <div className="inner-box">
                             <figure className="image-box">
-                                <img src="assets/images/project/project-9.jpg" alt="" />
+                                <Image src="assets/images/project/project-9.jpg" alt="" />
                             </figure>
                             <div className="content-box">
                                 <div className="inner">

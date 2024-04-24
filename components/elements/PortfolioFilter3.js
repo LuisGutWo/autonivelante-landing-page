@@ -3,6 +3,7 @@
 import Isotope from "isotope-layout"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
+import { Image } from "react-bootstrap"
 
 export default function PortfolioFilter3() {
     // Isotope
@@ -61,7 +62,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-1 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-1.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-1.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -76,7 +77,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-2 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-2.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-2.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -91,7 +92,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-1 cat-2 cat-4 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-3.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-3.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -106,7 +107,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-5 cat-2 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-4.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-4.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -121,7 +122,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-2 cat-1 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-5.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-5.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -136,7 +137,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-3 cat-5 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-4-1.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-4-1.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -151,7 +152,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-1 cat-3 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-4-2.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-4-2.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -166,7 +167,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-1 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-4-3.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-4-3.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>
@@ -181,7 +182,7 @@ export default function PortfolioFilter3() {
                 <div className="project-block-five masonry-item all cat-4 cat-5 col-lg-4 col-md-6 col-sm-12">
                     <div className="inner-box">
                         <div className="image">
-                            <img src="/assets/images/gallery/gallery-4-4.jpg" alt="" />
+                            <Image src="/assets/images/gallery/gallery-4-4.jpg" alt="" />
                         </div>
                         <div className="lower-content">
                             <div className="link-btn"><Link href="#"><i className="flaticon-right-arrow" /></Link></div>

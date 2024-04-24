@@ -42,7 +42,7 @@ export default function Counter({ end, duration }) {
         return () => {
             clearInterval(interval)
         }
-    }, [end, increment])
+    }, [duration, end, increment])
 
     const startCount = () => {
         setCount(0)

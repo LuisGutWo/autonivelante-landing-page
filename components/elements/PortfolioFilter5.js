@@ -3,6 +3,7 @@
 import Isotope from "isotope-layout"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
+import { Image } from "react-bootstrap"
 
 export default function PortfolioFilter5() {
     // Isotope
@@ -48,7 +49,7 @@ export default function PortfolioFilter5() {
             <div className="row isotope-block">
                 <div className="project-block-three col-lg-3 col-md-6">
                     <div className="inner-box">
-                        <div className="image"><img src="/assets/images/gallery/gallery-3-1.jpg" alt="" /></div>
+                        <div className="image"><Image src="/assets/images/gallery/gallery-3-1.jpg" alt="" /></div>
                         <div className="overlay-content">
                             <div className="content">
                                 <div className="category">Technical</div>
@@ -60,7 +61,7 @@ export default function PortfolioFilter5() {
                 </div>
                 <div className="project-block-three col-lg-3 col-md-6">
                     <div className="inner-box">
-                        <div className="image"><img src="/assets/images/gallery/gallery-3-2.jpg" alt="" /></div>
+                        <div className="image"><Image src="/assets/images/gallery/gallery-3-2.jpg" alt="" /></div>
                         <div className="overlay-content">
                             <div className="content">
                                 <div className="category">Technical</div>
@@ -72,7 +73,7 @@ export default function PortfolioFilter5() {
                 </div>
                 <div className="project-block-three col-lg-3 col-md-6">
                     <div className="inner-box">
-                        <div className="image"><img src="/assets/images/gallery/gallery-3-3.jpg" alt="" /></div>
+                        <div className="image"><Image src="/assets/images/gallery/gallery-3-3.jpg" alt="" /></div>
                         <div className="overlay-content">
                             <div className="content">
                                 <div className="category">Technical</div>
@@ -84,7 +85,7 @@ export default function PortfolioFilter5() {
                 </div>
                 <div className="project-block-three col-lg-3 col-md-6">
                     <div className="inner-box">
-                        <div className="image"><img src="/assets/images/gallery/gallery-3-4.jpg" alt="" /></div>
+                        <div className="image"><Image src="/assets/images/gallery/gallery-3-4.jpg" alt="" /></div>
                         <div className="overlay-content">
                             <div className="content">
                                 <div className="category">Technical</div>
@@ -96,7 +97,7 @@ export default function PortfolioFilter5() {
                 </div>
                 <div className="project-block-three col-lg-3 col-md-6">
                     <div className="inner-box">
-                        <div className="image"><img src="/assets/images/gallery/gallery-3-5.jpg" alt="" /></div>
+                        <div className="image"><Image src="/assets/images/gallery/gallery-3-5.jpg" alt="" /></div>
                         <div className="overlay-content">
                             <div className="content">
                                 <div className="category">Technical</div>
