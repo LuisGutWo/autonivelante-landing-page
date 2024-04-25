@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Menu from "../Menu"
-import MobileMenu from "../MobileMenu"
+import Menu from "./Menu"
+import MobileMenu from "./MobileMenu"
 import { Image } from "react-bootstrap"
 export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSidebar, handlePopup, handleSidebar }) {
     return (

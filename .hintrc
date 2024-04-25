@@ -13,7 +13,9 @@
           "text-align: -webkit-match-parent",
           "overflow-anchor",
           "user-select",
-          "backdrop-filter"
+          "backdrop-filter",
+          "-webkit-overflow-scrolling",
+          "accent-color"
         ]
       }
     ]

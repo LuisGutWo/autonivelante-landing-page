@@ -9,7 +9,7 @@ export default function Menu() {
                 </li>
                 <li><Link href="#services-section">Servicios</Link>
                 </li>
-                <li><Link href="/shop">Productos</Link></li>
+                <li><Link href="#products">Productos</Link></li>
                 <li><Link href="/contact">Contacto</Link></li>
             </ul>
         </>

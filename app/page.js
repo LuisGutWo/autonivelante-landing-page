@@ -4,6 +4,7 @@ import Banner from "@/components/sections/Banner"
 import Services from "@/components/sections/Services"
 import FeaturesBanner from "@/components/sections/FeaturesBanner"
 import MainFeatures from "@/components/sections/MainFeatures"
+import ProductsCard from "@/components/sections/ProductsCard"
 export default function Home() {
 
     return (
@@ -14,6 +15,7 @@ export default function Home() {
                 <Services />
                 <About />
                 <MainFeatures />
+                <ProductsCard />
             </Layout>
         </>
     )
