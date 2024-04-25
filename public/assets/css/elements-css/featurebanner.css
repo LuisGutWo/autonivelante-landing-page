@@ -1,0 +1,40 @@
+.feature-section {
+  position: relative;
+}
+
+.feature-block .inner-box {
+  position: relative;
+  display: block;
+  z-index: 1;
+  padding: 0 30px;
+}
+
+.feature-block .inner-box .image-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 23.5rem;
+  left: -11%;
+  box-shadow: rgba(0, 0, 0, 0.203) 0px 25px 50px -12px;
+}
+
+.feature-block .inner-box .image-box img {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  transition: all 500ms ease;
+}
+.feature-block .inner-box .image-box button {
+  position: absolute;
+  z-index: 9;
+  top: 2.7em;
+  left: 1.8em;
+  font-size: 0.7rem;
+  width: 36%;
+  padding: 0;
+  height: 1.6rem;
+
+}

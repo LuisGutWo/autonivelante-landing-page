@@ -12,7 +12,7 @@ export default function FeaturesBanner() {
                 <div className="auto-container">
                     <div className="content-box">
                         <div className="feature-block">
-                            <div className="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
+                            <div className="feature-block wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
                                 <div className="inner-box">
                                     <figure className="image-box">
                                         <Image src="assets/images/banner/banner-productos.png" alt="" />

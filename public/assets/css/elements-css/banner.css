@@ -46,9 +46,9 @@
   width: 100%;
 }
 
-/** banner-style-two **/
+/** banner-style **/
 
-.banner-style-two .banner-carousel .content-box {
+.banner-style .banner-carousel .content-box {
   position: relative;
   max-width: 750px;
   width: 100%;
@@ -56,7 +56,7 @@
   z-index: 5;
 }
 
-.banner-style-two .banner-carousel .content-box h2 {
+.banner-style .banner-carousel .content-box h2 {
   opacity: 0;
   -webkit-transform: translateY(10px);
   -moz-transform: translateY(10px);
@@ -70,7 +70,7 @@
   transition: all 1000ms ease;
 }
 
-.banner-style-two .banner-carousel .swiper-slide-active .content-box h2 {
+.banner-style .banner-carousel .swiper-slide-active .content-box h2 {
   opacity: 1;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -84,7 +84,7 @@
   transition-delay: 1000ms;
 }
 
-.banner-style-two .banner-carousel .content-box .btn-box {
+.banner-style .banner-carousel .content-box .btn-box {
   opacity: 0;
   -webkit-transform: translateY(10px);
   -moz-transform: translateY(10px);
@@ -98,7 +98,7 @@
   transition: all 1000ms ease;
 }
 
-.banner-style-two .banner-carousel .swiper-slide-active .content-box .btn-box {
+.banner-style .banner-carousel .swiper-slide-active .content-box .btn-box {
   opacity: 1;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -112,7 +112,7 @@
   transition-delay: 1000ms;
 }
 
-.banner-style-two .owl-nav {
+.banner-style .owl-nav {
   position: absolute;
   left: 0px;
   top: 50%;
@@ -121,7 +121,7 @@
   z-index: 9;
 }
 
-.banner-style-two.alternat-2 {
+.banner-style.alternat-2 {
   position: relative;
   overflow: hidden;
   background-image: url(../../images/banner/autonivelante_banner_img.png) !important;
@@ -129,7 +129,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.banner-style-two.alternat-2::after {
+.banner-style.alternat-2::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -139,19 +139,19 @@
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.893));
 }
 
-.banner-style-two.alternat-2 .banner-carousel .slide-item:before {
+.banner-style.alternat-2 .banner-carousel .slide-item:before {
   display: none;
 }
 
-.banner-style-two.alternat-2 .banner-carousel .slide-item {
+.banner-style.alternat-2 .banner-carousel .slide-item {
   height: 100%;
 }
 
-.banner-style-two.alternat-2 .banner-carousel .content-box {
-  margin-left: 12rem;
+.banner-style.alternat-2 .banner-carousel .content-box {
+  margin-left: 2rem;
 }
 
-.banner-style-two.alternat-2 .pattern-layer .pattern-1 {
+.banner-style.alternat-2 .pattern-layer .pattern-1 {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -162,7 +162,7 @@
   background-position: center;
 }
 
-.banner-style-two.alternat-2 .pattern-layer .pattern-2 {
+.banner-style.alternat-2 .pattern-layer .pattern-2 {
   position: absolute;
   left: 50%;
   top: 0px;
@@ -175,37 +175,37 @@
   transition: all 1000ms ease;
 }
 
-.banner-style-two.alternat-2 .swiper-slide-active .pattern-layer .pattern-2 {
+.banner-style.alternat-2 .swiper-slide-active .pattern-layer .pattern-2 {
   opacity: 1;
   transform: scaleX(1);
 }
 
-.banner-style-two.alternat-2 .banner-image {
+.banner-style.alternat-2 .banner-image {
   position: absolute;
   bottom: 0;
   opacity: 0;
   transition: all 1000ms ease;
 }
 
-.banner-style-two.alternat-2 .swiper-slide-active .banner-image {
+.banner-style.alternat-2 .swiper-slide-active .banner-image {
   height: 100%;
   bottom: 0px;
   opacity: 0.6;
 }
 
-.banner-style-two.alternat-2 .owl-dots {
+.banner-style.alternat-2 .owl-dots {
   position: absolute;
   top: 45%;
   right: 70px;
 }
 
-.banner-style-two.alternat-2 .owl-theme .owl-dots .owl-dot {
+.banner-style.alternat-2 .owl-theme .owl-dots .owl-dot {
   display: block;
   height: 6px;
   margin: 28px 0px;
 }
 
-.banner-style-two.alternat-2 .owl-theme .owl-dots .owl-dot span {
+.banner-style.alternat-2 .owl-theme .owl-dots .owl-dot span {
   position: relative;
   display: inline-block;
   width: 6px;
@@ -216,7 +216,7 @@
   transition: all 500ms ease;
 }
 
-.banner-style-two.alternat-2 .owl-theme .owl-dots .owl-dot span:before {
+.banner-style.alternat-2 .owl-theme .owl-dots .owl-dot span:before {
   position: absolute;
   content: "";
   width: 22px;

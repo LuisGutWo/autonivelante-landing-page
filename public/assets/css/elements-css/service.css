@@ -133,7 +133,7 @@ a:hover {
     align-items: center;
   }
   .postcard__content p {
-    font-size: 80%;
+    font-size: 8px;
   }
 
   .postcard__tagbox {

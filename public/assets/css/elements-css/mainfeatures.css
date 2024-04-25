@@ -1,7 +1,13 @@
 .mainfeat-section {
-	margin: 9rem 0 6rem 0;
+	margin: 2rem 0 6rem 0;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .mainfeat__bar-2 {
 	width: 50px;
@@ -25,6 +31,7 @@
 .content_block_two .content-box .sec-title p {
   color: rgba(255, 255, 255, 0.7);
   margin-top: 24px;
+  font-size: 10px;
 }
 
 .content_block_two .content-box .inner-box .single-item {
@@ -93,7 +100,7 @@
   justify-content: flex-start;
 }
 .featcard__content p {
-  font-size: 100%;
+  font-size: 10px;
 }
 
 .mainfeat-section .outer-box h2 {
@@ -127,10 +134,10 @@
 }
 
 .mainfeat-section .bg-layer {
-  position: absolute;
+  position: relative;
   top: 0px;
   right: 0px;
-  width: 50%;
+  width: 100%;
   height: calc(100% - 220px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,11 +150,11 @@
 }
 
 .mainfeat-section .outer-box {
-  position: absolute;
+  position: relative;
   right: 0px;
   bottom: 0px;
-  width: 50%;
-  padding: 70px 100px;
+  width: 100%;
+  padding: 70px 50px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -160,9 +167,66 @@
 }
 
 @media screen and (min-width: 769px) {
+  .mainfeat-section {
+    margin: 9rem 0 6rem 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+  }
+
   .featcard__text {
     padding: 3rem;
     width: 100%;
+  }
+  .content_block_two .content-box .sec-title p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 24px;
+  }
+  .featcard__content p {
+    font-size: 100%;
+  }
+  .mainfeat-section .bg-layer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: calc(100% - 220px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4rem;
+  
+    &:hover .mainfeat__bar-2 {
+      width: 100px;
+    }
+  }
+  .mainfeat-section .outer-box {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    padding: 70px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    background-color: #d7d9d9;
+  
+    &:hover .mainfeat__bar {
+      width: 100px;
+    }
+  }
+  .featcard__text {
+    padding: 2rem;
+    text-align: left;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-area: text;
+  
+    &:hover .mainfeat__bar {
+      width: 100px;
+    }
   }
 
   .media.featcard__text:before {

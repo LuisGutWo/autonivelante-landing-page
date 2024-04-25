@@ -1,15 +1,20 @@
 .about-section {
   padding: 0;
-  background-image: url(../../images/resource/about-bg-image-.jpg);
-  background-position: center;
+  background-image: url(../../images/resource/about-bs-image-mobile.png);
+  background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #f3f5f7;
 }
 
+.about__main-column {
+  margin-top: 12rem;
+}
+
 .image_block_one .image-box {
   display: block;
-  margin-top: 235px;
+  margin-top: 400px;
+  padding: 0;
   box-shadow: rgba(0, 0, 0, 0.221) 0px 10px 15px -3px, rgba(0, 0, 0, 0.199) 0px 4px 6px -2px;
 }
 
@@ -32,11 +37,11 @@
   font-size: 0.7rem;
   text-overflow: ellipsis;
   text-align: justify;
-  margin-bottom: 1.8rem;
+  margin-bottom: 3rem;
 }
 
 .aboutcard__text-inner {
-  padding: 6rem 5rem 2rem 5rem;
+  padding: 4rem 3rem 0rem 3rem;
 }
 
 .aboutcard__bar {
@@ -49,7 +54,7 @@
 }
 
 .aboutcard__buttons {
-	height: 7rem;
+	height: 10rem;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
 	grid-template-areas: 50% 50%;
@@ -401,4 +406,15 @@
   line-height: 36px;
   font-weight: 700;
   color: #fff;
+}
+
+@media screen and (min-width: 769px){
+  .about-section {
+    padding: 0;
+    background-image: url(../../images/resource/about-bg-image-.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f3f5f7;
+  }
 }

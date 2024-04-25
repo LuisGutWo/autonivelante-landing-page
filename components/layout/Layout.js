@@ -6,8 +6,8 @@ import DataBg from "../elements/DataBg"
 import Breadcrumb from './Breadcrumb'
 import SearchPopup from "./SearchPopup"
 import Sidebar from "./Sidebar"
-import Footer from "./footer/Footer"
-import Header from "./header/Header"
+import Footer from "./Footer"
+import Header from "./Header"
 
 export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, wrapperCls }) {
     const [scroll, setScroll] = useState(0)
