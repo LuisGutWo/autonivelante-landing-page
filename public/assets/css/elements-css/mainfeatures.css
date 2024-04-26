@@ -1,7 +1,7 @@
 .mainfeat-section {
-	margin: 2rem 0 6rem 0;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	border-radius: 5px;
+  margin: 2rem 0 6rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
 
   display: flex;
   flex-direction: column;
@@ -10,14 +10,13 @@
   align-items: center;
 }
 .mainfeat__bar-2 {
-	width: 50px;
-	height: 7px;
-	margin: 10px 0;
-	border-radius: 2.5px;
-	background-color: #d7d9d9;
-	transition: width 0.2s ease;
-  }
-
+  width: 50px;
+  height: 7px;
+  margin: 10px 0;
+  border-radius: 2.5px;
+  background-color: #d7d9d9;
+  transition: width 0.2s ease;
+}
 
 .mainfeat-section .content-box {
   padding: 50px 0px 140px 0;
@@ -66,10 +65,6 @@
   color: #fff;
   font-weight: 600;
   margin-bottom: 6px;
-}
-
-.content_block_two .content-box .inner-box .single-item p {
-  color: rgba(255, 255, 255, 0.7);
 }
 
 /* main features main card */
@@ -168,67 +163,45 @@
 
 @media screen and (min-width: 769px) {
   .mainfeat-section {
-    margin: 9rem 0 6rem 0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 5px;
+    margin: 8rem 0 6rem 0;
+  }
+  .mainfeat-section .content-box {
+    padding: 0;
+    height: 100%;
+  }
+  .featcard__text {
+    justify-content: flex-start;
+  }
+  .auto-container {
+    margin-left: 0 !important;
+  }
+  .content-column {
+    margin-bottom: 8rem;
   }
 
-  .featcard__text {
-    padding: 3rem;
-    width: 100%;
-  }
-  .content_block_two .content-box .sec-title p {
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 24px;
-  }
   .featcard__content p {
-    font-size: 100%;
+    font-size: 1rem;
   }
   .mainfeat-section .bg-layer {
     position: absolute;
-    top: 0px;
-    right: 0px;
     width: 50%;
-    height: calc(100% - 220px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 4rem;
-  
-    &:hover .mainfeat__bar-2 {
-      width: 100px;
-    }
   }
   .mainfeat-section .outer-box {
     position: absolute;
     right: 0px;
     bottom: 0px;
     width: 50%;
-    padding: 70px 100px;
+    padding: 70px 80px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
     background-color: #d7d9d9;
-  
-    &:hover .mainfeat__bar {
-      width: 100px;
-    }
-  }
-  .featcard__text {
-    padding: 2rem;
-    text-align: left;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    grid-area: text;
-  
-    &:hover .mainfeat__bar {
-      width: 100px;
-    }
-  }
 
+    &:hover .mainfeat__bar {
+      width: 100px;
+    }
+  }
   .media.featcard__text:before {
     content: "";
     position: absolute;

@@ -13,7 +13,7 @@ export default function MainFeatures() {
                     </div>
                     <div className="auto-container">
                         <div className="row clearfix">
-                            <div className="col-lg-6 col-md-12 col-sm-12 content-column p-0">
+                            <div className="col-lg-12 col-md-12 col-sm-12 content-column p-0">
                                 <div className="content_block_two">
                                     <div className="content-box p_relative p-0">
                                         <div className="featcard__text">
@@ -22,7 +22,7 @@ export default function MainFeatures() {
 
                                                 Principales</h1>
                                             <div className="mainfeat__bar"></div>
-                                            <Container fluid className="text-center d-flex flex-column gap-4  mt-3">
+                                            <Container fluid className="text-center d-flex flex-column gap-4 mt-3">
                                                 <Row>
                                                     <Col>
                                                         <div className="featcard__content">

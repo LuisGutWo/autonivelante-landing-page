@@ -229,4 +229,12 @@
   transition: all 500ms ease;
 }
 
+@media screen and (min-width: 769px){
+  .banner-carousel .content-box {
+    
+    margin-left: 13rem  !important;
+  }
+
+}
+
 

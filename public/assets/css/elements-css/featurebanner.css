@@ -36,5 +36,23 @@
   width: 36%;
   padding: 0;
   height: 1.6rem;
+}
 
+@media screen and (min-width: 769px) {
+  .feature-block .inner-box .image-box {
+    width: 60rem;
+    left: 10%;
+  }
+  
+
+  .feature-block .inner-box .image-box button {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 5%;
+    font-size: 1rem;
+    width: 20%;
+    padding: 0;
+    height: 30%;
+  }
 }

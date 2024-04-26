@@ -5,6 +5,7 @@ import Services from "@/components/sections/Services"
 import FeaturesBanner from "@/components/sections/FeaturesBanner"
 import MainFeatures from "@/components/sections/MainFeatures"
 import ProductsCard from "@/components/sections/ProductsCard"
+import Contact from "@/components/sections/Contact"
 export default function Home() {
 
     return (
@@ -16,6 +17,7 @@ export default function Home() {
                 <About />
                 <MainFeatures />
                 <ProductsCard />
+                {/* <Contact /> */}
             </Layout>
         </>
     )
