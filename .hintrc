@@ -15,7 +15,9 @@
           "user-select",
           "backdrop-filter",
           "-webkit-overflow-scrolling",
-          "accent-color"
+          "accent-color",
+          "-ms-filter",
+          "-ms-touch-action"
         ]
       }
     ]

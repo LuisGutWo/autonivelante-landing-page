@@ -20,7 +20,7 @@
 
 .mainfeat-section .content-box {
   padding: 50px 0px 140px 0;
-  height: 40rem;
+  height: 100%;
 }
 
 .content_block_two .content-box {
@@ -167,7 +167,6 @@
   }
   .mainfeat-section .content-box {
     padding: 0;
-    height: 100%;
   }
   .featcard__text {
     justify-content: flex-start;

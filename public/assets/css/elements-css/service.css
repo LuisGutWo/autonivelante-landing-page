@@ -78,12 +78,16 @@ a:hover {
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    opacity:  0.8;
+    opacity: 0.8;
 
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white !important;
   }
 
   /* .swiper-slide img {

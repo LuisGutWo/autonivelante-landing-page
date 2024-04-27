@@ -22,6 +22,7 @@ export default function Services() {
                             loop={true}
                             pagination={{
                                 clickable: true,
+                                type: 'progressbar',
                             }}
                             autoplay={{
                                 delay: 4000,

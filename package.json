@@ -18,9 +18,10 @@
     "next": "14.2.2",
     "react": "^18",
     "react-bootstrap": "^2.10.2",
+    "react-content-loader": "^7.0.0",
     "react-curved-text": "^3.0.1",
     "react-dom": "^18",
-    "react-modal-video": "^2.0.1",
+    "react-modal-video": "^1.2.10",
     "sass": "^1.75.0",
     "swiper": "^11.1.1",
     "wowjs": "^1.1.3"
