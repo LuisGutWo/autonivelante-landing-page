@@ -1,153 +1,184 @@
+/* Responsive mobile first */
+/* contact new style sheet */
 
-.contact-section .form-inner{
-	position: relative;
-	display: block;
-	max-width: 850px;
-	margin: 0 auto;
-	background: #fff;
-	border-radius: 10px;
-	padding: 70px;
+.contact__section {
+  padding: 0;
+  background-image: url(../../images/resource/autonivelante_contact_mobile_img.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f3f5f7;
 }
 
-.contact-section .form-inner .form-group{
-	position: relative;
-	margin-bottom: 20px;
+.contact__main-column {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+
+  &:hover .contacttcard__bar {
+    width: 100px;
+  }
+}
+.contactcard__bar {
+  width: 50px;
+  height: 7px;
+  margin: 10px 0;
+  border-radius: 2px;
+  background-color: #015c93;
+  transition: width 0.2s ease;
 }
 
-.contact-section .form-inner .form-group:last-child{
-	margin-bottom: 0px;
+.contact_block_one .image-box {
+  display: block;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.221) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.199) 0px 4px 6px -2px;
 }
 
-.contact-section .form-inner .message-btn{
-	padding-top: 10px;
+.contactcard__text {
+  padding: 0;
+  text-align: left;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
 }
 
-.contact-section .form-inner .form-group input[type='text'],
-.contact-section .form-inner .form-group input[type='email'],
-.contact-section .form-inner .form-group textarea{
-	position: relative;
-    display: block;
+.contactcard__text-inner {
+  padding: 2.5rem;
+  height: 100%;
+}
+
+/* Cards */
+.contactcard {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 4rem 3rem 4rem;
+
+  color: #ffffff;
+  background-color: #015c93;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 5px;
+
+  .postcard__img {
+    background-color: #110f16;
+    height: 25rem;
     width: 100%;
-    height: 50px;
-    border: 1px solid #E5E5E5;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #6E6E6E;
-    padding: 10px 20px;
-	text-align: left;
-    transition: all 500ms ease;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .contactcard__content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    border-bottom: solid 1px #f3f5f7;
+  }
+  .contactcard__content-tree {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+  }
+  .contactcard__content,
+  .contactcard__content-tree p {
+    font-size: 0.8em;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  .logo-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #f3f5f7;
+    padding: 0 0 2rem 0;
+  }
+
+  .logo-box .logo {
+    max-width: 9em;
+  }
+
+  .logo-box .logo img {
+    width: 100%;
+  }
+  .form__contact {
+    &:hover .aboutcard__bar {
+      width: 100px;
+    }
+  }
+}
+.contactcard__text-two {
+  padding: 4rem 1rem 5rem 1rem;
+  background-color: #f3f5f7;
+  grid-area: form;
 }
 
-.contact-section .form-inner .form-group textarea{
-	height: 130px;
-	resize: none;
+/* Responsive Desktop mode */
+@media screen and (min-width: 769px) {
+  .contact__section {
+    background-image: url(../../images/resource/autonivelante_contact_bg.png);
+    background-position: center;
+    height: 100%;
+  }
+  .contact__main-column {
+    margin-top: 0;
+    height: 100%;
+  }
+  .content-column {
+    margin-bottom: 0;
+  }
+  .contactcard__text {
+    width: 50%;
+  }
+  .contactcard {
+    flex-direction: row;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .contact_block_one .image-box {
+    margin-left: 7rem;
+    margin-top: 35rem;
+    width: 65rem;
+  }
+  .contactcard__text-inner {
+    padding: 6rem 5rem 0.5rem 5rem;
+    width: 100%;
+  }
+  .contactcard__text-two {
+    padding: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-style {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-left: 3rem;
+    
+  }
+
+  .aboutcard__preview-txt {
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    text-align: justify;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  .form__contact {
+    margin: 0;
+    
+    
+  }
 }
-
-.contact-section .form-inner .form-group input:focus,
-.contact-section .form-inner .form-group textarea:focus{
-
-}
-
-.contact-section .form-inner .form-group .theme-btn-one{
-	padding: 13px 40px;
-}
-
-.contact-section .pattern-layer{
-	position: absolute;
-	left: 0px;
-	bottom: 0px;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-
-/** contact-style-two **/
-
-.contact-style-two{
-	position: relative;
-}
-
-.contact-style-two .social-links li{
-	position: relative;
-	display: inline-block;
-	float: left;
-	margin-right: 10px;
-}
-
-.contact-style-two .social-links li:last-child{
-	margin: 0px;
-}
-
-.contact-style-two .social-links li a{
-	position: relative;
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 16px;
-	color: #fff;
-	text-align: center;
-	border-radius: 50%;
-	background: #3B5998;
-}
-
-.contact-style-two .social-links li:nth-child(2) a{
-	background: #55ACEE;
-}
-
-.contact-style-two .social-links li:nth-child(3) a{
-	background: #DC4E41;
-}
-
-.contact-style-two .social-links li:last-child a{
-	background: #3F729B;
-}
-
-.contact-style-two .form-inner textarea{
-	height: 170px;
-}
-
-.contact-style-two .form-inner .form-group{
-	margin-bottom: 30px;
-}
-
-.contact-style-two .form-inner .form-group:last-child{
-	margin-bottom: 0px;
-}
-
-.contact-style-two .form-inner .form-group .theme-btn-one{
-	padding: 13px 40px;
-	box-shadow: none;
-}
-
-.google-map-section{
-	position: relative;
-}
-
-.google-map-section #contact-google-map{
-	position: relative;
-	width: 100%;
-	height: 450px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

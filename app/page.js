@@ -17,7 +17,7 @@ export default function Home() {
                 <About />
                 <MainFeatures />
                 <ProductsCard />
-                {/* <Contact /> */}
+                <Contact />
             </Layout>
         </>
     )
