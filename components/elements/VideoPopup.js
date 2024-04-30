@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import { Image } from 'react-bootstrap'
-import ModalVideo from 'react-modal-video'
 
 
 export default function VideoPopup({ style, text }) {

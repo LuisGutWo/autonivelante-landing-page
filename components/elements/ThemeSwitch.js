@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, localStorage } from "react"
 
 export default function ThemeSwitch() {
     const [togglETHeme, setTogglETHeme] = useState(

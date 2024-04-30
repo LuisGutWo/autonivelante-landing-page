@@ -1,11 +1,15 @@
 import Link from "next/link"
 import { Button, Col, Container, Image, Row } from "react-bootstrap"
+
+
 export default function Contact() {
+
+
     return (
         <>
             <section id="contact" className="contact__section p_relative">
                 <div>
-                    <div  className="row">
+                    <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-13 image-column ml_0 contact__main-column">
                             <div className="contact_block_one">
                                 <div className="contactcard image-box p_relative d-flex flex-wrap flex-row">
@@ -71,6 +75,7 @@ export default function Contact() {
                                         </div>
                                     </div>
                                     <div className="contactcard__text-two">
+
 
                                         {/* Contact Form Section */}
                                         <section className="contact-style">

@@ -5,7 +5,7 @@ el_01
 color
 */
 .color_blue {
-    color: #7f27d8;
+    color: #015c93;
 }
 .color_purple {
     color: #6f42c1;
@@ -46,7 +46,7 @@ el_02
 background
 */
 .bg_blue {
-    background-color: #7f27d8;
+    background-color: #015c93;
 }
 .bg_purple {
     background-color: #6f42c1;
@@ -316,7 +316,7 @@ Font size
 }
 /* 
 el_08 
-Font wieght
+Font weight
 */
 .fw_light {
     font-weight: 300;
@@ -3988,7 +3988,7 @@ Btn
     padding: 14.5px 31px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background-color: #0d6efd;
+    background-color: #015c93;
     z-index: 1;
     vertical-align: middle;
 }
@@ -4034,7 +4034,7 @@ Btn
     content: "";
     top: 110%;
     left: 50%;
-    background: #0d6efd;
+    background: #015c93;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     border-radius: 50%;
@@ -4077,7 +4077,7 @@ Image Hover
 .img_hover_2 {
     position: relative;
     overflow: hidden;
-    background-color: #0d6efd;
+    background-color: #015c93;
 }
 .img_hover_2 img{
     width: 100%;
@@ -4186,7 +4186,7 @@ Image Hover
     top: 0px;
     opacity: 0.8;
     transition: all 500ms ease;
-    background-color: #0d6efd;
+    background-color: #015c93;
 }
 .img_hover_4:hover:before{
     height: 100%;
@@ -4207,7 +4207,7 @@ Image Hover
     opacity: 0.9;
     z-index: 1;
     transition: all 500ms ease;
-    background-color: #0d6efd;
+    background-color: #015c93;
 }  
 .img_hover_5:hover:before{
     transform: scale(1,1);
@@ -4223,7 +4223,7 @@ Image Hover
     position: relative;
     display: block;
     overflow: hidden;
-    background-color: #0d6efd;
+    background-color: #015c93;
 }
 .img_hover_6 img{
     width: 100%;
@@ -4333,7 +4333,7 @@ Image Hover
     transform-style: preserve-3d;
     transform: scaleY(0);
     z-index: 1;
-    background-color: #0d6efd;
+    background-color: #015c93;
 }
 .img_hover_9:hover:before{
     opacity: 0.80;
@@ -4356,7 +4356,7 @@ Image Hover
     transform-style: preserve-3d;
     transform: scaleY(0);
     z-index: 1;
-    background-color: #0d6efd;
+    background-color: #015c93;
 }
 .img_hover_9:hover:after{
     opacity: 0.80;
@@ -4375,7 +4375,7 @@ Image Hover
     right: 0;
     bottom: 0;
     opacity: 0;
-    background: #0d6efd;
+    background: #015c93;
     opacity: 1.0;
     transition: .5s;
     transform: perspective(400px) scaleY(0);

@@ -1,4 +1,3 @@
-import "@/node_modules/react-modal-video/css/modal-video.css"
 import "../public/assets/css/bootstrap.css"
 import "../public/assets/css/color.css"
 import "../public/assets/css/style.css"
@@ -14,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${inter.variable} ${jost.variable}`}>
+        <html lang="es" className={`${inter.variable} ${jost.variable}`}>
             <body>{children}</body>
         </html>
     )

@@ -16,12 +16,12 @@
     "isotope-layout": "^3.0.6",
     "lightgallery": "^2.7.2",
     "next": "14.2.2",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-bootstrap": "^2.10.2",
     "react-content-loader": "^7.0.0",
     "react-curved-text": "^3.0.1",
     "react-dom": "^18",
-    "react-modal-video": "^1.2.10",
     "sass": "^1.75.0",
     "swiper": "^11.1.1",
     "wowjs": "^1.1.3"
