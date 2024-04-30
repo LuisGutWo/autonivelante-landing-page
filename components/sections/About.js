@@ -1,4 +1,3 @@
-import VideoPopup from "@/components/elements/VideoPopup"
 import Link from "next/link"
 import { Button, Image } from "react-bootstrap"
 export default function About() {
