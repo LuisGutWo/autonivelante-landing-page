@@ -2605,14 +2605,6 @@ div#mCSB_1_container {
     line-height: 40px;
   }
 
-  .subscribe-section .form-inner .form-group {
-    margin-bottom: 30px;
-  }
-
-  .subscribe-section .form-inner .form-group:last-child {
-    margin-bottom: 0px;
-  }
-
   .banner-style-two.alternat-2 .banner-carousel .slide-item {
     padding: 250px 0px 120px 0px;
   }
