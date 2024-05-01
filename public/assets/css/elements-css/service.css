@@ -114,7 +114,7 @@ a:hover {
   .postcard__text {
     padding: 2rem;
     text-align: left;
-    max-height: 100vh;
+    max-height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -126,7 +126,8 @@ a:hover {
     font-size: 0.7rem;
     text-overflow: ellipsis;
     text-align: justify;
-    margin-bottom: 1.8rem;
+    padding-bottom: 2rem;
+    height: 100%;
   }
 
   .postcard__content {

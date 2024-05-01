@@ -1,65 +1,201 @@
+.maincard__section {
+  height: 100%;
+  position: relative;
+  background-image: url(../../images/background/autonivelante_contact_bg.png);
+  background-size: cover;
+  background-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0.683);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.detailproducts__card-box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.detailproducts__card-maincontent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  flex-grow: calc(var(--flexGrow, 1));
+  max-width: 54ch;
+  text-align: left;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
+  border-radius: 5px;
+}
+.detailmain__card {
+  place-items: center;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 5rem 1rem 5rem;
+}
+.detailcard-body {
+  padding: 1rem 0.5rem 1.2rem 1rem;
+  width: 18rem;
+}
+.detailproductcard__title {
+  font-size: 1.75rem;
+}
+.detailproductcard-subtitle {
+  font-size: 1rem;
+}
+
+.list__item {
+  height: 20px;
+}
+.list__item p {
+  font-size: 0.5rem;
+}
+.detailcard-price {
+  margin-top: 2rem;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.buttons__card {
+  width: 12rem;
+}
+.exit__button-card {
+  position: relative;
+  float: right;
+  top: -390px;
+  left: 140px;
+
+}
+
 .products__card-section {
   height: 100%;
-  background: #F1F1F1;
+  background: #f1f1f1;
 }
 .productcard__text {
-    padding: 2rem;
-    text-align: left;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    grid-area: text;
-  }
-  .product__card-title {
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 2rem;
+  text-align: left;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
+}
+.product__card-title {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    &:hover .productcard__bar {
-        width: 20%;
-      }
+  &:hover .productcard__bar {
+    width: 20%;
   }
-  .productcard__title {
-    font-size: 1.75rem;
-  }
-  .productcard__bar {
-    width: 80px;
-    height: 7px;
-    margin: 10px 0;
-    border-radius: 2px;
-    background-color: #015c93;
-    transition: width 0.4s ease;
-  }
-  /* .products__card-box {
+}
+.productcard__title {
+  font-size: 1.75rem;
+}
+.productcard__bar {
+  width: 80px;
+  height: 7px;
+  margin: 10px 0;
+  border-radius: 2px;
+  background-color: #015c93;
+  transition: width 0.4s ease;
+}
+/* .products__card-box {
 
   } */
-  .products__card-box{
-    height: 100%;
-  }
+.products__card-box {
+  height: 100%;
+}
 
-  .products__card-maincontent {
-    height: 100%;
-  }
+.products__card-maincontent {
+  height: 100%;
+}
 
-  .main__card {
-    height: 100%;
+.main__card {
+  height: 100%;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
+}
+.card-body {
+  padding-top: 0;
+  padding-bottom: 25px;
+  width: 250px;
+}
+.card-price {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+
+@media screen and (min-width: 769px) {
+  /* detail card section product 1 */
+  .maincard__section {
+    height: 100vh;
+    position: relative;
+    background-image: url(../../images/background/autonivelante_contact_bg.png);
+    background-size: cover;
+    background-blend-mode: color-burn;
+    background-color: rgba(0, 0, 0, 0.683);
+    display: flex;
+    justify-content: center;
     align-items: center;
+  }
+  
+  .detailproducts__card-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .detailproducts__card-maincontent {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
-
+    border-radius: 5px;
   }
-  .card-body {
-    padding-top: 0;
-    padding-bottom: 25px;
-    width: 250px;
+  .detailmain__card {
+    place-items: center;
+    border-radius: 0;
+    border: none;
+    height: 70vh;
   }
-  .card-price {
+  .detailcard-body {
+    padding: 4rem 1rem 3rem 4rem;
+    width: 28rem;
+  }
+  .detailproductcard__title {
+    font-size: 1.75rem;
+  }
+  .list__item {
+    height: 18px;
+  }
+  .detailcard-price {
+    margin-top: 2rem;
     font-size: 25px;
     margin-bottom: 30px;
   }
-
-  @media screen and (min-width: 769px){
+  .buttons__card {
+    width: 15rem;
+  }
+  .exit__button-card {
+    position: relative;
+    float: right;
+    top: -390px;
+    left: 140px;
 
   }
+
+  /* second card detail */
+ 
+
+}

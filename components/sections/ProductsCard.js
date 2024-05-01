@@ -32,7 +32,7 @@ export default function ProductsCard() {
                                             Autonivelante</h4>
                                         <div className="card-price fw-bold">$ 16.500</div>
                                         <div class="buttons__card d-flex flex-column gap-4 mb-4">
-                                            <Link href="#" className="btn btn-outline-primary">Ver detalle</Link>
+                                            <Link href="/product-details" className="btn btn-outline-primary">Ver detalle</Link>
                                             <Link href="#" className="btn btn-primary">Agregar al carro</Link>
                                         </div>
                                     </div>
@@ -56,19 +56,13 @@ export default function ProductsCard() {
                                             Autonivelante</h4>
                                         <div className="card-price fw-bold">$ 22.500</div>
                                         <div class="buttons__card d-flex flex-column gap-4 mb-4">
-                                            <Link href="#" className="btn btn-outline-primary">Ver detalle</Link>
-                                            <Link href="#" className="btn btn-primary">Agregar al carro</Link>
+                                            <Link href="/product-details-2" className="btn btn-outline-primary">Ver detalle</Link>
+                                            <Link href="/#contact" className="btn btn-primary">Agregar al carro</Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
-
-
-
                     </div>
                 </Container>
             </section>
