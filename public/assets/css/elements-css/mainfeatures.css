@@ -164,12 +164,15 @@
 @media screen and (min-width: 769px) {
   .mainfeat-section {
     margin: 8rem 0 6rem 0;
+    height: 100vh;
   }
   .mainfeat-section .content-box {
     padding: 0;
   }
   .featcard__text {
     justify-content: flex-start;
+    padding-top: 0;
+    padding-left: 40px;
   }
   .auto-container {
     margin-left: 0 !important;
@@ -230,9 +233,7 @@
   }
 }
 @media screen and (min-width: 1024px) {
-  .featcard__text {
-    padding: 4.2rem 0.5rem 1rem 4rem;
-  }
+  
 
   .featcard__text:before {
     content: "";

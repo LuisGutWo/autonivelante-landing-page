@@ -128,7 +128,7 @@
 @media screen and (min-width: 769px) {
   .contact__section {
     background-image: url(../../images/resource/autonivelante_contact_bg.png);
-    background-position: center;
+    background-position: top;
     height: 100%;
   }
   .contact__main-column {
@@ -146,8 +146,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .contact_block_one .image-box {
-    margin-left: 7rem;
-    margin-top: 35rem;
+    margin-top: 12.5rem;
     width: 65rem;
   }
   .contactcard__text-inner {

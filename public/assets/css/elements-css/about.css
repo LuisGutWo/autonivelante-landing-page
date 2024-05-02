@@ -16,7 +16,8 @@
   margin-top: 400px;
   border-radius: 10px;
   padding: 0;
-  box-shadow: rgba(0, 0, 0, 0.221) 0px 10px 15px -3px, rgba(0, 0, 0, 0.199) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.221) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.199) 0px 4px 6px -2px;
 }
 
 .aboutcard__text {
@@ -55,24 +56,22 @@
 }
 
 .aboutcard__buttons {
-	height: 10rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
-	grid-template-areas: 50% 50%;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  grid-template-areas: 50% 50%;
 }
 .aboutcard__buttons-btn-video {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #015c93;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #015c93;
 }
-.aboutcard__buttons-btn-contact{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #f3f5f7;
-
+.aboutcard__buttons-btn-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f5f7;
 }
 
 .image_block_one .image-box .video-btn {
@@ -124,7 +123,7 @@
   animation-delay: 0.6s;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) {
   .about__section {
     background-image: url(../../images/background/about_bg_image.jpg);
     background-position: center;
@@ -132,7 +131,7 @@
   .about__main-column {
     margin-top: 0;
   }
-  
+
   .image_block_one .image-box {
     margin-left: 2rem;
     margin-top: 260px;
@@ -146,5 +145,44 @@
     text-align: justify;
     margin-bottom: 3rem;
     margin-top: 2rem;
+  }
+  .modalvideo__section {
+    height: 100vh;
+  }
+  .modalvideo__section .container {
+    height: 100%;
+
+  }
+  .modal-video {
+    height: 100%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+  }
+  .modal-video-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-video-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-video-movie-wrap {
+    padding: 0 !important;
+  }
+  iframe {
+    position: absolute;
+    z-index: 9;
+    width: 800px;
+    height: 500px;
+  }
+  .modalvideo__button-card {
+    position: relative;
+    float: right;
+    top: -600px;
+    left: 40px;
+  
   }
 }

@@ -9,12 +9,12 @@ export default function ProductsCard() {
             <section id="products" className="products__card-section p_relative pt-5 centred sec-pad">
                 <Container fluid>
                     <div className="products__card-container productcard__text">
-                        <div class="product__card-title">
+                        <div class="product__card-title wow fadeIn animated"  data-wow-delay="01ms" data-wow-duration="1000ms">
                             <h1 className="productcard__title blue text-dark text-center fw-bold">Nuestros Productos</h1>
                             <div className="productcard__bar"></div>
                         </div>
                         <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4  align-items-center">
-                            <div class="products__card-maincontent">
+                            <div class="products__card-maincontent wow fadeInLeft animated" data-wow-delay="01ms" data-wow-duration="1000ms">
                                 <div
                                     className="card main__card text-center"
                                     style={{
@@ -38,7 +38,7 @@ export default function ProductsCard() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="products__card-maincontent">
+                            <div class="products__card-maincontent wow fadeInRight animated" data-wow-delay="01ms" data-wow-duration="1000ms">
                                 <div
                                     className="card main__card text-center"
                                     style={{

@@ -13,7 +13,7 @@ export default function Services() {
     return (
         <>
             <section id="services-section" className="service-section p_relative centred bg-color-1 sec-pad pt-0 pb-0">
-                <div className="container py-4">
+                <div className="container py-4 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
                     <article className="postcard">
                         <Swiper
                             modules={[Autoplay, Navigation, Pagination, Keyboard]}

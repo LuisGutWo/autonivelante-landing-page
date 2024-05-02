@@ -1,8 +1,37 @@
+'use client'
+import React, { useRef, useState } from "react";
 import Link from "next/link"
-import { Button, Col, Container, Image, Row } from "react-bootstrap"
+import { Button, Col, Container, Image, Row, Modal, Form } from "react-bootstrap"
+import emailjs from "@emailjs/browser";
 
 
 export default function Contact() {
+    const [showEmailSend, setShowEmailSend] = useState(false);
+    const form = useRef();
+
+    const handleCloseEmailSend = () => setShowEmailSend(false);
+    const handleShowEmailSend = () => setShowEmailSend(true);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                process.env.DB_SERVICE_EMAILJS,
+                process.env.DB_TEMPLATE_EMAILJS,
+                form.current,
+                process.env.DB_FORM_CURRENT
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
+
 
 
     return (
@@ -11,7 +40,7 @@ export default function Contact() {
                 <div>
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-13 image-column ml_0 contact__main-column">
-                            <div className="contact_block_one">
+                            <div className="contact_block_one d-flex justify-content-center align-items-center wow fadeIn animated" data-wow-delay="01ms" data-wow-duration="1000ms">
                                 <div className="contactcard image-box p_relative d-flex flex-wrap flex-row">
                                     <div className="contactcard__text">
                                         <div class="contactcard__text-inner">
@@ -91,7 +120,7 @@ export default function Contact() {
                                                     </div>
                                                     <div className="col-lg-8 col-md-12 col-sm-12 form-column">
                                                         <div className="form-inner">
-                                                            <form method="post" action="sendemail.php" id="contact-form" className="default-form">
+                                                            <Form ref={form} onSubmit={sendEmail} id="contact-form" className="default-form">
                                                                 <div className="row clearfix">
                                                                     <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                                                                         <input type="text" name="username" placeholder="Nombre y Apellido" required />
@@ -106,13 +135,21 @@ export default function Contact() {
                                                                         <textarea name="message" placeholder="Mensaje"></textarea>
                                                                     </div>
                                                                     <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                                                        <button className="theme-btn theme-btn-one" style={{ width: "100%", marginTop: "4rem" }} type="submit" name="submit-form">Enviar mensaje
+                                                                        <Button onClick={handleShowEmailSend} className="theme-btn theme-btn-one" style={{ width: "100%", marginTop: "4rem" }} value="Send" type="submit" name="submit-form">Enviar mensaje
                                                                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" style={{ marginLeft: "1rem" }} viewBox="0 0 16 16">
                                                                                 <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                                                                            </svg></button>
+                                                                            </svg></Button>
+                                                                        <Modal show={showEmailSend} onHide={handleCloseEmailSend}>
+                                                                            <Modal.Header closeButton>
+                                                                                <Modal.Body>
+                                                                                    Correo Enviado! 🛸 <br /> Te responderemos de inmediato.
+                                                                                    Gracias
+                                                                                </Modal.Body>
+                                                                            </Modal.Header>
+                                                                        </Modal>
                                                                     </div>
                                                                 </div>
-                                                            </form>
+                                                            </Form>
                                                         </div>
                                                     </div>
                                                 </div>

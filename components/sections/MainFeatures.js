@@ -6,12 +6,12 @@ export default function MainFeatures() {
         <>
             <Container>
                 <section className="mainfeat-section p_relative">
-                    <div className="bg-layer" style={{ backgroundColor: "#015c93" }}>
+                    <div className="bg-layer wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1000ms" style={{ backgroundColor: "#015c93" }}>
                         <h2 className="text-light fw-bold">Campos de Aplicación</h2>
                         <div className="mainfeat__bar-2"></div>
                         <p className="text-light fs-6">Para la nivelación, reparación y afinado de losas, sobrelosas, radieres y pisos de concreto. El autonivelante está diseñado para la recepción de recubrimientos de alfombras, pisos vinilicos, pisos de madera, pisos flotantes, pisos de goma.</p>
                     </div>
-                    <div className="auto-container">
+                    <div className="auto-container wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1000ms">
                         <div className="row clearfix">
                             <div className="col-lg-12 col-md-12 col-sm-12 content-column p-0">
                                 <div className="content_block_two">
@@ -84,7 +84,7 @@ export default function MainFeatures() {
                             </div>
                         </div>
                     </div>
-                    <div className="outer-box">
+                    <div className="outer-box wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
                         <h2>Espesor aplicable</h2>
                         <div className="mainfeat__bar"></div>
                         <p className="text-dark">Cargas desde 3 mm hasta 30 mm de espesor en una sola aplicación.</p>

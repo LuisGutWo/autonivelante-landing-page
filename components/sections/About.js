@@ -1,6 +1,11 @@
+'use client'
 import Link from "next/link"
-import { Button, Image } from "react-bootstrap"
+import { useState } from "react"
+import { Button } from "react-bootstrap"
+import ModalVideo from "react-modal-video"
 export default function About() {
+    const [isOpen, setOpen] = useState(false)
+
     return (
         <>
             <section className="about-section p_relative">
@@ -9,7 +14,7 @@ export default function About() {
                         <div className="col-lg-6 col-md-12 col-sm-13 image-column ml_0 about__main-column">
                             <div className="image_block_one">
                                 <div className="image-box p_relative">
-                                    <div className="aboutcard__text bg-light">
+                                    <div className="aboutcard__text bg-light wow fadeInUp animated" data-wow-delay="05ms" data-wow-duration="1500ms">
                                         <div class="aboutcard__text-inner">
                                             <h1 className="postcard__title blue text-dark text-start fs-3 fw-bold">¿Qué es el autonivelante?</h1>
                                             <div className="aboutcard__bar"></div>
@@ -21,12 +26,15 @@ export default function About() {
                                         </div>
                                         <section class="aboutcard__buttons">
                                             <div class="aboutcard__buttons-btn-video">
-                                                <Button variant="outline-light" style={{ width: "10rem", height: "2.8rem" }}>Ver video
+                                                {<Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "10rem", height: "2.8rem" }}>Ver video
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style={{ marginLeft: "12px" }} fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
                                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                                         <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
                                                     </svg>
-                                                </Button>{' '}
+                                                </Button>}
+                                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="vfhzo499OeA" onClose={() => setOpen(false)} />
+
+
                                             </div>
                                             <div class="aboutcard__buttons-btn-contact">
                                                 <Link href="#contact">

@@ -524,10 +524,34 @@ img {
   margin: 0px !important;
 }
 
+/* // /// WhatsApp Floating Button /// */
+.btn-wsp {
+  position: fixed;
+  cursor: pointer;
+  top: 80%;
+  left: 90%;
+  z-index: 100;
+
+
+  & .wsp-image {
+    width: 80%;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.624));
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+}
+
 /** scroll-to-top **/
 .scroll-to-top {
   position: fixed;
-  right: 50px;
+  right: auto;
   bottom: 50px;
   width: 54px;
   height: 54px;
@@ -536,7 +560,7 @@ img {
   cursor: pointer;
   background: #015c93;
   border-radius: 50%;
-  margin-left: -26px;
+  margin-left: 1.5rem;
   display: none;
   transition: all 0.3s ease;
   transform: rotate(0deg);

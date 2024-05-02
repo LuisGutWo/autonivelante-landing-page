@@ -8,6 +8,7 @@ import SearchPopup from "./SearchPopup"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 import Header from "./Header"
+import WhatsAppButton from "../elements/WhatsAppButton"
 
 export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, wrapperCls }) {
     const [scroll, setScroll] = useState(0)
@@ -58,6 +59,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
                 {!footerStyle && < Footer />}
                 {footerStyle == 1 ? < Footer /> : null}
             </div>
+            <WhatsAppButton />
             <BackToTop scroll={scroll} />
         </>
     )
