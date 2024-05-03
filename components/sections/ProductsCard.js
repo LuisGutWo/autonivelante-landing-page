@@ -1,15 +1,20 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
-import { Container, Image } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Container, Image, Modal } from 'react-bootstrap'
 
 export default function ProductsCard() {
+    const [showContactSend, setShowContactSend] = useState(false);
+
+    const handleCloseContactSend = () => setShowContactSend(false);
+    const handleShowContactSend = () => setShowContactSend(true);
 
     return (
         <>
             <section id="products" className="products__card-section p_relative pt-5 centred sec-pad">
                 <Container fluid>
                     <div className="products__card-container productcard__text">
-                        <div class="product__card-title wow fadeIn animated"  data-wow-delay="01ms" data-wow-duration="1000ms">
+                        <div class="product__card-title wow fadeIn animated" data-wow-delay="01ms" data-wow-duration="1000ms">
                             <h1 className="productcard__title blue text-dark text-center fw-bold">Nuestros Productos</h1>
                             <div className="productcard__bar"></div>
                         </div>
@@ -33,7 +38,14 @@ export default function ProductsCard() {
                                         <div className="card-price fw-bold">$ 16.500</div>
                                         <div class="buttons__card d-flex flex-column gap-4 mb-4">
                                             <Link href="/product-details" className="btn btn-outline-primary">Ver detalle</Link>
-                                            <Link href="#" className="btn btn-primary">Agregar al carro</Link>
+                                            <Link href="/contact-page" onClick={handleShowContactSend} className="btn btn-primary">Agregar al carro</Link>
+                                            <Modal show={showContactSend} onHide={handleCloseContactSend}>
+                                                <Modal.Header closeButton>
+                                                    <Modal.Body>
+                                                        Hola... Escríbenos por WhatsApp o envíanos un correo que te estaremos respondiendo en la brevedad posible... Gracias 😉
+                                                    </Modal.Body>
+                                                </Modal.Header>
+                                            </Modal>
                                         </div>
                                     </div>
                                 </div>

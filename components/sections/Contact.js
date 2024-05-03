@@ -17,10 +17,10 @@ export default function Contact() {
 
         emailjs
             .sendForm(
-                process.env.DB_SERVICE_EMAILJS,
-                process.env.DB_TEMPLATE_EMAILJS,
+                process.env.NEXT_SERVICE_EMAILJS,
+                process.env.NEXT_TEMPLATE_EMAILJS,
                 form.current,
-                process.env.DB_FORM_CURRENT
+                process.env.NEXT_FORM_CURRENT
             )
             .then(
                 (result) => {
@@ -37,7 +37,7 @@ export default function Contact() {
     return (
         <>
             <section id="contact" className="contact__section p_relative">
-                <div>
+                <Container>
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-13 image-column ml_0 contact__main-column">
                             <div className="contact_block_one d-flex justify-content-center align-items-center wow fadeIn animated" data-wow-delay="01ms" data-wow-duration="1000ms">
@@ -113,7 +113,7 @@ export default function Contact() {
                                                     <div className="col-lg-6 col-md-12 col-sm-12 content-column">
                                                         <div className="form__contact content-box mr_70">
                                                             <div className="sec-title mb_35 ms-1">
-                                                                <h1 className="postcard__title blue text-dark text-start fs-1 fw-bold">Contáctanos</h1>
+                                                                <h1 className="postcard__title blue text-dark text-start fw-bold fs-2">Contáctanos</h1>
                                                                 <div className="contactcard__bar"></div>
                                                             </div>
                                                         </div>
@@ -161,7 +161,7 @@ export default function Contact() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Container>
             </section>
 
 

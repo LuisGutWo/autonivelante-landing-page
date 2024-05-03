@@ -13,10 +13,6 @@
 .contact__main-column {
   margin-top: 10rem;
   margin-bottom: 5rem;
-
-  &:hover .contacttcard__bar {
-    width: 100px;
-  }
 }
 .contactcard__bar {
   width: 50px;
@@ -113,7 +109,9 @@
     width: 100%;
   }
   .form__contact {
-    &:hover .aboutcard__bar {
+    margin: 1rem 0;
+
+    &:hover .contactcard__bar {
       width: 100px;
     }
   }
@@ -122,6 +120,29 @@
   padding: 4rem 1rem 5rem 1rem;
   background-color: #f3f5f7;
   grid-area: form;
+}
+/* // /// WhatsApp Floating Button /// */
+.btn-wsp {
+  position: fixed;
+  cursor: pointer;
+  top: 79%;
+  left: 80%;
+  z-index: 100;
+  width: 5rem;
+
+  & .wsp-image {
+    width: 100%;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.624));
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
 }
 
 /* Responsive Desktop mode */
@@ -165,7 +186,6 @@
     flex-direction: column;
     padding: 2rem;
     margin-left: 3rem;
-    
   }
 
   .aboutcard__preview-txt {
@@ -177,7 +197,28 @@
   }
   .form__contact {
     margin: 0;
-    
-    
+  }
+  /* // /// WhatsApp Floating Button /// */
+  .btn-wsp {
+    position: fixed;
+    cursor: pointer;
+    top: 80%;
+    left: 90%;
+    z-index: 100;
+    width: 6rem;
+
+    & .wsp-image {
+      width: 100%;
+      filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.624));
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: 1s ease-in-out;
+      transition: 1s ease-in-out;
+
+      &:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
   }
 }

@@ -1,8 +1,13 @@
 import Link from "next/link"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
-import { Image } from "react-bootstrap"
+import { Button, Image, Modal } from "react-bootstrap"
+import { useState } from "react";
 export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSidebar, handlePopup, handleSidebar }) {
+    const [showCartSend, setShowCartSend] = useState(false);
+
+    const handleCloseCartSend = () => setShowCartSend(false);
+    const handleShowCartSend = () => setShowCartSend(true);
     return (
         <>
             <header className={`main-header header-style-three ${scroll ? "fixed-header" : ""}`}>
@@ -32,11 +37,18 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSideb
                             </div>
                             <ul className="menu-right-content">
                                 <li className="cart-box">
-                                    <Link href="/">
+                                    <Link href="/#contact" onClick={handleShowCartSend}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-bag-heart" viewBox="0 0 16 16">
                                             <path fillRule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
                                         </svg>
                                     </Link>
+                                    <Modal show={showCartSend} onHide={handleCloseCartSend}>
+                                        <Modal.Header>
+                                            <Modal.Body>
+                                                Hola... Gracias por visitarnos. Si deseas obtener nuestros productos y servicios conéctate con nosotros. Estaremos los mas pronto posible en contacto contigo... Gracias 😎
+                                            </Modal.Body>
+                                        </Modal.Header>
+                                    </Modal>
                                 </li>
                             </ul>
                         </div>
@@ -61,11 +73,18 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSideb
                             </div>
                             <ul className="menu-right-content">
                                 <li className="cart-box">
-                                    <Link href="/shopping-cart">
+                                    <Link href="/#contact" onClick={handleShowCartSend}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="dark" className="bi bi-bag-heart" viewBox="0 0 16 16">
                                             <path fillRule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
                                         </svg>
                                     </Link>
+                                    <Modal show={showCartSend} onHide={handleCloseCartSend}>
+                                        <Modal.Header>
+                                            <Modal.Body>
+                                                Hola... Gracias por visitarnos. Si deseas obtener nuestros productos y servicios conéctate con nosotros. Estaremos los mas pronto posible en contacto contigo... Gracias 😎
+                                            </Modal.Body>
+                                        </Modal.Header>
+                                    </Modal>
                                 </li>
                             </ul>
                         </div>

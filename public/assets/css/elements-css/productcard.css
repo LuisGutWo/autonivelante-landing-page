@@ -148,18 +148,15 @@
   }
   
   .detailproducts__card-box {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     
   }
   .detailproducts__card-maincontent {
-    height: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
     border-radius: 5px;
   }
@@ -168,10 +165,10 @@
     border-radius: 0;
     border: none;
     height: 70vh;
+    
   }
   .detailcard-body {
     padding: 4rem 1rem 3rem 4rem;
-    width: 28rem;
   }
   .detailproductcard__title {
     font-size: 1.75rem;
