@@ -40,7 +40,7 @@ export default function Contact() {
                 <Container>
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-13 image-column ml_0 contact__main-column">
-                            <div className="contact_block_one d-flex justify-content-center align-items-center wow fadeIn animated" data-wow-delay="01ms" data-wow-duration="1000ms">
+                            <div className="contact_block_one d-flex justify-content-center align-items-center">
                                 <div className="contactcard image-box p_relative d-flex flex-wrap flex-row">
                                     <div className="contactcard__text">
                                         <div class="contactcard__text-inner">

@@ -1,9 +1,9 @@
 import Link from "next/link"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
-import { Button, Image, Modal } from "react-bootstrap"
+import { Image, Modal } from "react-bootstrap"
 import { useState } from "react";
-export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSidebar, handlePopup, handleSidebar }) {
+export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSidebar }) {
     const [showCartSend, setShowCartSend] = useState(false);
 
     const handleCloseCartSend = () => setShowCartSend(false);
@@ -92,7 +92,7 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSideb
                 </div>
             </header>
 
-            <MobileMenu handleMobileMenu={handleMobileMenu} isSidebar={isSidebar} handleSidebar={handleSidebar} />
+            <MobileMenu handleMobileMenu={handleMobileMenu} />
 
 
 

@@ -18,7 +18,6 @@
 @import url("elements-css/featurebanner.css");
 @import url("elements-css/about.css");
 @import url("elements-css/service.css");
-@import url("elements-css/service-details.css");
 @import url("elements-css/mainfeatures.css");
 @import url("elements-css/maincontact.css");
 @import url("elements-css/page-title.css");
@@ -26,12 +25,6 @@
 @import url("elements-css/video.css");
 @import url("elements-css/error.css");
 @import url("elements-css/productcard.css");
-@import url("elements-css/subscribe.css");
-@import url("elements-css/cta.css");
-@import url("elements-css/checkout.css");
-@import url("elements-css/cart.css");
-@import url("elements-css/shop.css");
-@import url("elements-css/shop-details.css");
 /*** 
 
 ====================================================================
@@ -2200,7 +2193,7 @@ div#mCSB_1_container {
     margin: 0px;
   }
 
-  .image_block_one .image-box {
+  .image_block .image-box {
     margin: 0px;
   }
 
@@ -2291,7 +2284,7 @@ div#mCSB_1_container {
     padding-bottom: 120px;
   }
 
-  .image_block_one .image-box {
+  .image_block .image-box {
     margin-bottom: 30px;
   }
 
@@ -2867,16 +2860,16 @@ div#mCSB_1_container {
     padding: 0px 30px;
   }
 
-  .image_block_one .image-box {
+  .image_block .image-box {
     padding: 0px;
   }
 
-  .image_block_one .image-box .image-2 {
+  .image_block .image-box .image-2 {
     position: relative;
     margin-top: 30px;
   }
 
-  .image_block_one .image-box .video-btn {
+  .image_block .image-box .video-btn {
     left: 30px;
   }
 

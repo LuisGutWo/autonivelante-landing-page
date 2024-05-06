@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Container, Image } from "react-bootstrap"
 import 'swiper/css/thumbs'
 
-export default function Home() {
+export default function CardDetailOne() {
 
     return (
         <>
@@ -67,7 +67,7 @@ export default function Home() {
                             <div
                                 className="card detailmain__card text-center"
                                 style={{
-                                    width: "22rem",
+                                    width: "100%",
                                     backgroundImage: "url(assets/images/shop/card-background-shape-circle.png)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundPosition: "right",

@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .detailproducts__card-maincontent {
   height: 100%;
@@ -68,7 +67,6 @@
   float: right;
   top: -390px;
   left: 140px;
-
 }
 
 .products__card-section {
@@ -132,43 +130,36 @@
   margin-bottom: 30px;
 }
 
-
 @media screen and (min-width: 769px) {
   /* detail card section product 1 */
   .maincard__section {
     height: 100vh;
-    position: relative;
-    background-image: url(../../images/background/autonivelante_contact_bg.png);
-    background-size: cover;
-    background-blend-mode: color-burn;
-    background-color: rgba(0, 0, 0, 0.683);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
   }
-  
   .detailproducts__card-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 100vw;
   }
   .detailproducts__card-maincontent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
-    border-radius: 5px;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    max-height: 30rem;
+    width: 100%;
+    max-width: 60rem;
+    overflow: hidden;
   }
+
   .detailmain__card {
-    place-items: center;
-    border-radius: 0;
-    border: none;
-    height: 70vh;
-    
-  }
-  .detailcard-body {
-    padding: 4rem 1rem 3rem 4rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    .detailcard-body {
+      padding: 2rem 0 0 1rem;
+    }
   }
   .detailproductcard__title {
     font-size: 1.75rem;
@@ -187,12 +178,7 @@
   .exit__button-card {
     position: relative;
     float: right;
-    top: -390px;
-    left: 140px;
-
+    top: -400px;
+    left: 185px;
   }
-
-  /* second card detail */
- 
-
 }

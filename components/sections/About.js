@@ -12,7 +12,7 @@ export default function About() {
                 <div className="auto-container">
                     <div className="row clearfix">
                         <div className="col-lg-6 col-md-12 col-sm-13 image-column ml_0 about__main-column">
-                            <div className="image_block_one">
+                            <div className="image_block">
                                 <div className="image-box p_relative">
                                     <div className="aboutcard__text bg-light wow fadeInUp animated" data-wow-delay="05ms" data-wow-duration="1500ms">
                                         <div class="aboutcard__text-inner">

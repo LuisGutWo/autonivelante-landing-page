@@ -3,29 +3,19 @@
 import { useEffect, useState } from "react"
 import BackToTop from '../elements/BackToTop'
 import DataBg from "../elements/DataBg"
-import Breadcrumb from './Breadcrumb'
-import SearchPopup from "./SearchPopup"
-import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 import Header from "./Header"
 import WhatsAppButton from "../elements/WhatsAppButton"
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, wrapperCls }) {
+export default function Layout({ headerStyle, footerStyle, children, wrapperCls }) {
     const [scroll, setScroll] = useState(0)
+
     // Mobile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
     const handleMobileMenu = () => {
         setMobileMenu(!isMobileMenu)
         !isMobileMenu ? document.body.classList.add("mobile-menu-visible") : document.body.classList.remove("mobile-menu-visible")
     }
-
-    // Popup
-    const [isPopup, setPopup] = useState(false)
-    const handlePopup = () => setPopup(!isPopup)
-
-    // Sidebar
-    const [isSidebar, setSidebar] = useState(false)
-    const handleSidebar = () => setSidebar(!isSidebar)
 
     useEffect(() => {
         const WOW = require('wowjs')
@@ -45,14 +35,8 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
         <>
             <DataBg />
             <div className={`page-wrapper ${wrapperCls ? wrapperCls : ""}`} id="#top">
-                {!headerStyle && <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} />}
-                {headerStyle == 3 ? <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} handlePopup={handlePopup} isSidebar={isSidebar} handleSidebar={handleSidebar} /> : null}
-
-
-                <Sidebar isSidebar={isSidebar} handleSidebar={handleSidebar} />
-                <SearchPopup isPopup={isPopup} handlePopup={handlePopup} />
-
-                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+                {!headerStyle && <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}
+                {headerStyle == 3 ? <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
 
                 {children}
 
