@@ -2,6 +2,7 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import 'animate.css';
 
 const WhatsAppButton = () => {
   const renderTooltip = (props) => (
@@ -26,7 +27,7 @@ const WhatsAppButton = () => {
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/wa_chat_icon.png?alt=media&token=ce6cb743-6822-4223-9279-0bdd5efe6677"
             alt=""
-            className="wsp-image"
+            className="wsp-image animate__animated animate__tada animate__infinite animate__slower"
           />
         </a>
       </OverlayTrigger>
