@@ -147,42 +147,20 @@
     margin-top: 2rem;
   }
   .modalvideo__section {
+    width: 100vw;
     height: 100vh;
-  }
-  .modalvideo__section .container {
-    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.732);
+    border: solid 2px #015c93;
 
   }
-  .modal-video {
-    height: 100%;
+  .modalvideo__section .container {
+    width: 100%;
     display: flex;
-    align-items: center;  
-    justify-content: center;
-  }
-  .modal-video-body {
-    display: flex;
-    justify-content: center;
     align-items: center;
-  }
-  .modal-video-inner {
-    display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  .modal-video-movie-wrap {
-    padding: 0 !important;
-  }
-  iframe {
-    position: absolute;
-    z-index: 9;
-    width: 800px;
-    height: 500px;
-  }
-  .modalvideo__button-card {
-    position: relative;
-    float: right;
-    top: -600px;
-    left: 40px;
-  
+
+
   }
 }

@@ -120,7 +120,36 @@ export default function Contact() {
                                                     </div>
                                                     <div className="col-lg-8 col-md-12 col-sm-12 form-column">
                                                         <div className="form-inner">
-                                                            <Form ref={form} onSubmit={sendEmail} id="contact-form" className="default-form">
+                                                            <Form ref={form} onSubmit={sendEmail} id="contact-form">
+                                                                <Form.Group className="mb-3" controlId="formBasicName">
+                                                                    <Form.Control type="name" name="username" placeholder="Nombre y Apellido" required />
+                                                                </Form.Group>
+                                                                <Form.Group className="mb-3" controlId="formBasicPhone">
+                                                                    <Form.Control type="phone" placeholder="Teléfono" required />
+                                                                </Form.Group>
+                                                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                                                    <Form.Control type="email" placeholder="Correo electrónico" required />
+                                                                </Form.Group>
+                                                                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                                                    <Form.Control placeholder="Mensaje" as="textarea" rows={3} />
+                                                                </Form.Group>
+
+                                                                <Button onClick={handleShowEmailSend} className="theme-btn theme-btn-one" style={{ width: "100%", marginTop: "4rem" }} value="Send" type="submit" name="submit-form">Enviar mensaje
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" style={{ marginLeft: "1rem" }} viewBox="0 0 16 16">
+                                                                        <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                                                    </svg></Button>
+                                                                <Modal show={showEmailSend} onHide={handleCloseEmailSend}>
+                                                                    <Modal.Header closeButton>
+                                                                        <Modal.Body>
+                                                                            Correo Enviado! 🛸 <br /> Te responderemos de inmediato.
+                                                                            Gracias
+                                                                        </Modal.Body>
+                                                                    </Modal.Header>
+                                                                </Modal>
+                                                            </Form>
+
+
+                                                            {/* <Form ref={form} onSubmit={sendEmail} id="contact-form" className="default-form">
                                                                 <div className="row clearfix">
                                                                     <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                                                                         <input type="text" name="username" placeholder="Nombre y Apellido" required />
@@ -149,7 +178,7 @@ export default function Contact() {
                                                                         </Modal>
                                                                     </div>
                                                                 </div>
-                                                            </Form>
+                                                            </Form> */}
                                                         </div>
                                                     </div>
                                                 </div>
