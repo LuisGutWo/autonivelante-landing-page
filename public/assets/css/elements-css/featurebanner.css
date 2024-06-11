@@ -48,11 +48,11 @@
   .feature-block .inner-box .image-box button {
     position: absolute;
     z-index: 9;
-    top: 50%;
+    top: 62%;
     left: 5%;
     font-size: 1rem;
     width: 20%;
     padding: 0;
-    height: 30%;
+    height: 28%;
   }
 }

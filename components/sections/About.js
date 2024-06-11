@@ -1,9 +1,34 @@
 'use client'
 import Link from "next/link"
 import { useState } from "react"
-import { Button } from "react-bootstrap"
+import { Button, ListGroup } from "react-bootstrap"
 export default function About() {
     const [isOpen, setOpen] = useState(false)
+
+    const caracteristicas = [{
+        id: 0,
+        name: 'Suelos industriales.',
+    }, {
+        id: 1,
+        name: 'Zonas de alto tráfico.',
+        id: 2,
+        name: 'Oficinas, Plantas Abiertas.',
+    }, {
+        id: 3,
+        name: 'Galpones, Hangares y Bodegas.',
+    }, {
+        id: 4,
+        name: 'Estacionamientos.',
+    }];
+
+    const listItems = caracteristicas.map(caracteristica =>
+        <li key={caracteristicas.id}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" className="bi bi-circle-fill pe-1" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8" />
+            </svg>
+            {caracteristica.name}
+        </li>
+    );
 
     return (
         <>
@@ -17,30 +42,28 @@ export default function About() {
                                         <div class="aboutcard__text-inner">
                                             <h1 className="postcard__title blue text-dark text-start fs-3 fw-bold">¿Qué es el autonivelante?</h1>
                                             <div className="aboutcard__bar"></div>
-                                            <div className="aboutcard__preview-txt">EL autonivelante generalmente se usa para crear una superficie plana y lisa con una resistencia a la compresión similar o superior a la del concreto tradicional antes de instalar revestimientos de pisos interiores.
+                                            <div className="aboutcard__preview-txt">
+                                                El Autonivelante crea una superficie plana, lisa y con resistencia a la compresión; similar o superior a la del concreto tradicional.
                                                 <br />
                                                 <br />
-                                                Se puede utilizar en exterior e interior. Su uso esta muy extendido en suelos industriales, pistas polideportivas exteriores y para zonas de tráfico rodado, como garajes o aparcamientos.
+                                                Se puede utilizar en exterior e interior, como por ejemplo en:
+                                                <br />
+                                                <br />
+                                                <ul>{listItems}</ul>
+
                                             </div>
                                         </div>
                                         <section class="aboutcard__buttons">
                                             <div class="aboutcard__buttons-btn-video">
                                                 <Link href="/modalvideo">
-                                                    <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "10rem", height: "2.8rem" }}>Ver video
+                                                    <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "12rem", height: "2.8rem" }}>Reproducir video
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style={{ marginLeft: "12px" }} fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
                                                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                                             <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
                                                         </svg>
-                                                    
+
                                                     </Button>
                                                 </Link>
-
-
-
-
-                                                
-
-
                                             </div>
                                             <div class="aboutcard__buttons-btn-contact">
                                                 <Link href="#contact">

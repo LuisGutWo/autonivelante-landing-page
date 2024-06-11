@@ -35,6 +35,12 @@ export default function Banner() {
     return (
         <>
             <section className="banner-style alternat-2 p_relative">
+                {/* <video width="100%" height="100%" loop autoPlay controls preload="none" playsInline>
+                    <source src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/autonivelante_bg_video.mp4?alt=media&token=82033e63-9eeb-4802-a5d3-2b9bdd19e5fb" type="video/mp4" />
+                    <track
+                        src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/autonivelante_bg_video.mp4?alt=media&token=82033e63-9eeb-4802-a5d3-2b9bdd19e5fb"
+                    />
+                </video> */}
                 <Swiper {...swiperOptions} className="banner-carousel">
                     <SwiperSlide className="slide-item p_relative">
                         <div className="banner-image">
