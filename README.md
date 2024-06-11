@@ -12,4 +12,4 @@ npm install
 
 ## Contribuciones
 
-Los Pull Request son bienvenidos. For major changes, soy un desarrollador Junior y todo el feedback posible... Muchas gracias de antemano.
+Los Pull Request son bienvenidos. Soy un desarrollador Junior y todo el feedback posible me sera de mucha ayuda... Muchas gracias de antemano.

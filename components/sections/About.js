@@ -11,12 +11,16 @@ export default function About() {
     }, {
         id: 1,
         name: 'Zonas de alto tráfico.',
+    },
+    {
         id: 2,
         name: 'Oficinas, Plantas Abiertas.',
-    }, {
+    },
+    {
         id: 3,
         name: 'Galpones, Hangares y Bodegas.',
-    }, {
+    },
+    {
         id: 4,
         name: 'Estacionamientos.',
     }];

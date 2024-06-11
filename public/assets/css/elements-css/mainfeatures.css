@@ -70,7 +70,7 @@
 /* main features main card */
 
 .featcard__text {
-  padding: 2rem;
+  padding: 4rem;
   text-align: left;
   height: 100%;
   position: relative;
@@ -108,7 +108,7 @@
 .mainfeat__bar {
   width: 50px;
   height: 7px;
-  margin: 10px 0;
+  margin: 0.6rem 0 2.5rem 0;
   border-radius: 2.5px;
   background-color: #015c93;
   transition: width 0.2s ease;
