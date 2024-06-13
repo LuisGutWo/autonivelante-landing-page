@@ -25,6 +25,7 @@
 
 .contact_block_one .image-box {
   display: block;
+  overflow: visible;
   flex-direction: column;
   margin-top: 0;
   padding: 0;
@@ -55,8 +56,9 @@
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
+  max-width: 60rem;
   width: 100%;
-  height: 100%;
+  max-height: 40.5rem;
   padding: 2.5rem 4rem 3rem 4rem;
 
   color: #ffffff;
@@ -96,13 +98,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
     border-bottom: solid 1px #f3f5f7;
-    padding: 0 0 2rem 0;
+    padding: 0 0 3rem 0;
+    margin: 0 1rem;
   }
 
   .logo-box .logo {
-    max-width: 9em;
+    max-width: 11em;
+    width: 100%;
   }
 
   .logo-box .logo img {
@@ -110,16 +113,22 @@
   }
   .form__contact {
     margin: 1rem 0;
-
-    &:hover .contactcard__bar {
-      width: 100px;
-    }
   }
 }
 .contactcard__text-two {
   padding: 4rem 1rem 5rem 1rem;
   background-color: #f3f5f7;
   grid-area: form;
+}
+.contact-style {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0 2rem 5rem;
+
+  &:hover .contactcard__bar {
+    width: 100px;
+  }
 }
 /* // /// WhatsApp Floating Button /// */
 .btn-wsp {
@@ -143,6 +152,24 @@
       transform: scale(1.1);
     }
   }
+}
+.social__icons {
+  position: absolute;
+  overflow: visible;
+  z-index: 1;
+  left: 100%;
+  top: 10%;
+  width: 3rem;
+  height: 6rem;
+
+  .contact__links {
+    height: 100%;
+  }
+}
+.social__icons-inner {
+  height: 100%;
+  background-color: #015c93;
+  color: #ffffff;
 }
 
 /* Responsive Desktop mode */
@@ -171,23 +198,16 @@
     width: 65rem;
   }
   .contactcard__text-inner {
-    padding: 6rem 5rem 0.5rem 5rem;
+    padding: 3rem 5rem 0.5rem 5rem;
     width: 100%;
   }
   .contactcard__text-two {
     padding: 0;
+    margin: 0;
     width: 50%;
     display: flex;
     flex-direction: column;
   }
-  .contact-style {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    margin-left: 3rem;
-  }
-
   .aboutcard__preview-txt {
     font-size: 0.9rem;
     text-overflow: ellipsis;
