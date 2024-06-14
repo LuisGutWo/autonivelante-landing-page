@@ -161,7 +161,7 @@ export default function Contact() {
                                         </section>
                                         {/* Contact Form Section End */}
                                     </div>
-                                    <section class="social__icons d-flex flex-column justify-content-center">
+                                    <section class="social__icons">
                                         <Link href="https://www.instagram.com/autonivelante_cl/" className="contact__links mb-1">
                                             <div className="social__icons-inner d-flex justify-content-center align-items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">

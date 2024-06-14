@@ -69,16 +69,6 @@ export default function About() {
                                             </div>
                                         </div>
                                         <section class="aboutcard__buttons">
-                                            {/* <div className="vid-circle bg-white text-dark">
-                                                <a href="https://youtu.be/AzwC6umvd1s" className="vid" onClick={openVideo}>
-                                                    <span className="icon">
-                                                        <svg className="default" width="13" height="20" viewBox="0 0 13 20"
-                                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M0 20L13 10L0 0V20Z"></path>
-                                                        </svg>
-                                                    </span>
-                                                </a>
-                                            </div> */}
                                             <div class="aboutcard__buttons-btn-video">
                                                 <Link href="/modalvideo">
                                                     <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "12rem", height: "2.8rem" }}>Reproducir video
