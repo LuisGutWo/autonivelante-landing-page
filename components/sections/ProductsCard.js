@@ -57,7 +57,7 @@ export default function ProductsCard() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="products__card-maincontent wow fadeInRight animated" data-wow-delay="01ms" data-wow-duration="1000ms">
+                            <div class="products__card-maincontent wow fadeInUp animated" data-wow-delay="01ms" data-wow-duration="1000ms">
                                 <div
                                     className="card main__card text-center"
                                     style={{

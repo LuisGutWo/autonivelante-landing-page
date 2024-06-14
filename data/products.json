@@ -1,0 +1,147 @@
+[
+    {
+        "id": "P001",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/rhenacret_nivelador_img1.png?alt=media&token=e7ae47e9-06b6-4dcb-91bb-803fc7828c92",
+        "name": "Rhenacret Nivelador 2000",
+        "subtitle": "Mortero Autonivelante Cementicio",
+        "desc": "Rhenacret Nivelador 2000 es un mortero autonivelante diseñado para la nivelación y afinado de pisos interiores como losas y sobrelosas de concreto y radieres. Su formulación aporta consistencia plástica y reológica permitiendo una óptima trabajabilidad y terminación final.",
+        "caracteristicas": [
+            {
+                "carach1": "Autonivelante",
+                "carach2": "Fácil preparación y colocación.",
+                "carach3": "Transitable a partir de las 4 horas en adelante.",
+                "carach4": "Alta estabilidad dimensional y durabilidad.",
+                "carach5": "Acabado liso y fino acompañado de alta resistencia final.",
+                "carach6": "Alta trabajabilidad y rendimiento.",
+                "carach7": "Colocación desde 3 hasta 30 mm. de espesor en una sola aplicación.",
+                "carach8": "No sufre retracciones hasta el espesor máximo indicado.",
+                "carach9": "Uso exclusivo para superficies interiores."
+            }
+        ],
+        "brand": "rhenatec",
+        "price": 16500
+    },
+    {
+        "id": "P002",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/rhenatec_top_img2.png?alt=media&token=e239c98a-5e11-4f7e-b303-1b114860b58c",
+        "name": "Rhenacret TOP RTU",
+        "subtitle": "Promotor de Adherencia Listo para Uso",
+        "desc": "Rhenacret TOP RTU es una emulsión elastomérica que permite mejorar la trabajabilidad, adherencia, flexibilidad e impermeabilidad de los morteros. Forma parte del sistema de productos Rhenatec para la nivelación de pisos, actuando como matapolvo, promotor de adherencia y sellador de superficies.",
+        "caracteristicas": [
+            {
+                "carach1": "Producto sustentable",
+                "carach2": "No requiere dilución con agua",
+                "carach3": "Aumenta la resistencia mecánica y la adherencia",
+                "carach4": "Reduce tiempos de secado",
+                "carach5": "Mejora la impermeabilidad",
+                "carach6": "Alta capacidad selladora",
+                "carach7": "Mejora la cohesión interna del mortero",
+                "carach8": "Mayor resistencia a la alcalinidad (evita formación de sales) ",
+                "carach9": "Aumenta la docilidad de los morteros frescos"
+            }
+        ],
+        "brand": "rhenatec",
+        "price": 16500
+    },
+    {
+        "id": "P003",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/rhenapur_espuma_img3.png?alt=media&token=0bca99ff-74d9-4542-883d-ee50521b97f9",
+        "name": "Rhenapur Espuma PU Expansiva",
+        "subtitle": "Espuma de poliuretano",
+        "desc": "Rhenapur Espuma PU Autoexpandible es una espuma de poliuretano de color amarillo suave monocomponente, ideal para rellenos de cavidades, aislación térmica y acústica, con afinidad a una gran variedad de materiales de construcción.",
+        "caracteristicas": [
+            {
+                "carach1": "Monocomponente",
+                "carach2": "Curado por humedad.",
+                "carach3": "Gran afinidad con la mayoría de los materiales de construcción.",
+                "carach4": "Aislante térmico - acústico.",
+                "carach5": "Fácil aplicación.",
+                "carach6": "Ideal para el relleno de huecos y cavidades.",
+                "carach7": "Ideal para fijar puertas, ventanas y paneles."
+            }
+        ],
+        "brand": "rhenatec",
+        "price": 16500
+    },
+    {
+        "id": "P004",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/ultrabond_eco_img4.png?alt=media&token=b1f9cf17-6d80-4333-81cc-88398725b0c8",
+        "name": "Ultrabond Eco V4 Evolution",
+        "subtitle": "Adhesivo Vinílico | 4 Lvt (14 Kg)",
+        "desc": "Adhesivo acrílico universal en dispersión acuosa, sin disolventes, con un tiempo abierto prolongado. Para la colocación de pavimentos de goma, PVC, vinílicos, poliolefínicos, linóleo.",
+        "desc2": "Ultrabond Eco V4 SP es un adhesivo a base de polímeros sintéticos en dispersión acuosa, exento de disolventes, de aplicación simple, que se presenta bajo forma de pasta de color beige lista al uso. Está caracterizado por un tiempo abierto particularmente largo, adecuado para la colocación de pavimentos y revestimientos flexibles, siempre que sean estables dimensionalmente.",
+        "desc3": "Por esta característica se puede utilizar también para la colocación en superficies no absorbentes, como alternativa a los adhesivos policloroprénicos de doble encolado o epoxipoliuretánicos (tiempo de espera 30-40 minutos a +23ºC).",
+        "brand": "mapei",
+        "price": 16500
+    },
+    {
+        "id": "P005",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/primer_g_img5.png?alt=media&token=56877c02-76fa-4f3b-b426-706f37f5a393",
+        "name": "Primer G",
+        "subtitle": "Promotor De Adherencia (10kg)",
+        "desc": "Es una imprimación que consolida las superficies y mejora la adhesión de enlucidos, pinturas, adhesivos para papel pintado, colas, adhesivos para porcelanatos, ceramicas, gres porcelanicos y morteros cementicios (autonivelante).",
+        "desc2": "Primer G es una imprimación con base de resinas sintéticas que, una vez aplicada, se seca formando una película elástica, compacta y brillante. Esta película consolida las superficies, si es necesario, y mejora la adhesión de enlucidos, pinturas, adhesivos para papel pintado, colas, adhesivos para baldosas y morteros de revoque.",
+        "caracteristicas": [
+            {
+                "carach1": "Para el tratamiento de superficies de yeso, antes de la colocación de cerámicos y porcelanatos.",
+                "carach2": "Como capa de anclaje para revoques proyectados de base yeso.",
+                "carach3": " Para mejorar la adhesión de la capa de enlucido sobre superficies cementicias o de anhidrita, o superficies a base de yeso.",
+                "carach4": " Para regular la absorción de superficies cementicias o de yeso."
+            }
+        ],
+        "brand": "mapei",
+        "price": 16500
+    },
+    {
+        "id": "P006",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/mapei_grip_plus_img6.png?alt=media&token=f952b51b-b802-484a-9ef9-40cd2a1d6e50",
+        "name": "Eco Prim Grip Plus",
+        "subtitle": "Promotor De Adherencia Universal | (10 Kg)",
+        "desc": "Listo para usar tanto en interiores como en exteriores, en paredes y pavimentos. Mejora la adherencia de enlucidos y adhesivos para cerámica en superficies no absorbentes como porcelanatos, metal, estuco, yeso, incluso vidrio. Secado rápido y tiempo de uso extendido. Monocomponente y fácil aplicación con brocha o rodillo.",
+        "desc2": "es una imprimación a base de resina sintética en dispersión acuosa y agregada, prensada inodora, libre de Disolventes, con excelentes características de adherencia, resistencia al agua y al envejecimiento. Garantizar una superficie sistema de enganche rugoso ideal para enlucidos, enlucidos y adhesivos cementosos, asegurando una excelente adherencia incluso sobre soportes lisos o poco absorbente",
+        "desc3": "Una vez seco, garantiza la adherencia tenaz de los adhesivos, alisadores y morteros cementicios sobre sustratos de diversa naturaleza: hormigón, ladrillos, piedras, ladrillos, placas de yeso, madera, cerámica, metal, yeso, etc.",
+        "desc4": "Eco Prim Grip Plus es de color gris, listo para usar y de fácil aplicación a brocha y rodillo, no es inflamable y tiene un contenido volátil (VOC) de contenido orgánico muy bajo. puede almacenarse sin precauciones particulares.",
+        "brand": "mapei",
+        "price": 106900
+    },
+    {
+        "id": "P007",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/mapei_ultraplan_contact_img7.png?alt=media&token=fee50e15-e7bc-4c78-9a03-2c74e17e312d",
+        "name": "Ultraplan Contract 3-40",
+        "subtitle": "Mortero Autonivelante",
+        "desc": "Mortero autonivelante altamente fluido, de secado rápido para espesores de 3 a 40 mm con alta resistencia a la compresión (28 MPa). Para nivelación de pisos previo a la instalación de revestimientos: pisos vinilicos pegados, de caucho madera o pisos flotantes (SPC, LVT).",
+        "caracteristicas": [
+            {
+                "carach1": "Exclusivo: Uso interior",
+                "carach2": "espesores de 3 a 40 mm",
+                "carach3": "Transitable a las 3 hrs / Bombeable.",
+                "carach4": "PRESENTACIÓN: bolsas de 20 kg."
+            }
+        ],
+        "brand": "mapei",
+        "price": 17166
+    },
+    {
+        "id": "P008",
+        "image": "https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/mapei_planiprep_fast_img8.png?alt=media&token=9ffe3b19-21a6-4ad9-9a98-0fc17af6010e",
+        "name": "Planiprep Fast Track",
+        "subtitle": "Retape De Piso (4 Kg)",
+        "desc": "Mortero cementicio de retape y parchado tixotrópico de textura fina y secado ultrarrápido. Adecuado para afinado, retape de pisos y muros de hormigón nuevo y existente, para espesores de 0 a 3 mm, preparación de superficies previa a la instalación de todo tipo de revestimientos de pisos y muros. Se puede instalar el revestimiento muy rápidamente (2 horas), incluyendo vinilos, caucho y textiles.",
+        "desc2": "Donde usarlo: sobre pisos y paredes interiores de hormigón, cerámica, piedra natural previo a la instalación de revestimientos vinílicos, de caucho y textiles.",
+        "caracteristicas": [
+            {
+                "carach1": "Consistencia: polvo fino.",
+                "carach2": "Color: gris.",
+                "carach3": "Tiempo de trabajabilidad: aprox. 25 minutos.",
+                "carach4": "Espesor aplicado: de 0 a 3 mm (1 cm para trabajos de reparación localizados).",
+                "carach5": "Ajuste para trafico ligero: aprox. 1 hora (3 mm).",
+                "carach6": "Almacenamiento: 12 meses.",
+                "carach7": "Aplicación: llana.",
+                "carach8": "Consumo: aprox. 1.0 kg/m² por mm de espesor.",
+                "carach9": "Formato: bolsa de aluminio de 4 kg."
+            }
+        ],
+        "brand": "mapei",
+        "price": 14990
+    }
+]

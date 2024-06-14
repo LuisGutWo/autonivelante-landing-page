@@ -6,6 +6,8 @@ import FeaturesBanner from "@/components/sections/FeaturesBanner"
 import MainFeatures from "@/components/sections/MainFeatures"
 import ProductsCard from "@/components/sections/ProductsCard"
 import Contact from "@/components/sections/Contact"
+
+
 export default function Home() {
 
     return (

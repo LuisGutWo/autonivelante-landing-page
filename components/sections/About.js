@@ -1,9 +1,20 @@
 'use client'
-import Link from "next/link"
 import { useState } from "react"
+import Link from "next/link"
+//= Components
+import ModalVideo from '@/components/common/ModalVideo';
+
 import { Button, ListGroup } from "react-bootstrap"
+
+
 export default function About() {
-    const [isOpen, setOpen] = useState(false)
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
+    const [open, setOpen]  = useState(false);
+
+    function openVideo(event) {
+        event.preventDefault();
+        setIsVideoOpen(true);
+    }
 
     const caracteristicas = [{
         id: 0,
@@ -58,6 +69,16 @@ export default function About() {
                                             </div>
                                         </div>
                                         <section class="aboutcard__buttons">
+                                            {/* <div className="vid-circle bg-white text-dark">
+                                                <a href="https://youtu.be/AzwC6umvd1s" className="vid" onClick={openVideo}>
+                                                    <span className="icon">
+                                                        <svg className="default" width="13" height="20" viewBox="0 0 13 20"
+                                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0 20L13 10L0 0V20Z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div> */}
                                             <div class="aboutcard__buttons-btn-video">
                                                 <Link href="/modalvideo">
                                                     <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "12rem", height: "2.8rem" }}>Reproducir video
@@ -85,6 +106,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+                <ModalVideo videoId="AzwC6umvd1s" channel="youtube" isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} autoplay />
             </section>
 
         </>

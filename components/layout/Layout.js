@@ -5,6 +5,7 @@ import BackToTop from '../elements/BackToTop'
 import DataBg from "../elements/DataBg"
 import Footer from "./Footer"
 import Header from "./Header"
+import HeaderAux from "@/components/layout/HeaderAux"
 import WhatsAppButton from "../elements/WhatsAppButton"
 
 export default function Layout({ headerStyle, footerStyle, children, wrapperCls }) {
@@ -37,6 +38,7 @@ export default function Layout({ headerStyle, footerStyle, children, wrapperCls 
             <div className={`page-wrapper ${wrapperCls ? wrapperCls : ""}`} id="#top">
                 {!headerStyle && <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}
                 {headerStyle == 3 ? <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
+                {headerStyle == 4 ? <HeaderAux scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
 
                 {children}
 
