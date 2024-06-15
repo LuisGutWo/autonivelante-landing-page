@@ -29,7 +29,7 @@ const MainProductCard = ({ item }) => {
                     <Image src={item.image} className="card-img-top" style={{ width: "13.5rem", marginTop: "40px", marginBottom: "20px" }} alt="..." />
                     <div className="card-body">
                         <h4 className="card-title fw-bold pb-3">{item.name}</h4>
-                        <div className="card-price fw-bold">$ {item.price}</div>
+                        <div className="card-price fw-bold">{formatPrice(item.price)}</div>
                         <div className="buttons__card d-flex flex-column gap-4 mb-4">
                             <Link href="/product-details" className="btn btn-outline-primary btn-lg"><b>Ver detalle
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" className="bi bi-copy ms-3" viewBox="0 0 16 16">

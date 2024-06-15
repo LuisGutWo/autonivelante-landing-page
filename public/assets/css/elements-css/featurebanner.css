@@ -4,7 +4,9 @@
 
 .feature-block .inner-box {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   padding: 1rem;
 }
@@ -14,7 +16,7 @@
   display: block;
   overflow: hidden;
   border-radius: 5px;
-  width: 23.5rem;
+  width: 100%;
   left: 0;
   box-shadow: rgba(0, 0, 0, 0.203) 0px 25px 50px -12px;
 }
@@ -28,29 +30,29 @@
   transition: all 500ms ease;
 }
 .feature-block .inner-box .image-box button {
-  position: absolute;
-  z-index: 9;
-  top: 4.5em;
-  left: 1.8em;
-  font-size: 0.5rem;
-  width: 28%;
-  padding: 0;
-  height: 1.4rem;
+  display: none;
 }
 
 @media screen and (min-width: 769px) {
   .feature-block .inner-box .image-box {
-    width: 60rem;
-    left: 10%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.203) 0px 25px 50px -12px;
   }
   
 
   .feature-block .inner-box .image-box button {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9;
     top: 62%;
     left: 5%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: 20%;
     padding: 0;
     height: 28%;

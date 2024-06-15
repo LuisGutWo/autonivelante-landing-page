@@ -173,7 +173,7 @@
 /* Responsive Desktop mode */
 @media screen and (min-width: 769px) {
   .contact__section {
-    background-image: url(../../images/resource/autonivelante_contact_bg.png);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/autonivelante_contact_bg.png?alt=media&token=385298ec-ac43-43a5-94d8-52df6e8b50c8);
     background-position: top;
     height: 100%;
   }

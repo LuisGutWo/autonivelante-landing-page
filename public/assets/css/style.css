@@ -19,7 +19,6 @@
 @import url("elements-css/about.css");
 @import url("elements-css/service.css");
 @import url("elements-css/mainfeatures.css");
-@import url("elements-css/maincontact.css");
 @import url("elements-css/page-title.css");
 @import url("elements-css/contact.css");
 @import url("elements-css/video.css");
@@ -2887,9 +2886,6 @@ div#mCSB_1_container {
     padding: 0px 30px;
   }
 
-  .banner-style-two.alternat-2 .banner-image {
-    display: none;
-  }
 
   .feature-block-three .inner-box .icon-box {
     margin-top: 0px;

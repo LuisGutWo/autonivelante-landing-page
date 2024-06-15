@@ -14,7 +14,7 @@ export default function Services() {
         <>
             <section id="services-section" className="service-section p_relative centred bg-color-1 sec-pad p-0">
                 <div className="container p-0 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
-                    <article className="postcard">
+                    <article className="postcard p_relative">
                         <Swiper
                             modules={[Autoplay, Navigation, Pagination, Keyboard]}
                             slidesPerView={1}
@@ -107,8 +107,8 @@ export default function Services() {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container class="buttons__container d-flex flex-row gap-5">
-                                <Link href="#contact" alt="Link sección Contacto" >
+                            <Container class="buttons__container d-flex flex-row gap-5 justify-content-between">
+                                <Link href="/works-gallery" alt="Link sección Contacto" >
                                     <Button variant="light" style={{ width: "11rem", height: "3rem" }}>Proyectos 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                             <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />

@@ -66,6 +66,19 @@
   justify-content: center;
   align-items: center;
   background-color: #015c93;
+
+  p {
+    font-size: 0.8rem;
+    color: #f3f5f7;
+  }
+
+
+}
+.aboutcard__buttons-btn-video button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutcard__buttons-btn-contact {
@@ -126,7 +139,7 @@
 
 @media screen and (min-width: 769px) {
   .about__section {
-    background-image: url(../../images/background/about_bg_image.jpg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/about_bg_image.jpg?alt=media&token=2dbfb3a9-98ce-4738-8489-f4b22bafa650);
     background-position: center;
   }
   .about__main-column {
@@ -146,6 +159,12 @@
     text-align: justify;
     margin-bottom: 3rem;
     margin-top: 2rem;
+  }
+  .aboutcard__buttons {
+    height: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+    grid-template-areas: 50% 50%;
   }
   .modalvideo__section {
     width: 100vw;

@@ -47,7 +47,7 @@ export default function About() {
 
     return (
         <>
-            <section id="about-section" className="about-section p_relative">
+            <section id="about-section" className="about__section p_relative">
                 <div className="auto-container">
                     <div className="row clearfix">
                         <div className="col-lg-6 col-md-12 col-sm-13 image-column ml_0 about__main-column">
@@ -71,7 +71,7 @@ export default function About() {
                                         <section class="aboutcard__buttons">
                                             <div class="aboutcard__buttons-btn-video">
                                                 <Link href="/modalvideo">
-                                                    <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "12rem", height: "2.8rem" }}>Reproducir video
+                                                    <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "10rem", height: "2.8rem" }}><p>Reproducir video</p>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style={{ marginLeft: "12px" }} fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
                                                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                                             <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />

@@ -1,15 +1,13 @@
 import Button from 'react-bootstrap/Button';
-import { Image } from "react-bootstrap"
+import { Container, Image } from "react-bootstrap"
 import Link from 'next/link';
 
 
 export default function FeaturesBanner() {
     return (
         <>
-
             <section className="feature-section bg-color-1 sec-pad centred">
-
-                <div className="auto-container">
+                <Container>
                     <div className="content-box">
                         <div className="feature-block">
                             <div className="feature-block wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
@@ -29,7 +27,7 @@ export default function FeaturesBanner() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Container>
             </section>
         </>
     )
