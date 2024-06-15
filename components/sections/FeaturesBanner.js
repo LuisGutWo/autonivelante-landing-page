@@ -1,6 +1,6 @@
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import { Container, Image } from "react-bootstrap"
-import Link from 'next/link';
+import Link from "next/link";
 
 
 export default function FeaturesBanner() {

@@ -1,7 +1,7 @@
 
 'use client'
 import { useEffect, useState } from "react"
-import BackToTop from '../elements/BackToTop'
+import BackToTop from "../elements/BackToTop"
 import DataBg from "../elements/DataBg"
 import Footer from "./Footer"
 import Header from "./Header"

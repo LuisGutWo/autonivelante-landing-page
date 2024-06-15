@@ -1,7 +1,7 @@
 'use client'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import { Container, Image, Modal } from 'react-bootstrap'
+import Link from "next/link"
+import React, { useState } from "react"
+import { Container, Image, Modal } from "react-bootstrap"
 
 export default function ProductsCard() {
     const [showContactSend, setShowContactSend] = useState(false);

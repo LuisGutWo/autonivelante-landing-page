@@ -2,11 +2,11 @@
 import Link from "next/link"
 import { Button, Col, Container, Row } from "react-bootstrap"
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
 
-import { Navigation, Pagination, Keyboard, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard, Autoplay } from "swiper/modules";
 
 
 export default function Services() {

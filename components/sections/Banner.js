@@ -1,6 +1,5 @@
 'use client'
 import Link from "next/link"
-import React, { useEffect, useRef } from 'react';
 
 export default function Banner() {
 
