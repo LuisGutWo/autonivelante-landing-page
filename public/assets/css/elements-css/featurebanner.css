@@ -38,6 +38,7 @@
     position: relative;
     display: block;
     overflow: hidden;
+    max-width: 60rem;
     border-radius: 5px;
     left: 0;
     box-shadow: rgba(0, 0, 0, 0.203) 0px 25px 50px -12px;
@@ -52,9 +53,9 @@
     z-index: 9;
     top: 62%;
     left: 5%;
-    font-size: 1.5rem;
-    width: 20%;
+    font-size: 100%;
+    width: 18%;
     padding: 0;
-    height: 28%;
+    height: 25%;
   }
 }

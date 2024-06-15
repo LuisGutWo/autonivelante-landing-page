@@ -60,7 +60,7 @@
   margin-bottom: 30px;
 }
 .buttons__card {
-  width: 12rem;
+  width: 100%;
 }
 .exit__button-card {
   position: relative;
@@ -121,9 +121,13 @@
   box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
 }
 .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 0;
   padding-bottom: 25px;
-  width: 250px;
+  width: 90%;
 }
 .card-price {
   font-size: 25px;

@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  place-items: initial;
 }
 .mainfeat__bar-2 {
   width: 50px;
@@ -70,7 +71,7 @@
 /* main features main card */
 
 .featcard__text {
-  padding: 4rem;
+  padding: 2rem;
   text-align: left;
   height: 100%;
   position: relative;
@@ -138,6 +139,7 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 4rem;
+  margin: 0;
 
   &:hover .mainfeat__bar-2 {
     width: 100px;
@@ -171,6 +173,7 @@
   }
   .featcard__text {
     justify-content: flex-start;
+    padding: 4rem;
     padding-top: 0;
     padding-left: 40px;
   }
@@ -184,9 +187,12 @@
   .featcard__content p {
     font-size: 1rem;
   }
+
   .mainfeat-section .bg-layer {
     position: absolute;
     width: 50%;
+    top: 0px;
+    right: 0px;
   }
   .mainfeat-section .outer-box {
     position: absolute;

@@ -123,6 +123,14 @@
     font-size: 0.6rem;
   }
 
+  .buttons__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
   .postcard__tagbox {
     display: flex;
     flex-flow: row wrap;
@@ -197,6 +205,13 @@
       text-align: justify;
       padding-bottom: 0;
       height: 100%;
+    }
+
+    .buttons__container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
     }
 
     .media.postcard__text:before {
