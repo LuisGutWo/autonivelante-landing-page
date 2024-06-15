@@ -1,12 +1,12 @@
 
 
-/* .banner-video {
+.banner-video {
   position: absolute;
   z-index: -1;
   height: 100%;
   width: 100%;
   object-fit: cover;
-} */
+}
 
 /** banner style main **/
 
@@ -113,10 +113,10 @@
 .banner-style.alternat-2 {
   position: relative;
   overflow: hidden;
-  background-image: url(../../images/banner/autonivelante_banner_img.png) !important;
+  /* background-image: url(../../images/banner/autonivelante_banner_img.png) !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .banner-style.alternat-2::after {
   content: "";
@@ -128,7 +128,7 @@
   background-image: linear-gradient(
     to top,
     rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.893)
+    rgba(0, 0, 0, 0.175)
   );
 }
 
