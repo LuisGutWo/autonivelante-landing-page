@@ -179,6 +179,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "text image";
     height: 40.43rem;
+    max-width: 90rem;
     width: 100%;
       
 
@@ -187,7 +188,7 @@
     }
 
     .postcard__tagbox {
-      justify-content: start;
+      justify-content: flex-start;
     }
 
     .postcard__img {

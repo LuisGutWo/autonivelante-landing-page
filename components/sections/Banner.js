@@ -6,7 +6,7 @@ export default function Banner() {
     return (
         <>
             <section className="banner-style alternat-2 p_relative">
-                <video className="banner-video" controls autoPlay width="100%" height="100%" loop muted>
+                <video className="banner-video" autoPlay width="100%" height="100%" loop muted>
                     <source src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/autonivelante_bg_video.mp4?alt=media&token=82033e63-9eeb-4802-a5d3-2b9bdd19e5fb" type="video/mp4" />
                 </video>
                 <div className="banner__container">

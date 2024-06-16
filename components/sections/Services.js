@@ -13,7 +13,7 @@ export default function Services() {
     return (
         <>
             <section id="services-section" className="service-section p_relative centred bg-color-1 sec-pad p-0">
-                <Container fluid className="p-0 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
+                <Container fluid className="d-flex justify-content-center p-0 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1000ms">
                     <article className="postcard p_relative">
                         <Swiper
                             modules={[Autoplay, Navigation, Pagination, Keyboard]}
