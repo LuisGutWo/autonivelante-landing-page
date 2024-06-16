@@ -37,7 +37,7 @@ export default function About() {
     }];
 
     const listItems = caracteristicas.map(caracteristica =>
-        <li key={caracteristicas.id}>
+        <li key={caracteristica.id}>
             <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" className="bi bi-circle-fill pe-1" viewBox="0 0 16 16">
                 <circle cx="8" cy="8" r="8" />
             </svg>
@@ -54,7 +54,7 @@ export default function About() {
                             <div className="image_block">
                                 <div className="image-box p_relative">
                                     <div className="aboutcard__text bg-light wow fadeInUp animated" data-wow-delay="05ms" data-wow-duration="1500ms">
-                                        <div class="aboutcard__text-inner">
+                                        <div className="aboutcard__text-inner">
                                             <h1 className="postcard__title blue text-dark text-start fs-3 fw-bold">¿Qué es el autonivelante?</h1>
                                             <div className="aboutcard__bar"></div>
                                             <div className="aboutcard__preview-txt">
@@ -68,11 +68,11 @@ export default function About() {
 
                                             </div>
                                         </div>
-                                        <section class="aboutcard__buttons">
-                                            <div class="aboutcard__buttons-btn-video">
+                                        <section className="aboutcard__buttons">
+                                            <div className="aboutcard__buttons-btn-video">
                                                 <Link href="/modalvideo">
                                                     <Button onClick={() => setOpen(true)} variant="outline-light" style={{ width: "10rem", height: "2.8rem" }}><p>Reproducir video</p>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style={{ marginLeft: "12px" }} fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style={{ marginLeft: "12px" }} fill="currentColor" className="bi bi-play-circle" viewBox="0 0 16 16">
                                                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                                             <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
                                                         </svg>
@@ -80,10 +80,10 @@ export default function About() {
                                                     </Button>
                                                 </Link>
                                             </div>
-                                            <div class="aboutcard__buttons-btn-contact">
+                                            <div className="aboutcard__buttons-btn-contact">
                                                 <Link href="#contact">
                                                     <Button variant="outline-dark" style={{ width: "10rem", height: "2.8rem" }}>Contáctenos
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                                             <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                                         </svg>
                                                     </Button>{' '}
