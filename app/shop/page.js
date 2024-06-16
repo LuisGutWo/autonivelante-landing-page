@@ -1,5 +1,6 @@
 
 import Layout from "@/components/layout/Layout"
+import Image from "next/image"
 import Link from "next/link"
 export default function Home() {
 
@@ -52,7 +53,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-1.png" alt="Wooden Tea Table" />
+                                                                <Image src="assets/images/shop/shop-1.png" alt="Wooden Tea Table" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -84,7 +85,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-2.png" alt="White Lamp Handcraft" />
+                                                                <Image src="assets/images/shop/shop-2.png" alt="White Lamp Handcraft" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -116,7 +117,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-3.png" alt="Armchair Black Leather" />
+                                                                <Image src="assets/images/shop/shop-3.png" alt="Armchair Black Leather" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -138,7 +139,7 @@ export default function Home() {
                                                             <h4>
                                                                 <Link href="/product-details">Armchair Black Leather</Link>
                                                             </h4>
-                                                            <span className="price">"$12.00"</span>
+                                                            <span className="price">$12.00</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,7 +149,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-4.png" alt="Nordic Kitchen Teapot" />
+                                                                <Image src="assets/images/shop/shop-4.png" alt="Nordic Kitchen Teapot" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -180,7 +181,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-5.png" alt="Globe Electric Tech Series" />
+                                                                <Image src="assets/images/shop/shop-5.png" alt="Globe Electric Tech Series" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -212,7 +213,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-6.png" alt="White Vase Handcraft" />
+                                                                <Image src="assets/images/shop/shop-6.png" alt="White Vase Handcraft" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -244,7 +245,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-7.png" alt="Wooden Chair Anthracite" />
+                                                                <Image src="assets/images/shop/shop-7.png" alt="Wooden Chair Anthracite" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -276,7 +277,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-8.png" alt="Stylish Showpiece" />
+                                                                <Image src="assets/images/shop/shop-8.png" alt="Stylish Showpiece" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>
@@ -308,7 +309,7 @@ export default function Home() {
                                                     <div className="inner-box">
                                                         <div className="image-box">
                                                             <figure className="image">
-                                                                <img src="assets/images/shop/shop-9.png" alt="Treated Pine Wood Chair" />
+                                                                <Image src="assets/images/shop/shop-9.png" alt="Treated Pine Wood Chair" />
                                                             </figure>
                                                             <ul className="option-list clearfix">
                                                                 <li><Link href="/product-details"><i className="icon-36"></i></Link></li>

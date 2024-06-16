@@ -1,12 +1,11 @@
 'use client'
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Layout from "@/components/layout/Layout";
 import data from "@/data/products.json";
 
 import MainProductCard from "@/components/elements/MainProductCard";
-import Loader from "@/app/Loader";
 
 const MainProductsList = () => {
 

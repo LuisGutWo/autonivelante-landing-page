@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
-import React, { useRef, useState } from 'react'
-import { Container, Image, Modal } from 'react-bootstrap'
+import React, { useRef } from 'react'
+import { Image, Modal } from 'react-bootstrap'
 
 
 import { formatPrice } from "@/utils/formatPrice";
@@ -9,7 +9,6 @@ import { formatPrice } from "@/utils/formatPrice";
 
 
 const MainProductCard = ({ item }) => {
-    const [showCart, setShowCart] = useState(false);
     const target = useRef(null);
 
 

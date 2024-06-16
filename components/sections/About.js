@@ -4,7 +4,7 @@ import Link from "next/link"
 //= Components
 import ModalVideo from '@/components/common/ModalVideo';
 
-import { Button, ListGroup } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 
 
 export default function About() {
