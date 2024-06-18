@@ -32,7 +32,7 @@ export default function ProductsCard() {
 
                                     <Image src="assets/images/shop/producto-rhenatec.png" className="card-img-top" style={{ width: "13.5rem", marginTop: "40px", marginBottom: "20px" }} alt="..." />
                                     <div className="card-body">
-                                        <h4 className="card-title fw-bold pb-3">Montero
+                                        <h4 className="card-title fw-bold pb-3">Mortero
                                             <br />
                                             Autonivelante</h4>
                                         <div className="card-price fw-bold">$ 16.500</div>
@@ -70,7 +70,7 @@ export default function ProductsCard() {
 
                                     <Image src="assets/images/shop/producto-mapei.png" className="card-img-top" style={{ width: "13.5rem", marginTop: "40px", marginBottom: "20px" }} alt="..." />
                                     <div className="card-body">
-                                        <h4 className="card-title fw-bold pb-3">Montero
+                                        <h4 className="card-title fw-bold pb-3">Mortero
                                             <br />
                                             Autonivelante</h4>
                                         <div className="card-price fw-bold">$ 22.500</div>
@@ -100,7 +100,7 @@ export default function ProductsCard() {
 
                                     <Image src="assets/images/shop/producto-mapei.png" className="card-img-top" style={{ width: "13.5rem", marginTop: "40px", marginBottom: "20px" }} alt="..." />
                                     <div className="card-body">
-                                        <h4 className="card-title fw-bold pb-3">Montero
+                                        <h4 className="card-title fw-bold pb-3">Mortero
                                             <br />
                                             Autonivelante</h4>
                                         <div className="card-price fw-bold">$ 22.500</div>

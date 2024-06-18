@@ -11,9 +11,8 @@ export default function Menu() {
                 <li><Link className={`link ${usePathname === '/#services-section' ? 'active' : ''}`} href="/#services-section">Servicios</Link>
                 </li>
                 <li><Link className={`link ${usePathname === '/products' ? 'active' : ''}`} href="/products">Productos</Link></li>
-                <li><Link className={`link ${usePathname === '/#contact' ? 'active' : ''}`} href="/#contact">Contacto</Link></li>
+                <li><Link className={`link ${usePathname === '/contact-page' ? 'active' : ''}`} href="/contact-page">Contacto</Link></li>
             </ul>
         </>
     )
 }
- 

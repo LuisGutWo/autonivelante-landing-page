@@ -81,7 +81,7 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu, isSideb
                                     <Modal show={showCartSend} onHide={handleCloseCartSend}>
                                         <Modal.Header>
                                             <Modal.Body>
-                                                Hola... Gracias por visitarnos. Si deseas obtener nuestros productos y servicios conéctate con nosotros. Estaremos los mas pronto posible en contacto contigo... Gracias 😎
+                                                Hola... Gracias por visitarnos. Si deseas obtener nuestros productos y servicios conéctate con nosotros, te responderemos de inmediato.
                                             </Modal.Body>
                                         </Modal.Header>
                                     </Modal>
