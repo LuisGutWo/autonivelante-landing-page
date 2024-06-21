@@ -69,9 +69,9 @@ export default function Contact() {
                                                             </svg><p className="text-light">
                                                                 <b>Numero de contacto</b>
                                                                 <br />
-                                                                +56 9 45 280 836
+                                                                +56 9 7528 0836
                                                                 <br />
-                                                                +56 9 71 447 333
+                                                                +56 9 7144 7333
                                                             </p>
                                                         </div>
                                                     </Col>
