@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { NEXT_PRODUCTS_API_URL } from "../config";
+import { NEXT_PRODUCTS_API_URL } from "@/app/config";
 
 import Layout from "@/components/layout/Layout";
 
