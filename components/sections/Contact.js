@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import Link from "next/link"
 import { Button, Col, Container, Image, Row, Modal, Form } from "react-bootstrap"
 import emailjs from "@emailjs/browser";
+import { NEXT_FORM_CURRENT, NEXT_SERVICE_EMAILJS, NEXT_TEMPLATE_EMAILJS } from "@/app/config";
 
 
 export default function Contact() {
@@ -17,10 +18,10 @@ export default function Contact() {
 
         emailjs
             .sendForm(
-                process.env.NEXT_SERVICE_EMAILJS,
-                process.env.NEXT_TEMPLATE_EMAILJS,
+                NEXT_SERVICE_EMAILJS,
+                NEXT_TEMPLATE_EMAILJS,
                 form.current,
-                process.env.NEXT_FORM_CURRENT
+                NEXT_FORM_CURRENT
             )
             .then(
                 (result) => {
