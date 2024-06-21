@@ -13,7 +13,7 @@ const waitSeconds = () => {
 
 export default async function MainProductsList() {
     await waitSeconds()
-    const res = await fetch(`${NEXT_PRODUCTS_API_URL}`);
+    const res = await fetch(`${NEXT_PRODUCTS_API_URL}/products.json`);
     const data = await res.json();
 
     return (
