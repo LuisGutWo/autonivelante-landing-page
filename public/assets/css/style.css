@@ -949,7 +949,8 @@ img {
 }
 
 .main-header .outer-box .logo-box .logo {
-  max-width: 15em;
+  max-width: 19em;
+  width: 100%;
 }
 
 .main-header .outer-box .logo-box .logo img {
@@ -2151,7 +2152,7 @@ div#mCSB_1_container {
 
 .main-footer .footer-bottom .footer-logo img {
   width: 20%;
-  margin: 1rem;
+  margin: 2rem;
 }
 
 /** header-style-two **/

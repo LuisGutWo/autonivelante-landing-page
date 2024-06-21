@@ -112,10 +112,11 @@
 }
 
 .products__card-maincontent {
-  height: 100%;
+  height: 88vh;
 }
 
 .main__card {
+  max-height: 100vh;
   height: 100%;
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
@@ -123,10 +124,12 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 0;
   padding-bottom: 25px;
+  max-height: 25rem;
+  height: 100%;
   width: 90%;
 }
 .card-price {

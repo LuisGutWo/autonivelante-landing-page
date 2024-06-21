@@ -7,8 +7,13 @@ import MainFeatures from "@/components/sections/MainFeatures"
 import ProductsCard from "@/components/sections/ProductsCard"
 import Contact from "@/components/sections/Contact"
 
+const waitSeconds = () => {
+    return new Promise((resolve) => setTimeout(resolve, 1500));
+}
 
-export default function Home() {
+
+export default async function Home() {
+    await waitSeconds();
 
     return (
         <>

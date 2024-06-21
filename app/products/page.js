@@ -1,13 +1,20 @@
-'use client'
 import React from "react";
 import { Container } from "react-bootstrap";
+import { NEXT_PRODUCTS_API_URL } from "../config";
 
 import Layout from "@/components/layout/Layout";
-import data from "@/data/products.json";
+
 
 import MainProductCard from "@/components/elements/MainProductCard";
 
-const MainProductsList = () => {
+const waitSeconds = () => {
+    return new Promise(resolve => { setTimeout(resolve, 1500) })
+}
+
+export default async function MainProductsList() {
+    await waitSeconds()
+    const res = await fetch(`${NEXT_PRODUCTS_API_URL}`);
+    const data = await res.json();
 
     return (
         <>
@@ -16,16 +23,14 @@ const MainProductsList = () => {
                     <div className="container p-5 d-flex justify-content-center align-items-center flex-row flex-wrap gap-3">
                         {
                             data.map((item) => (
-                                <MainProductCard key={item.id} item={item}/>
+                                <MainProductCard key={item.id} item={item} />
 
                             ))
                         }
                     </div>
                 </Container>
-                
+
             </Layout>
         </>
     );
 };
-
-export default MainProductsList;
