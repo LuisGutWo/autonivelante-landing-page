@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { NEXT_PRODUCTS_API_URL } from "@/app/config";
 
 import Layout from "@/components/layout/Layout";
 
@@ -13,7 +12,7 @@ const waitSeconds = () => {
 
 export default async function MainProductsList() {
     await waitSeconds()
-    const res = await fetch(`${NEXT_PRODUCTS_API_URL}/products.json`);
+    const res = await fetch("https://autonivelante-725bf-default-rtdb.firebaseio.com/products.json");
     const data = await res.json();
 
     return (
