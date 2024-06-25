@@ -1,5 +1,5 @@
 'use client'
-import Layout from "@/components/layout/Layout"
+import Layout from "@/src/components/layout/Layout"
 import Image from "next/image"
 import Link from "next/link"
 export default function Home() {

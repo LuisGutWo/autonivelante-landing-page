@@ -4,7 +4,7 @@ import BackToTop from "../elements/BackToTop"
 import DataBg from "../elements/DataBg"
 import Footer from "./Footer"
 import Header from "./Header"
-import HeaderAux from "@/components/layout/HeaderAux"
+import HeaderAux from "@/src/components/layout/HeaderAux"
 import WhatsAppButton from "../elements/WhatsAppButton"
 
 export default function Layout({ headerStyle, footerStyle, children, wrapperCls }) {

@@ -1,18 +1,20 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-import Layout from "@/components/layout/Layout";
+import Layout from "@/src/components/layout/Layout";
 
 
-import MainProductCard from "@/components/elements/MainProductCard";
+
+import { NEXT_PRODUCTS_API_URL } from "../config";
+import MainProductCard from "./MainProductCard";
 
 const waitSeconds = () => {
     return new Promise(resolve => { setTimeout(resolve, 1500) })
 }
 
-export default async function MainProductsList() {
+export default async function MainProductsPage() {
     await waitSeconds()
-    const res = await fetch("https://autonivelante-725bf-default-rtdb.firebaseio.com/products.json");
+    const res = await fetch(NEXT_PRODUCTS_API_URL);
     const data = await res.json();
 
     return (
@@ -21,8 +23,8 @@ export default async function MainProductsList() {
                 <Container fluid className="mt_150">
                     <div className="container p-5 d-flex justify-content-center align-items-center flex-row flex-wrap gap-3">
                         {
-                            data.map((item) => (
-                                <MainProductCard key={item.id} item={item} />
+                            data.map((item, index) => (
+                                <MainProductCard key={index} item={item} />
 
                             ))
                         }

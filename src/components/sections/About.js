@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 //= Components
-import ModalVideo from '@/components/common/ModalVideo';
+import ModalVideo from '@/src/components/common/ModalVideo';
 
 import { Button } from "react-bootstrap"
 

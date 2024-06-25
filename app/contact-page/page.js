@@ -1,5 +1,5 @@
-import Layout from '@/components/layout/Layout'
-import Contact from '@/components/sections/Contact'
+import Layout from '@/src/components/layout/Layout'
+import Contact from '@/src/components/sections/Contact'
 import React from 'react'
 
 const ContactPage = () => {

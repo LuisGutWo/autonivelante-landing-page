@@ -5,7 +5,7 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import 'swiper/css/free-mode';
-import { inter, jost } from '@/lib/font'
+import { inter, jost } from '@/src/lib/font'
 export const metadata = {
     title: 'Autonivelante.cl',
     description: 'Generado con React-Bootstrap',

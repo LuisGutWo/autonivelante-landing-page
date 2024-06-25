@@ -1,5 +1,5 @@
 'use client'
-import Layout from "@/components/layout/Layout"
+import Layout from "@/src/components/layout/Layout"
 import Link from "next/link"
 import { Container, Image } from "react-bootstrap"
 import 'swiper/css/thumbs'

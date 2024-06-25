@@ -1,7 +1,7 @@
 'use client'
 // import VideoPopup from '@/components/elements/VideoPopup'
 import Link from 'next/link'
-import Layout from "@/components/layout/Layout"
+import Layout from "@/src/components/layout/Layout"
 import { Container } from 'react-bootstrap'
 import ReactPlayer from 'react-player'
 
