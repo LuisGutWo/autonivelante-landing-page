@@ -6,7 +6,6 @@ import Footer from "./Footer";
 import Header from "./Header";
 import HeaderAux from "@/src/components/layout/HeaderAux";
 import WhatsAppButton from "../elements/WhatsAppButton";
-import WOW from 'wowjs';
 
 export default function Layout(props) {
     const { headerStyle, footerStyle, children, wrapperCls } = props;
@@ -21,11 +20,11 @@ export default function Layout(props) {
     }, [isMobileMenu]);
 
     useEffect(() => {
+        const WOW = require('wowjs')
         window.wow = new WOW.WOW({ live: false });
         window.wow.init();
 
-        const scrollEffect = () => {
-            if( !window || typeof window === 'undefined' ) return false;    
+        const scrollEffect = () => {  
             setScroll(window.scrollY > 100);
         }
 
