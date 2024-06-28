@@ -3,6 +3,7 @@ import Layout from "@/src/components/layout/Layout";
 import Link from "next/link";
 import { Container, Image } from "react-bootstrap";
 import "swiper/css/thumbs";
+import { productsListPage } from "@/src/config/productsListPage";
 
 export default function Home() {
   return (
@@ -14,17 +15,22 @@ export default function Home() {
               <div className="card detailmain__card">
                 <div className="detailcard-body">
                   <h4 className="detailproductcard-title fw-bold pb-3">
-                    Mortero Autonivelante
+                    {productsListPage[1].name}
                   </h4>
-
                   <p className="fs_11 fw-bold">
-                    Mortero autonivelante altamente fluido, de secado rápido
-                    para espesores de 3 a 40 mm con alta resistencia a la
-                    compresión (28 MPa). Para nivelación de pisos previo a la
-                    instalación de revestimientos.
+                    {productsListPage[1].subtitle}
                   </p>
+                  <p className="fs_11 fw-bold">
+                    {productsListPage[1].desc}
+                  </p>
+                  <ul className="fs_11 fw-bold">
+                    <li>
+                        {productsListPage[1].features}
+                    </li>
+                  </ul>
+                  
 
-                  <div className="detailcard-price fw-bold">$ 22.500</div>
+                  <div className="detailcard-price fw-bold">{productsListPage[1].price}</div>
                   <div className="buttons__card d-flex flex-column">
                     <Link
                       href="/#contact"
@@ -70,7 +76,7 @@ export default function Home() {
                   alt="..."
                 />
                 <div className="exit__button-card">
-                  <Link href="/#products">
+                  <Link href="/products">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"

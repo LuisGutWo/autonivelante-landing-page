@@ -2,29 +2,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Container, Image, Modal } from "react-bootstrap";
+import { productsListPage } from "@/src/config/productsListPage";
 
-const products = [
-  {
-    name: "Mortero Autonivelante",
-    image: "assets/images/shop/producto-rhenatec.png",
-    price: "$16.500",
-    url: "/product-details-1",
-  },
-  {
-    name: "Mortero Autonivelante",
-    image: "assets/images/shop/producto-mapei.png",
-    price: "$22.500",
-    url: "/product-details-2",
-  },
-  {
-    name: "Mortero Autonivelante",
-    image: "assets/images/shop/producto-mapei.png",
-    price: "$22.500",
-    url: "/product-details-3",
-  },
-];
-
-export default function ProductsCard() {
+export default function ProductsCardPage() {
   const [showContactSend, setShowContactSend] = useState(false);
 
   return (
@@ -34,22 +14,11 @@ export default function ProductsCard() {
     >
       <Container fluid>
         <div className="products__card-container productcard__text">
-          <div
-            className="product__card-title wow fadeIn animated"
-            data-wow-delay="01ms"
-            data-wow-duration="1000ms"
-          >
-            <h2 className="productcard__title blue text-dark text-center fw-bold">
-              Nuestros Productos
-            </h2>
-            <div className="productcard__bar"></div>
-          </div>
-
           <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4  align-items-center">
-            {products.map((item, i) => (
+            {productsListPage.map((item, i) => (
               <div
                 key={i}
-                className="products__card-maincontent wow fadeInLeft animated"
+                className="products__card-maincontent wow fadeIn animated"
                 data-wow-delay="01ms"
                 data-wow-duration="1000ms"
               >
