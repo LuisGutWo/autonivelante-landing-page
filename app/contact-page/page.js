@@ -1,6 +1,5 @@
-import Layout from '@/src/components/layout/Layout'
-import Contact from '@/src/components/sections/Contact'
-import React from 'react'
+import Layout from '@/src/components/layout/Layout';
+import Contact from '@/src/components/sections/Contact';
 
 const ContactPage = () => {
     return (
@@ -17,7 +16,7 @@ const ContactPage = () => {
                 {/* Google Map Section End */}
             </div>
         </Layout>
-    )
+    );
 }
 
-export default ContactPage
+export default ContactPage;

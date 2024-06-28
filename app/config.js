@@ -1,4 +1,5 @@
-export const { NEXT_PRODUCTS_API_URL,
+export const {
+    NEXT_PRODUCTS_API_URL,
     NEXT_GALLERY_API_URL,
     NEXT_API_KEY,
     NEXT_AUTH_DOMAIN,
@@ -10,5 +11,5 @@ export const { NEXT_PRODUCTS_API_URL,
     NEXT_PUBLIC_API_URL,
     NEXT_SERVICE_EMAILJS,
     NEXT_TEMPLATE_EMAILJS,
-    NEXT_FORM_CURRENT
-} = process.env
+    NEXT_FORM_CURRENT,
+} = process.env;

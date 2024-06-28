@@ -4,12 +4,13 @@ import MobileMenu from "./MobileMenu"
 import { Image, Modal } from "react-bootstrap"
 import { useState } from "react";
 
+export default function HeaderAux(props) {
+    const { scroll, isMobileMenu, handleMobileMenu, isSidebar } = props;
 
-export default function HeaderAux({ scroll, isMobileMenu, handleMobileMenu, isSidebar }) {
-    const [showCartSend, setShowCartSend] = useState(false);
-
+    const [ showCartSend, setShowCartSend ] = useState(false);
     const handleCloseCartSend = () => setShowCartSend(false);
     const handleShowCartSend = () => setShowCartSend(true);
+    
     return (
         <>
             <header className={`main-header header-style-three2 ${scroll ? "fixed-header2" : ""}`}>
@@ -18,11 +19,11 @@ export default function HeaderAux({ scroll, isMobileMenu, handleMobileMenu, isSi
                     <div className="outer-container2">
                         <div className="outer-box">
                             <div className="logo-box">
-                                <figure className="logo">
-                                    <Link href="/">
+                                <Link href="/">
+                                    <figure className="logo">
                                         <Image src="assets/images/logo_horizontal.png" alt="" />
-                                    </Link>
-                                </figure>
+                                    </figure>
+                                </Link>
                             </div>
                             <div className="menu-area clearfix">
                                 {/* Mobile Navigation Toggler */}
@@ -95,9 +96,6 @@ export default function HeaderAux({ scroll, isMobileMenu, handleMobileMenu, isSi
             </header>
 
             <MobileMenu handleMobileMenu={handleMobileMenu} />
-
-
-
         </>
     )
 }

@@ -1,51 +1,54 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import BackToTop from "../elements/BackToTop"
-import DataBg from "../elements/DataBg"
-import Footer from "./Footer"
-import Header from "./Header"
-import HeaderAux from "@/src/components/layout/HeaderAux"
-import WhatsAppButton from "../elements/WhatsAppButton"
+'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+import BackToTop from "../elements/BackToTop";
+import DataBg from "../elements/DataBg";
+import Footer from "./Footer";
+import Header from "./Header";
+import HeaderAux from "@/src/components/layout/HeaderAux";
+import WhatsAppButton from "../elements/WhatsAppButton";
 
-export default function Layout({ headerStyle, footerStyle, children, wrapperCls }) {
-    const [scroll, setScroll] = useState(0)
+export default function Layout(props) {
+    const { headerStyle, footerStyle, children, wrapperCls } = props;
+    const [ scroll, setScroll ] = useState(0);
+    const [ isMobileMenu, setMobileMenu ] = useState(false);
 
-    // Mobile Menu
-    const [isMobileMenu, setMobileMenu] = useState(false)
-    const handleMobileMenu = () => {
-        setMobileMenu(!isMobileMenu)
-        !isMobileMenu ? document.body.classList.add("mobile-menu-visible") : document.body.classList.remove("mobile-menu-visible")
-    }
+    const handleMobileMenu = useCallback(() => {
+        setMobileMenu(!isMobileMenu);
+        !isMobileMenu
+            ? document.body.classList.add("mobile-menu-visible")
+            : document.body.classList.remove("mobile-menu-visible");
+    }, [isMobileMenu]);
 
     useEffect(() => {
         const WOW = require('wowjs')
-        window.wow = new WOW.WOW({
-            live: false
-        })
-        window.wow.init()
+        window.wow = new WOW.WOW({ live: false });
+        window.wow.init();
 
-        document.addEventListener("scroll", () => {
-            const scrollCheck = window.scrollY > 100
-            if (scrollCheck !== scroll) {
-                setScroll(scrollCheck)
-            }
-        })
-    }, [scroll])
+        const scrollEffect = () => {  
+            setScroll(window.scrollY > 100);
+        }
+
+        document.addEventListener("scroll", scrollEffect);
+        return () => { document.removeEventListener('scroll', scrollEffect) }
+    }, []);
+
     return (
         <>
             <DataBg />
+
             <div className={`page-wrapper ${wrapperCls ? wrapperCls : ""}`} id="#top">
-                {!headerStyle && <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}
-                {headerStyle == 3 ? <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
-                {headerStyle == 4 ? <HeaderAux scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null}
+                { !headerStyle || headerStyle === 3 ? <Header scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} /> : null }
+                { headerStyle === 4 ? <HeaderAux scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu } /> : null}
 
-                {children}
+                { children }
 
-                {!footerStyle && < Footer />}
-                {footerStyle == 1 ? < Footer /> : null}
+                { !footerStyle ? < Footer /> : null }
+                { footerStyle === 1 ? < Footer /> : null }
             </div>
+
             <WhatsAppButton />
-            <BackToTop scroll={scroll} />
+
+            { scroll ? <BackToTop /> : null }
         </>
     )
 }
