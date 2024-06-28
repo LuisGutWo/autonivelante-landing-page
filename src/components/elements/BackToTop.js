@@ -1,14 +1,10 @@
 
-export default function BackToTop({ scroll }) {
-
+export const BackToTop = () => {
     return (
-        <>
-            {scroll && (
-                <a className="scroll-to-top scroll-to-target d-block" href="#top">
-                    <i className="fas fa-angle-up"></i>
-                </a>
-                
-            )}
-        </>
-    )
+        <a className="scroll-to-top scroll-to-target d-block" href="#top">
+            <i className="fas fa-angle-up"></i>
+        </a>
+    );
 }
+
+export default BackToTop;

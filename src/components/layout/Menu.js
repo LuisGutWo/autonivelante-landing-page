@@ -1,20 +1,20 @@
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { menuList } from "@/src/config/menu";
 
 export default function Menu() {
-
     return (
-        <>
-            <ul className="navigation clearfix">
-                <li><Link className={`link ${usePathname === '/' ? 'active' : ''}`} href="/#">Home</Link>
+        <ul className="navigation clearfix">
+            { menuList.map((item, i) => 
+                <li key={i}>
+                    <Link
+                        className={`link ${usePathname === item.href ? 'active' : ''}`}
+                        href={item.route}
+                    >
+                        { item.name }
+                    </Link>
                 </li>
-                <li><Link className={`link ${usePathname === '/#services-section' ? 'active' : ''}`} href="/#services-section">Servicios</Link>
-                </li>
-                <li><Link className={`link ${usePathname === '/#' ? 'active' : ''}`} href="/#">Proyectos</Link>
-                </li>
-                <li><Link className={`link ${usePathname === '/products' ? 'active' : ''}`} href="/products">Productos</Link></li>
-                <li><Link className={`link ${usePathname === '/contact-page' ? 'active' : ''}`} href="/contact-page">Contacto</Link></li>
-            </ul>
-        </>
-    )
+            )}
+        </ul>
+    );
 }
