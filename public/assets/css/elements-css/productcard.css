@@ -1,7 +1,7 @@
 .maincard__section {
   position: relative;
   margin-top: 9rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .detailproducts__card-box {
@@ -30,7 +30,7 @@
   border: none;
   height: 100%;
   width: 100%;
-  padding: 2rem 5rem 1rem 5rem;
+  padding: 1.5rem;
 }
 .detailmain__img-box {
   place-items: center;
@@ -49,8 +49,14 @@
   }
 }
 .detailcard-body {
-  padding: 1rem 0.5rem 1.2rem 1rem;
-  width: 18rem;
+  padding: 0;
+  width: 100%;
+
+  li{
+    font-size: 0.7rem;
+  }
+
+
 }
 .detailproductcard__title {
   font-size: 1.75rem;
@@ -119,7 +125,7 @@
 }
 
 .products__card-maincontent {
-  height: 85vh;
+  height: 100%;
 }
 
 .main__card {
@@ -184,55 +190,6 @@
   border-radius: 18px;
 }
 
-/* .swiper-slide:nth-child(1n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_03.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-} */
-
-/* .swiper-slide:nth-child(2n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_18.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
-/* .swiper-slide:nth-child(3n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_01.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
-/* .swiper-slide:nth-child(4n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_02.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
-/* .swiper-slide:nth-child(5n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_13.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
-/* .swiper-slide:nth-child(6n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_15.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
-/* .swiper-slide:nth-child(7n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_18.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}  */
 
 @media screen and (min-width: 992px) {
   /* detail card section product 1 */
@@ -269,8 +226,8 @@
     .detailcard-body {
       display: flex;
       flex-direction: column;
-      padding: 5rem 2rem 2rem 0;
-      width: 80%;
+      padding: 1rem 0.5rem 1.2rem 1rem;
+      width: 18rem;
 
       h4 {
         font-size: 1.6rem;
@@ -282,6 +239,9 @@
         font-size: 0.9rem;
       }
     }
+  }
+  .products__card-maincontent {
+    height: 85vh;
   }
 
   .list__item {

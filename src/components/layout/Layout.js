@@ -5,7 +5,7 @@ import DataBg from "../elements/DataBg";
 import Footer from "./Footer";
 import Header from "./Header";
 import HeaderAux from "@/src/components/layout/HeaderAux";
-import WhatsAppButton from "../elements/WhatsAppButton";
+import WhatsAppButton from "@/src/components/elements/WhatsAppButton";
 
 export default function Layout(props) {
     const { headerStyle, footerStyle, children, wrapperCls } = props;

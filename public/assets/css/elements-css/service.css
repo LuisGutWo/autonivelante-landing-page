@@ -128,6 +128,11 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+
+    .service-button {
+      width: 20rem;
+      height: 3rem;
+    }
   }
 
   .postcard__tagbox {
@@ -180,7 +185,6 @@
     height: 40.43rem;
     max-width: 70rem;
     width: 100%;
-      
 
     .postcard__title {
       font-size: 2rem;
@@ -212,6 +216,11 @@
       justify-content: center;
       align-items: center;
       gap: 2rem;
+      .service-button {
+        width: 100%;
+        width: 11rem;
+        height: 3rem;
+      }
     }
 
     .media.postcard__text:before {
