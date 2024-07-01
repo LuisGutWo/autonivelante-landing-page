@@ -1,24 +1,68 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import { Container, Image, Modal } from "react-bootstrap";
-import { productsListPage } from "@/src/config/productsListPage";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-export default function ProductsCardPage() {
-  const [showContactSend, setShowContactSend] = useState(false);
+import { productsListPage } from "@/src/config/productsListPage";
+import Link from "next/link";
+import Image from "next/image";
+
+export default function CarouselSection() {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 564, min: 0 },
+      items: 2,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
 
   return (
-    <section
-      id="products"
-      className="products__card-section p_relative pt-5 centred sec-pad"
-    >
-      <Container fluid>
-        <div className="products__card-container productcard__text">
-          <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4  align-items-center">
-            {productsListPage.map((item, i) => (
+    <div className="carousel__main-section">
+      <div className="container carousel__container">
+        <Carousel
+          responsive={responsive}
+          additionalTransfrom={0}
+          arrows={true}
+          autoPlay={true}
+          autoPlaySpeed={9000}
+          customTransition="all 5s linear"
+          centerMode={false}
+          containerClass="container-with-dots"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          draggable
+          focusOnSelect={true}
+          infinite={true}
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover={true}
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside={true}
+          renderDotsOutside={true}
+          className="swiper"
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={true}
+          sliderClass=""
+          slidesToSlide
+          swipeable={true}
+        >
+          {productsListPage.map((item, i) => (
+            <section key={i} className="p-4">
               <div
                 key={i}
-                className="products__card-maincontent wow fadeIn animated"
+                item={item}
+                className="swiper-slide products__card-maincontent wow fadeIn animated"
                 data-wow-delay="01ms"
                 data-wow-duration="1000ms"
               >
@@ -38,8 +82,6 @@ export default function ProductsCardPage() {
                       src={item.image}
                       className="card-img-top"
                       style={{
-                        width: "15rem",
-                        alignItems: "center",
                         marginTop: "40px",
                         marginBottom: "20px",
                       }}
@@ -49,7 +91,7 @@ export default function ProductsCardPage() {
                   <div className="card-body">
                     <h4 className="card-title fw-bold pb-3">{item.name}</h4>
                     <div className="card-price fw-bold">{item.price}</div>
-                    <div className="buttons__card d-flex flex-column gap-4">
+                    <div className="buttons__card d-flex flex-column gap-4 mb-4">
                       <Link
                         href={item.url}
                         className="btn btn-outline-primary btn-lg"
@@ -71,7 +113,6 @@ export default function ProductsCardPage() {
                           </svg>
                         </b>
                       </Link>
-
                       <Link
                         href="/contact-page"
                         onClick={() => setShowContactSend(true)}
@@ -96,22 +137,10 @@ export default function ProductsCardPage() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <Modal
-            show={showContactSend}
-            onHide={() => setShowContactSend(false)}
-          >
-            <Modal.Header closeButton>
-              <Modal.Body>
-                Hola... Escríbenos por WhatsApp o envíanos un correo que te
-                estaremos respondiendo en la brevedad posible... Gracias 😉
-              </Modal.Body>
-            </Modal.Header>
-          </Modal>
-        </div>
-      </Container>
-    </section>
+            </section>
+          ))}
+        </Carousel>
+      </div>
+    </div>
   );
 }

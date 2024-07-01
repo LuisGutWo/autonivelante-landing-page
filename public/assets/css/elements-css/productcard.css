@@ -1,23 +1,19 @@
 .maincard__section {
-  height: 100%;
   position: relative;
-  background-image: url(../../images/background/autonivelante_contact_bg.png);
-  background-size: cover;
-  background-blend-mode: color-burn;
-  background-color: rgba(0, 0, 0, 0.683);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  margin-top: 9rem;
+  height: 100vh;
 }
 
 .detailproducts__card-box {
+  margin-top: 2rem;
+  min-height: 35rem;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .detailproducts__card-maincontent {
+  background-color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -26,16 +22,31 @@
   max-width: 54ch;
   text-align: left;
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.184) 0px 7px 29px 0px;
   border-radius: 5px;
 }
 .detailmain__card {
-  place-items: center;
   border-radius: 0;
   border: none;
   height: 100%;
   width: 100%;
   padding: 2rem 5rem 1rem 5rem;
+}
+.detailmain__img-box {
+  place-items: center;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+
+  .card-img-top {
+    margin-top: 5rem;
+    width: 35rem;
+    height: 35rem;
+    object-fit: contain;
+
+  }
 }
 .detailcard-body {
   padding: 1rem 0.5rem 1.2rem 1rem;
@@ -59,9 +70,7 @@
   font-size: 20px;
   margin-bottom: 30px;
 }
-.buttons__card {
-  width: 100%;
-}
+
 .exit__button-card {
   position: relative;
   float: right;
@@ -71,7 +80,6 @@
 
 .products__card-section {
   height: 100%;
-  background: #f1f1f1;
 }
 .productcard__text {
   padding: 2rem;
@@ -89,7 +97,7 @@
   justify-content: center;
   align-items: center;
 }
-.product__card-title:hover .productcard__bar{
+.product__card-title:hover .productcard__bar {
   width: 20%;
 }
 .productcard__title {
@@ -111,14 +119,14 @@
 }
 
 .products__card-maincontent {
-  height: 88vh;
+  height: 85vh;
 }
 
 .main__card {
-  max-height: 100vh;
+  min-height: 100%;
   height: 100%;
   align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.356) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.276) 0px 7px 29px 0px;
 }
 .card-body {
   display: flex;
@@ -127,78 +135,104 @@
   align-items: center;
   padding-top: 0;
   padding-bottom: 25px;
-  max-height: 25rem;
   height: 100%;
   width: 90%;
-}
-.card-price {
-  font-size: 25px;
-  margin-bottom: 30px;
-}
-/* .swiper {
-  width: 240px;
-  height: 320px;
-} */
 
-/* .swiper-slide {
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-price {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .buttons__card {
+    width: 100%;
+  }
+}
+
+.carousel__page {
+  position: relative;
+  height: 100%;
+  margin-top: 5rem;
+  padding-top: 1rem;
+}
+.grey__square {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(100, 100, 111, 0.062);
+}
+
+.carousel__main-section {
+  height: 100%;
+  padding-top: 4rem;
+}
+.carousel__container {
+  height: 100%;
+  background-color: transparent;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
 }
 
-.swiper-slide:nth-child(1n) {
+/* .swiper-slide:nth-child(1n) {
   background-image: url(../../../../public/assets/images/works/Mathiesen_03.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-}
+} */
 
-.swiper-slide:nth-child(2n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_18.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.swiper-slide:nth-child(3n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_01.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.swiper-slide:nth-child(4n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_02.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.swiper-slide:nth-child(5n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_13.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.swiper-slide:nth-child(6n) {
-  background-image: url(../../../../public/assets/images/works/Mathiesen_15.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.swiper-slide:nth-child(7n) {
+/* .swiper-slide:nth-child(2n) {
   background-image: url(../../../../public/assets/images/works/Mathiesen_18.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 } */
+
+/* .swiper-slide:nth-child(3n) {
+  background-image: url(../../../../public/assets/images/works/Mathiesen_01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .swiper-slide:nth-child(4n) {
+  background-image: url(../../../../public/assets/images/works/Mathiesen_02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .swiper-slide:nth-child(5n) {
+  background-image: url(../../../../public/assets/images/works/Mathiesen_13.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .swiper-slide:nth-child(6n) {
+  background-image: url(../../../../public/assets/images/works/Mathiesen_15.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .swiper-slide:nth-child(7n) {
+  background-image: url(../../../../public/assets/images/works/Mathiesen_18.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}  */
 
 @media screen and (min-width: 992px) {
   /* detail card section product 1 */
@@ -206,17 +240,12 @@
     max-width: 60rem;
     overflow: hidden;
   }
-  .exit__button-card {
-    position: relative;
-    float: right;
-    top: -25rem;
-    left: 13rem;
-  }
 }
 @media screen and (min-width: 769px) {
   /* detail card section product 1 */
   .maincard__section {
-    height: 100vh;
+    height: 100%;
+    margin-bottom: 5rem;
     width: 100vw;
   }
 
@@ -224,26 +253,37 @@
     display: grid;
     gap: 0;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-    max-height: 40rem;
+    height: 100%;
     width: 100%;
-    max-width: 70rem;
+    max-width: 100%;
     overflow: hidden;
   }
 
   .detailmain__card {
     justify-content: flex-start;
     align-items: center;
+    height: 100%;
     width: 100%;
     padding: 2rem 0;
 
     .detailcard-body {
-      padding: 2rem 0;
-      width: 70%;
+      display: flex;
+      flex-direction: column;
+      padding: 5rem 2rem 2rem 0;
+      width: 80%;
+
+      h4 {
+        font-size: 1.6rem;
+      }
+      h5 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
     }
   }
-  .detailproductcard__title {
-    font-size: 1.75rem;
-  }
+
   .list__item {
     height: 18px;
   }
@@ -254,6 +294,8 @@
   }
   .buttons__card {
     width: 15rem;
+    top: -350px;
+    left: 100px;
   }
   .exit__button-card {
     position: relative;

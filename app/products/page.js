@@ -11,7 +11,7 @@ export default async function MainProductsPage() {
     <Layout headerStyle={4} footerStyle={1}>
       <Container className="mt_150">
         <Breadcrumb items={[{ name: "Productos", href: "products" }]} />
-        <div className="d-flex justify-content-center align-items-center flex-row flex-wrap gap-3">
+        <div className="d-flex justify-content-center align-items-center">
           <ProductsCardPage />
         </div>
       </Container>

@@ -68,7 +68,7 @@ export default function ProductsCard() {
                     src={item.image}
                     className="card-img-top"
                     style={{
-                      width: "13.5rem",
+                      width: "16rem",
                       marginTop: "40px",
                       marginBottom: "20px",
                     }}
