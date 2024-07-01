@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  padding: 1rem;
+  padding: 0;
 }
 
 .feature-block .inner-box .image-box {

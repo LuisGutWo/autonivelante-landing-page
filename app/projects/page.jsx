@@ -240,7 +240,7 @@ export default function MainProjectsPage() {
         <section className="py-5">
           {projects.map((item, i) => (
             <div key={i} className={styles.projects__item}>
-              <div className="row align-items-center">
+              <div className="row align-items-center proyects__card">
                 <div className={`col-12 col-sm-6 ${i % 2 ? "order-sm-2" : ""}`}>
                   <h2 className="postcard__title blue text-dark text-start fs-3 fw-bold">
                     Proyecto {item.name}

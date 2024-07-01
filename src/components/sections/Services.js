@@ -231,7 +231,7 @@ export default function Services() {
               </Row>
             </Container>
             <Container className="buttons__container">
-              <Link href="/" alt="Link sección Contacto">
+              <Link href="/projects" alt="Link sección Contacto">
                 <Button variant="light" className="service-button">
                   Servicios
                   <svg
