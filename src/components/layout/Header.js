@@ -111,14 +111,14 @@ export default function Header(props) {
           <div className="auto-container">
             <div className="outer-box">
               <div className="logo-box">
-                <figure className="logo">
-                  <Link href="/">
+                <Link href="/">
+                  <figure className="logo">
                     <Image
                       src="assets/images/logo_horizontal_black.png"
                       alt=""
                     />
-                  </Link>
-                </figure>
+                  </figure>
+                </Link>
               </div>
               <div className="menu-area clearfix">
                 <nav className="main-menu navbar-expand-md navbar-light">
