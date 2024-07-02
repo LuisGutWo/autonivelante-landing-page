@@ -3,19 +3,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Button, Container, Image, Modal } from "react-bootstrap";
 import { productsListPage } from "@/src/config/productsListPage";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 export default function ProductsCardPage() {
-  const [cart, setCart] = useState([]);
   const [showProductSend, setShowProductSend] = useState(false);
 
   const [showCartSend, setShowCartSend] = useState(false);
   const handleCloseCartSend = () => setShowCartSend(false);
   const handleShowCartSend = () => setShowCartSend(true);
-
-  const addItemToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
-  };
 
   return (
     <section
