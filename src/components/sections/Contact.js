@@ -19,6 +19,10 @@ export default function Contact() {
   const handleCloseEmailSend = () => setShowEmailSend(false);
   const handleShowEmailSend = () => setShowEmailSend(true);
 
+  const [showCartSend, setShowCartSend] = useState(false);
+  const handleCloseCartSend = () => setShowCartSend(false);
+  const handleShowCartSend = () => setShowCartSend(true);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -210,7 +214,7 @@ export default function Contact() {
                               </Form.Group>
 
                               <Button
-                                onClick={handleShowEmailSend}
+                                onClick={handleShowCartSend}
                                 className="theme-btn theme-btn-one"
                                 style={{ width: "100%", marginTop: "4rem" }}
                                 value="Send"
@@ -233,6 +237,29 @@ export default function Contact() {
                                   />
                                 </svg>
                               </Button>
+                              <Modal
+                                show={showCartSend}
+                                onHide={handleCloseCartSend}
+                              >
+                                <Modal.Header closeButton>
+                                  <Modal.Body>
+                                    Hola... Gracias por visitarnos. Si deseas
+                                    obtener nuestros productos y servicios
+                                    conéctate con nosotros, te responderemos de
+                                    inmediato.
+                                  </Modal.Body>
+                                </Modal.Header>
+                                <Modal.Footer>
+                                  <Link href="/contact-page">
+                                    <Button
+                                      variant="primary"
+                                      onClick={handleCloseCartSend}
+                                    >
+                                      Escríbenos
+                                    </Button>
+                                  </Link>
+                                </Modal.Footer>
+                              </Modal>
                               <Modal
                                 show={showEmailSend}
                                 onHide={handleCloseEmailSend}

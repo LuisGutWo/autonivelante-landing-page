@@ -59,8 +59,8 @@ export default function Home() {
                 href: "products",
               },
               {
-                name: "product-details-4",
-                href: "Rhenatec Nivelador 2000",
+                name: "Rhenatec Nivelador 2000",
+                href: "product-details-4",
               },
             ]}
           />

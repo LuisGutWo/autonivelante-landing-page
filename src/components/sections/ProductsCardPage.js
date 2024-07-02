@@ -1,11 +1,21 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { Container, Image, Modal } from "react-bootstrap";
+import { Button, Container, Image, Modal } from "react-bootstrap";
 import { productsListPage } from "@/src/config/productsListPage";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 export default function ProductsCardPage() {
-  const [showContactSend, setShowContactSend] = useState(false);
+  const [cart, setCart] = useState([]);
+  const [showProductSend, setShowProductSend] = useState(false);
+
+  const [showCartSend, setShowCartSend] = useState(false);
+  const handleCloseCartSend = () => setShowCartSend(false);
+  const handleShowCartSend = () => setShowCartSend(true);
+
+  const addItemToCart = (item) => {
+    setCart((prevCart) => [...prevCart, item]);
+  };
 
   return (
     <section
@@ -72,10 +82,11 @@ export default function ProductsCardPage() {
                         </b>
                       </Link>
 
-                      <Link
-                        href="/contact-page"
-                        onClick={() => setShowContactSend(true)}
+                      <Button
                         className="btn btn-primary btn-lg"
+                        onClick={handleShowCartSend}
+                        data-toggle="modal"
+                        data-target="#exampleModal"
                       >
                         Agregar al carro
                         <svg
@@ -91,7 +102,27 @@ export default function ProductsCardPage() {
                             d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"
                           />
                         </svg>
-                      </Link>
+                      </Button>
+
+                      <Modal show={showCartSend} onHide={handleCloseCartSend}>
+                        <Modal.Header closeButton>
+                          <Modal.Body>
+                            Hola... Gracias por visitarnos. Si deseas obtener
+                            nuestros productos y servicios conéctate con
+                            nosotros, te responderemos de inmediato.
+                          </Modal.Body>
+                        </Modal.Header>
+                        <Modal.Footer>
+                          <Link href="/contact-page">
+                            <Button
+                              variant="primary"
+                              onClick={handleCloseCartSend}
+                            >
+                              Escríbenos
+                            </Button>
+                          </Link>
+                        </Modal.Footer>
+                      </Modal>
                     </div>
                   </div>
                 </div>
@@ -100,8 +131,8 @@ export default function ProductsCardPage() {
           </div>
 
           <Modal
-            show={showContactSend}
-            onHide={() => setShowContactSend(false)}
+            show={showProductSend}
+            onHide={() => setShowProductSend(false)}
           >
             <Modal.Header closeButton>
               <Modal.Body>
