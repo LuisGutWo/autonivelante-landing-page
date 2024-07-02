@@ -33,7 +33,10 @@ export default function Header(props) {
               <div className="logo-box">
                 <Link href="/">
                   <figure className="logo">
-                    <Image src="assets/images/logo_horizontal.png" alt="" />
+                    <Image
+                      src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Group%2045.png?alt=media&token=827170a8-1063-46de-b7bf-db0ae19e3058"
+                      alt=""
+                    />
                   </figure>
                 </Link>
               </div>
@@ -114,7 +117,7 @@ export default function Header(props) {
                 <Link href="/">
                   <figure className="logo">
                     <Image
-                      src="assets/images/logo_horizontal_black.png"
+                      src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Group%2052.png?alt=media&token=ec59cd9b-219d-4e66-a64e-7cc615a896a7"
                       alt=""
                     />
                   </figure>
