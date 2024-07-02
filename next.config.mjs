@@ -9,6 +9,11 @@ const nextConfig = {
       },
     ];
   },
+  env: {
+    NEXT_SERVICE_ID: "service_3k8blmt",
+    NEXT_TEMPLATE_ID: "template_c7njbme",
+    NEXT_PUBLIC_KEY: "t44F1vh8sWatI9HKy",
+  },
 };
 
 export default nextConfig;

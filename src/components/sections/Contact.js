@@ -23,9 +23,14 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_3k8blmt", "template_c7njbme", form.current, {
-        publicKey: "t44F1vh8sWatI9HKy",
-      })
+      .sendForm(
+        process.env.NEXT_SERVICE_ID,
+        process.env.NEXT_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");
