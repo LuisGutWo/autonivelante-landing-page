@@ -43,7 +43,7 @@
 }
 
 .contactcard__text-inner {
-  padding: 2.5rem 0 0 4.4rem;
+  padding: 2.5rem 0 0 2.2rem;
   height: 100%;
 }
 
@@ -86,10 +86,9 @@
     gap: 20px;
     align-items: center;
   }
-  .contactcard__content,
-  .contactcard__content-tree p {
-    font-size: 0.8em;
-    padding: 0.5rem 0 0.5rem 0;
+  .contactcard__content p {
+    font-size: 1rem;
+    padding: 1rem 0;
   }
 
   .logo-box {
@@ -183,7 +182,7 @@
   .content-column {
     margin-bottom: 0;
   }
-  
+
   .contactcard__text {
     width: 50%;
     padding: 0;
@@ -194,15 +193,15 @@
     flex-direction: column;
     grid-area: text;
   }
-  
+
   .contactcard__text-inner {
-    padding: 2.5rem 0 0 5.5rem;
+    padding: 2.5rem 0 0 4.4rem;
     height: 100%;
   }
 
   .contact-style {
     padding: 4rem 0 2rem 5rem;
-  
+
     &:hover .contactcard__bar {
       width: 100px;
     }

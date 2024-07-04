@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <section
       id="services-section"
-      className="service-section p_relative centred bg-color-1 sec-pad p-0"
+      className="service-section p_relative centred bg-color-1 sec-pad p-2"
     >
       <Container
         fluid
@@ -19,7 +19,7 @@ export default function Services() {
         data-wow-delay="00ms"
         data-wow-duration="1000ms"
       >
-        <article className="postcard p_relative">
+        <article className="postcard">
           <Swiper
             modules={[Autoplay, Navigation, Pagination, Keyboard]}
             slidesPerView={1}
@@ -30,8 +30,9 @@ export default function Services() {
               type: "progressbar",
             }}
             autoplay={{
-              delay: 4000,
+              delay: 5000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
             navigation={true}
             className="mySwiper"

@@ -42,6 +42,7 @@
 
   .postcard__title {
     font-size: 1.75rem;
+    padding: 1rem;
   }
 
   .postcard__img {
@@ -84,16 +85,16 @@
   }
 
   .postcard__bar {
-    width: 50px;
-    height: 20px;
-    margin: 10px 0;
+    width: 3.125rem;
+    height: 1.25rem;
+    margin: 0.6rem 0 1rem 1rem;
     border-radius: 2px;
     background-color: #f3f3f3;
     transition: width 0.2s ease;
   }
 
   .postcard__text {
-    padding: 2rem;
+    padding: 1rem;
     text-align: left;
     max-height: 100%;
     position: relative;
@@ -104,10 +105,10 @@
 
   .postcard__preview-txt {
     overflow: hidden;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-overflow: ellipsis;
     text-align: justify;
-    padding-bottom: 2rem;
+    padding: 1rem;
     height: 100%;
   }
 
@@ -182,7 +183,7 @@
     grid-auto-columns: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "text image";
-    height: 40.43rem;
+    height: 100%;
     max-width: 70rem;
     width: 100%;
 
@@ -196,7 +197,11 @@
 
     .postcard__img {
       height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
       transition: transform 0.3s ease;
+      border-radius: 0%;
     }
 
     .postcard__text {

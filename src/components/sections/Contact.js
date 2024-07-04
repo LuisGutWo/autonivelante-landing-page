@@ -78,7 +78,7 @@ export default function Contact() {
                               width="17"
                               height="17"
                               fill="currentColor"
-                              className="bi bi-phone mt-2"
+                              className="bi bi-phone mt-4"
                               viewBox="0 0 16 16"
                             >
                               <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
@@ -102,7 +102,7 @@ export default function Contact() {
                               width="18"
                               height="18"
                               fill="currentColor"
-                              className="bi bi-geo-alt mt-2"
+                              className="bi bi-geo-alt mt-4"
                               viewBox="0 0 16 16"
                             >
                               <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
@@ -127,13 +127,13 @@ export default function Contact() {
                               height="17"
                               spacing="10"
                               fill="currentColor"
-                              className="bi bi-clock mt-3"
+                              className="bi bi-clock mt-4"
                               viewBox="0 0 16 16"
                             >
                               <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
                               <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
                             </svg>{" "}
-                            <p className="text-light">
+                            <p className="text-light pt-3">
                               <b>Horario</b>
                               <br />
                               Lunes a Domingo.
