@@ -17,7 +17,7 @@
 
 .banner__container .content-box {
   position: relative;
-  max-width: 630px;
+  max-width: 39.3rem;
   width: 100%;
   z-index: 0;
 }
@@ -35,12 +35,12 @@
 }
 
 .banner__container .content-box h2 {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.2rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 25px;
-  margin-top: 50px;
+  margin: 2rem 5rem 3rem 0;
   padding-top: 20px;
 }
 
@@ -124,7 +124,9 @@
   background-image: linear-gradient(
     to top,
     rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.646)
+    rgba(255, 255, 255, 0.13),
+    rgba(79, 79, 79, 0.386),
+    rgba(0, 0, 0, 0.624)
   );
 }
 
@@ -142,6 +144,6 @@
 
 @media screen and (min-width: 769px) {
   .banner__container .content-box {
-    margin-left: 13rem !important;
+    margin-left: 20rem !important;
   }
 }

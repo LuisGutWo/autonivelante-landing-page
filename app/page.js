@@ -7,20 +7,20 @@ import MainFeatures from "@/src/components/sections/MainFeatures";
 import ProductsCard from "@/src/components/sections/ProductsCard";
 import Contact from "@/src/components/sections/Contact";
 
-import { waitSeconds } from '@/src/utils/helpers';
+import { waitSeconds } from "@/src/utils/helpers";
 
 export default async function Home() {
-    await waitSeconds(1000);
+  await waitSeconds(1000);
 
-    return (
-        <Layout headerStyle={3} footerStyle={1}>
-            <Banner />
-            <FeaturesBanner />
-            <Services />
-            <About />
-            <MainFeatures />
-            <ProductsCard />
-            <Contact />
-        </Layout>
-    );
+  return (
+    <Layout headerStyle={3} footerStyle={1}>
+      <Banner />
+      <FeaturesBanner />
+      <About />
+      <Services />
+      <MainFeatures />
+      <ProductsCard />
+      <Contact />
+    </Layout>
+  );
 }

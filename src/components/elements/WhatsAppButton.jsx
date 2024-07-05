@@ -19,7 +19,7 @@ const WhatsAppButton = () => {
         >
             <a
                 rel=""
-                href="https://api.whatsapp.com/send?phone=56920390272&text=Hola, Somos Autonivelante. En que podemos ayudarte...😀"
+                href="https://api.whatsapp.com/send?phone=56971447333&text=Hola, Somos Autonivelante. En que podemos ayudarte...😀"
                 className="btn-wsp"
                 target="_blank"
             >

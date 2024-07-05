@@ -9,8 +9,7 @@
     "text";
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
-  margin-bottom: 3.5rem;
-  height: 60rem;
+  height: 100%;
 
   color: #ffffff;
   background-color: #015c93;
@@ -47,7 +46,7 @@
 
   .postcard__img {
     background-color: #110f16;
-    height: 25rem;
+    height: 30rem;
     width: 100%;
     object-fit: cover;
     position: relative;
@@ -184,11 +183,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "text image";
     height: 100%;
-    max-width: 70rem;
+    max-width: 70vw;
     width: 100%;
 
     .postcard__title {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     .postcard__tagbox {
@@ -205,7 +204,7 @@
     }
 
     .postcard__text {
-      padding: 3rem 6rem;
+      padding: 3rem 2rem;
       width: 100%;
     }
     .postcard__preview-txt {
@@ -213,12 +212,13 @@
       text-overflow: ellipsis;
       text-align: justify;
       padding-bottom: 0;
+      margin-bottom: 1rem;
       height: 100%;
     }
 
     .buttons__container {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       gap: 2rem;
       .service-button {

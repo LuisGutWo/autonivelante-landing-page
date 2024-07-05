@@ -11,11 +11,11 @@ export default function Services() {
   return (
     <section
       id="services-section"
-      className="service-section p_relative centred bg-color-1 sec-pad p-2"
+      className="service-section p_relative centred sec-pad"
     >
       <Container
         fluid
-        className="d-flex justify-content-center p-0 wow fadeInUp animated"
+        className="d-flex justify-content-center wow fadeInUp animated"
         data-wow-delay="00ms"
         data-wow-duration="1000ms"
       >
@@ -98,7 +98,7 @@ export default function Services() {
 
           <div className="postcard__text">
             <h1 className="postcard__title blue text-light text-start">
-              <Link href="#">
+              <Link href="/projects">
                 Conoce Nuestros
                 <br />
                 Servicios
@@ -116,7 +116,7 @@ export default function Services() {
               rollos y en palmetas. Especialistas en instalación y reparación en
               toda la gama de pisos vinilicos en rollos y en palmetas.
             </div>
-            <Container fluid className="mb-4 text-center">
+            <Container fluid className="mb-5 text-center">
               <Row>
                 <Col>
                   <div className="postcard__content">
@@ -252,7 +252,7 @@ export default function Services() {
               </Link>
               <Link href="/contact-page" alt="Link sección Contacto">
                 <Button variant="outline-light" className="service-button">
-                  Contáctenos
+                  Contáctanos
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"

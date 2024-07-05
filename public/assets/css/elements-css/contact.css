@@ -225,13 +225,6 @@
     display: flex;
     flex-direction: column;
   }
-  .aboutcard__preview-txt {
-    font-size: 0.9rem;
-    text-overflow: ellipsis;
-    text-align: justify;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-  }
   .form__contact {
     margin: 0;
   }

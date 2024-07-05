@@ -34,7 +34,7 @@ export default function MobileMenu(props) {
         <nav className="menu-box">
           <div className="nav-logo">
             <Link href="/">
-              <Image src="/assets/images/logo_horizontal.png" alt="" />
+              <Image src="/assets/images/logo_horizontal.png" alt="" width={150} />
             </Link>
           </div>
 

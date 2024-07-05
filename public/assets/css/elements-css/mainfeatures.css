@@ -71,9 +71,10 @@
 /* main features main card */
 
 .featcard__text {
-  padding: 2rem;
+  padding: 3rem 1rem 5rem 2.5rem;
   text-align: left;
   height: 100%;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -85,7 +86,7 @@
 }
 
 .featcard__title {
-  font-size: 2.5em;
+  font-size: 1.5rem;
 }
 .featcard__content {
   display: flex;
@@ -96,7 +97,14 @@
   justify-content: flex-start;
 }
 .featcard__content p {
-  font-size: 0.55rem;
+  font-size: 0.8rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
 }
 
 .mainfeat-section .outer-box h2 {
@@ -174,8 +182,8 @@
   .featcard__text {
     justify-content: flex-start;
     padding: 4rem;
+    width: 50%;
     padding-top: 0;
-    padding-left: 40px;
   }
   .auto-container {
     margin-left: 0 !important;
@@ -238,7 +246,7 @@
     transform: rotate(-4deg);
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   
 
   .featcard__text:before {
@@ -249,5 +257,9 @@
     top: -20%;
     height: 130%;
     width: 55px;
+  }
+
+  .featcard__content p {
+    font-size: 100%;
   }
 }

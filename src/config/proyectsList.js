@@ -19,7 +19,7 @@ export const projects = [
       ],
     },
     {
-      name: "Patio Poster",
+      name: "Patio Foster",
       mt2: "300",
       duration: "5 días",
       year: "2022",
@@ -103,7 +103,7 @@ export const projects = [
       ],
     },
     {
-      name: "Oficina Castro",
+      name: "Oficina Casbro",
       mt2: "150",
       duration: "5 días",
       year: "2022",
