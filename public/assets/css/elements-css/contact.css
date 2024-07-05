@@ -43,7 +43,7 @@
 }
 
 .contactcard__text-inner {
-  padding: 2.5rem 0 0 2.2rem;
+  padding: 2.8rem 0 0 0;
   height: 100%;
 }
 
@@ -53,6 +53,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
   max-width: 60rem;
@@ -114,7 +115,7 @@
   }
 }
 .contactcard__text-two {
-  padding: 4rem 1rem 5rem 1rem;
+  padding: 4rem;
   background-color: #f3f5f7;
   grid-area: form;
 }

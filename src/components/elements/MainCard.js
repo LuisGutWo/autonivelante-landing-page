@@ -13,7 +13,7 @@ export default function ProductsCard({ item }) {
       data-wow-duration="1000ms"
     >
       <div className="card main__card">
-        <div class="main__card-img-container">
+        <div className="main__card-img-container">
           <Image src={item.image} className="card-img-top" alt="..." />
         </div>
         <div className="card-body">

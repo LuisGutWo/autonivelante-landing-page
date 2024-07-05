@@ -74,7 +74,8 @@ export default function About() {
                         <Button
                           onClick={() => setOpen(true)}
                           variant="outline-light"
-                          style={{ width: "14rem", height: "3.5rem" }}
+                          size="lg"
+                          className="w-100"
                         >
                           <p>Reproducir video</p>
                           <svg
@@ -96,7 +97,8 @@ export default function About() {
                       <Link href="/contact-page">
                         <Button
                           variant="outline-dark"
-                          style={{ width: "14rem", height: "3.5rem", padding: "0" }}
+                          size="lg"
+                          className="w-100"
                         >
                           <p>Contáctanos</p>
                           <svg
