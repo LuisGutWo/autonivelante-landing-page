@@ -14,20 +14,17 @@ export default function Home() {
               <div className="card detailmain__card">
                 <div className="detailcard-body">
                   <h4 className="detailproductcard-title fw-bold pb-3">
-                    Mortero Autonivelante
+                  Planiprep Fast Track
                   </h4>
 
                   <p className="fs_11 fw-bold">
-                    Mortero autonivelante altamente fluido, de secado rápido
-                    para espesores de 3 a 40 mm con alta resistencia a la
-                    compresión (28 MPa). Para nivelación de pisos previo a la
-                    instalación de revestimientos.
+                  Mortero cementicio de retape y parchado tixotrópico de textura fina y secado ultrarrápido. Adecuado para afinado, retape de pisos y muros de hormigón nuevo y existente, para espesores de 0 a 3 mm, preparación de superficies previa a la instalación de todo tipo de revestimientos de pisos y muros. Se puede instalar el revestimiento muy rápidamente (2 horas), incluyendo vinilos, caucho y textiles.
                   </p>
 
-                  <div className="detailcard-price fw-bold">$ 22.500</div>
+                  <div className="detailcard-price fw-bold">$ 15.900</div>
                   <div className="buttons__card d-flex flex-column">
                     <Link
-                      href="/#contact"
+                      href="/contact-page"
                       className="btn btn-primary d-flex justify-content-center gap-3"
                     >
                       Agregar al carro
@@ -70,7 +67,7 @@ export default function Home() {
                   alt="..."
                 />
                 <div className="exit__button-card">
-                  <Link href="/#products">
+                  <Link href="/products">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"

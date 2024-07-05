@@ -48,7 +48,7 @@ export default function Home() {
         <>
             <Layout headerStyle={1} footerStyle={2}>
                 <section className="maincard__section">
-                    <Container>
+                    <Container className="page-wrapper">
                         <div className="detailproducts__card-box">
                             <div className="detailproducts__card-maincontent">
                                 <div
