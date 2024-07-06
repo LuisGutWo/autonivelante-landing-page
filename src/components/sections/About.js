@@ -70,12 +70,13 @@ export default function About() {
 
                   <section className="aboutcard__buttons">
                     <div className="aboutcard__buttons-btn-video">
-                      <Link href="/modalvideo">
+                      <Link href="#about-section">
                         <Button
                           onClick={() => setOpen(true)}
                           variant="outline-light"
                           size="lg"
                           className="w-100"
+                          disabled="true"
                         >
                           <p>Reproducir video</p>
                           <svg
