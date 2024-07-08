@@ -1,10 +1,15 @@
 "use client";
 import Layout from "@/src/components/layout/Layout";
 import Link from "next/link";
-import { Container, Image } from "react-bootstrap";
+import { useState } from "react";
+import { Container, Image, Modal, Button } from "react-bootstrap";
 import "swiper/css/thumbs";
 
 export default function Home() {
+  const [showProductSend, setShowProductSend] = useState(false);
+
+  const handleCloseProductSend = () => setShowProductSend(false);
+  const handleShowProductSend = () => setShowProductSend(true);
   return (
     <Layout headerStyle={1} footerStyle={2}>
       <section className="maincard__section">
@@ -14,18 +19,24 @@ export default function Home() {
               <div className="card detailmain__card">
                 <div className="detailcard-body">
                   <h4 className="detailproductcard-title fw-bold pb-3">
-                  Planiprep Fast Track
+                    Planiprep Fast Track
                   </h4>
 
                   <p className="fs_11 fw-bold">
-                  Mortero cementicio de retape y parchado tixotrópico de textura fina y secado ultrarrápido. Adecuado para afinado, retape de pisos y muros de hormigón nuevo y existente, para espesores de 0 a 3 mm, preparación de superficies previa a la instalación de todo tipo de revestimientos de pisos y muros. Se puede instalar el revestimiento muy rápidamente (2 horas), incluyendo vinilos, caucho y textiles.
+                    Mortero cementicio de retape y parchado tixotrópico de
+                    textura fina y secado ultrarrápido. Adecuado para afinado,
+                    retape de pisos y muros de hormigón nuevo y existente, para
+                    espesores de 0 a 3 mm, preparación de superficies previa a
+                    la instalación de todo tipo de revestimientos de pisos y
+                    muros. Se puede instalar el revestimiento muy rápidamente (2
+                    horas), incluyendo vinilos, caucho y textiles.
                   </p>
 
                   <div className="detailcard-price fw-bold">$ 15.900</div>
                   <div className="buttons__card d-flex flex-column">
-                    <Link
-                      href="/contact-page"
-                      className="btn btn-primary d-flex justify-content-center gap-3"
+                    <Button
+                      onClick={handleShowProductSend}
+                      className="btn btn-primary btn-lg d-flex justify-content-center gap-3"
                     >
                       Agregar al carro
                       <svg
@@ -41,7 +52,40 @@ export default function Home() {
                           d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"
                         />
                       </svg>
-                    </Link>
+                    </Button>
+                    <Modal
+                      show={showProductSend}
+                      onHide={handleCloseProductSend}
+                    >
+                      <Modal.Header closeButton>
+                        <Modal.Body style={{ fontSize: "1.5rem" }}>
+                          Gracias por visitarnos...
+                          <br />
+                          <br /> escríbenos al WhatsApp
+                          <br /> o envíanos un email para estar en contacto.
+                          <br />
+                          <br /> Gracias 😉
+                        </Modal.Body>
+                      </Modal.Header>
+                      <Modal.Footer>
+                        <Link
+                          href="/#products"
+                          variant="primary"
+                          onClick={handleCloseProductSend}
+                          className="btn btn-secondary"
+                        >
+                          Volver
+                        </Link>
+                        <Link
+                          href="/contact-page"
+                          variant="primary"
+                          onClick={handleCloseProductSend}
+                          className="btn btn-primary"
+                        >
+                          Contáctanos
+                        </Link>
+                      </Modal.Footer>
+                    </Modal>
                   </div>
                 </div>
               </div>

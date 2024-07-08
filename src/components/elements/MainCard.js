@@ -80,7 +80,7 @@ export default function ProductsCard({ item }) {
                 onClick={handleCloseProductSend}
                 className="btn btn-primary"
               >
-                Regresar
+                Contáctanos
               </Link>
             </Modal.Footer>
           </Modal>
