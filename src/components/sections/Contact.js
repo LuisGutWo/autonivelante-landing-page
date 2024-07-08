@@ -19,10 +19,6 @@ export default function Contact() {
   const handleCloseEmailSend = () => setShowEmailSend(false);
   const handleShowEmailSend = () => setShowEmailSend(true);
 
-  const [showCartSend, setShowCartSend] = useState(false);
-  const handleCloseCartSend = () => setShowCartSend(false);
-  const handleShowCartSend = () => setShowCartSend(true);
-
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -174,8 +170,8 @@ export default function Contact() {
                                 controlId="formBasicName"
                               >
                                 <Form.Control
-                                  type="name"
                                   name="user_name"
+                                  type="name"
                                   placeholder="Nombre y Apellido"
                                   required
                                 />
@@ -185,6 +181,7 @@ export default function Contact() {
                                 controlId="formBasicPhone"
                               >
                                 <Form.Control
+                                  name="user_phone"
                                   type="phone"
                                   placeholder="Teléfono"
                                   required
@@ -195,8 +192,8 @@ export default function Contact() {
                                 controlId="formBasicEmail"
                               >
                                 <Form.Control
-                                  type="email"
                                   name="user_email"
+                                  type="email"
                                   placeholder="Correo electrónico"
                                   required
                                 />
@@ -206,15 +203,15 @@ export default function Contact() {
                                 controlId="exampleForm.ControlTextarea1"
                               >
                                 <Form.Control
-                                  placeholder="Mensaje"
                                   name="message"
                                   as="textarea"
+                                  placeholder="Mensaje"
                                   rows={3}
                                 />
                               </Form.Group>
 
                               <Button
-                                onClick={handleShowCartSend}
+                                onClick={handleShowEmailSend}
                                 className="theme-btn theme-btn-one"
                                 style={{ width: "100%", marginTop: "4rem" }}
                                 value="Send"
@@ -238,39 +235,26 @@ export default function Contact() {
                                 </svg>
                               </Button>
                               <Modal
-                                show={showCartSend}
-                                onHide={handleCloseCartSend}
-                              >
-                                <Modal.Header closeButton>
-                                  <Modal.Body>
-                                    Hola... Gracias por visitarnos. Si deseas
-                                    obtener nuestros productos y servicios
-                                    conéctate con nosotros, te responderemos de
-                                    inmediato.
-                                  </Modal.Body>
-                                </Modal.Header>
-                                <Modal.Footer>
-                                  <Link href="/contact-page">
-                                    <Button
-                                      variant="primary"
-                                      onClick={handleCloseCartSend}
-                                    >
-                                      Escríbenos
-                                    </Button>
-                                  </Link>
-                                </Modal.Footer>
-                              </Modal>
-                              <Modal
                                 show={showEmailSend}
                                 onHide={handleCloseEmailSend}
                               >
                                 <Modal.Header closeButton>
                                   <Modal.Body>
-                                    Correo Enviado!
-                                    <br /> Te responderemos a la brevedad.
+                                    Correo enviado con éxito!! Uno de nuestros
+                                    ejecutivos te contactara a la brevedad.
                                     Gracias
                                   </Modal.Body>
                                 </Modal.Header>
+                                <Modal.Footer>
+                                  <Link
+                                    href="/"
+                                    variant="primary"
+                                    onClick={handleCloseEmailSend}
+                                    className="btn btn-primary"
+                                  >
+                                    Regresar
+                                  </Link>
+                                </Modal.Footer>
                               </Modal>
                             </Form>
                           </div>
@@ -284,6 +268,10 @@ export default function Contact() {
                   <Link
                     href="https://www.instagram.com/autonivelante_cl/"
                     className="contact__links mb-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    title="Instagram"
                   >
                     <div className="social__icons-inner d-flex justify-content-center align-items-center">
                       <svg
@@ -301,6 +289,10 @@ export default function Contact() {
                   <Link
                     href="https://web.facebook.com/profile.php?id=100088723373843"
                     className="contact__links"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Facebook"
+                    aria-label="Facebook"
                   >
                     <div className="social__icons-inner d-flex justify-content-center align-items-center">
                       <svg

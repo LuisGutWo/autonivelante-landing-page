@@ -1,10 +1,13 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { Image, Modal } from "react-bootstrap";
+import { Button, Image, Modal } from "react-bootstrap";
 
 export default function ProductsCard({ item }) {
-  const [showContactSend, setShowContactSend] = useState(false);
+  const [showProductSend, setShowProductSend] = useState(false);
+
+  const handleCloseProductSend = () => setShowProductSend(false);
+  const handleShowProductSend = () => setShowProductSend(true);
 
   return (
     <section
@@ -40,10 +43,9 @@ export default function ProductsCard({ item }) {
             </b>
           </Link>
 
-          <Link
-            href="/contact-page"
-            onClick={() => setShowContactSend(true)}
-            className="btn btn-primary btn-lg"
+          <Button
+            onClick={handleShowProductSend}
+            className="btn btn-primary btn-lg w-100"
           >
             Agregar al carro
             <svg
@@ -59,17 +61,31 @@ export default function ProductsCard({ item }) {
                 d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"
               />
             </svg>
-          </Link>
+          </Button>
+          <Modal show={showProductSend} onHide={handleCloseProductSend}>
+            <Modal.Header closeButton>
+              <Modal.Body style={{ fontSize: "1.5rem" }}>
+                Gracias por visitarnos...
+                <br />
+                <br /> escríbenos al WhatsApp
+                <br /> o envíanos un email para estar en contacto.
+                <br />
+                <br /> Gracias 😉
+              </Modal.Body>
+            </Modal.Header>
+            <Modal.Footer>
+              <Link
+                href="/contact-page"
+                variant="primary"
+                onClick={handleCloseProductSend}
+                className="btn btn-primary"
+              >
+                Regresar
+              </Link>
+            </Modal.Footer>
+          </Modal>
         </div>
       </div>
-      <Modal show={showContactSend} onHide={() => setShowContactSend(false)}>
-        <Modal.Header closeButton>
-          <Modal.Body>
-            Hola... Escríbenos por WhatsApp o envíanos un correo que te
-            estaremos respondiendo en la brevedad posible... Gracias 😉
-          </Modal.Body>
-        </Modal.Header>
-      </Modal>
     </section>
   );
 }

@@ -114,7 +114,7 @@ export default function MainProjectsPage() {
                 </div>
 
                 <div className={`col-12 col-sm-6 ${i % 2 ? "order-sm-1" : ""}`}>
-                  <figure onClick={() => openGallery(item)}>
+                  <figure onClick={() => openGallery(item)} className="projects__img">
                     <Image src={item.thumbnail} alt={item.name} />
                   </figure>
                 </div>
