@@ -13,14 +13,6 @@ const caracteristicas = [
 ];
 
 export default function About() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  const openVideo = (event) => {
-    event.preventDefault();
-    setIsVideoOpen(true);
-  };
-
   return (
     <section id="about-section" className="about__section p_relative">
       <div className="auto-container">
@@ -70,13 +62,11 @@ export default function About() {
 
                   <section className="aboutcard__buttons">
                     <div className="aboutcard__buttons-btn-video">
-                      <Link href="#about-section">
+                      <Link href="/modalvideo">
                         <Button
-                          onClick={() => setOpen(true)}
                           variant="outline-light"
                           size="lg"
                           className="w-100"
-                          disabled="true"
                         >
                           <p>Reproducir video</p>
                           <svg
@@ -125,14 +115,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <ModalVideo
-        videoId="AzwC6umvd1s"
-        channel="youtube"
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        autoplay
-      />
     </section>
   );
 }
