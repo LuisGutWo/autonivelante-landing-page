@@ -33,11 +33,11 @@ export default function Home() {
       name: "Alta trabajabilidad y rendimiento",
     },
     {
-      id: 4,
+      id: 5,
       name: "No sufre retracciones hasta el espesor máximo indicado",
     },
     {
-      id: 4,
+      id: 6,
       name: "Uso exclusivo para superficies interiores",
     },
   ];

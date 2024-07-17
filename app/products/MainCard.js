@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Button, Image, Modal } from "react-bootstrap";
+import { formatPrice } from "./formatPrice";
 
 export default function ProductsCard({ item }) {
   const [showProductSend, setShowProductSend] = useState(false);
@@ -17,14 +18,24 @@ export default function ProductsCard({ item }) {
     >
       <div className="card main__card">
         <div className="main__card-img-container">
-          <Image src={item.image} className="card-img-top" alt="..." />
+          {item.attributes.image && (
+            <Image
+              src={item.attributes.image}
+              className="card-img-top"
+              alt="..."
+            />
+          )}
         </div>
         <div className="card-body">
-          <h4 className="card-title fw-bold">{item.name}</h4>
-          <div className="card-price fw-bold">{item.price}</div>
+          {item.attributes.title && (
+            <h4 className="card-title fw-bold">{item.attributes.title}</h4>
+          )}
+          <div className="card-price fw-bold">
+            {formatPrice(item.attributes.price)}
+          </div>
         </div>
         <div className="buttons__card">
-          <Link href={item.url} className="btn btn-outline-primary btn-lg">
+          <Link href="/" className="btn btn-outline-primary btn-lg">
             <b>
               Ver detalle
               <svg

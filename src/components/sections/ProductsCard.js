@@ -1,9 +1,22 @@
-"use client";
 import { Container } from "react-bootstrap";
-import { products } from "@/src/config/productsListHome";
-import MainCard from "@/src/components/elements/MainCard";
+import MainCard from "@/app/products/MainCard";
+import { waitSeconds } from "@/src/utils/helpers";
 
-export default function ProductsCard() {
+export default async function ProductsCard() {
+  const apiUrl = process.env.NEXT_STRAPI_HOME_URL;
+  await waitSeconds(1000); // wait for 1 second
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+
+  if (!data) {
+    return (
+      <div className="text-center">
+        <p>No products found.</p>
+      </div>
+    );
+  }
+
+  const products = data.data;
   return (
     <section
       id="products"
