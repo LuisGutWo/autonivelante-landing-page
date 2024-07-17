@@ -6,7 +6,7 @@ import Link from "next/link";
 import "swiper/css/thumbs";
 import { productsListPage } from "@/src/config/productsListPage";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import MainCard from "@/src/components/elements/MainCard";
+import MainCard from "@/app/products/MainCard";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

@@ -9,7 +9,7 @@ import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import MainCard from "@/src/components/elements/MainCard";
+import MainCard from "@/app/products/MainCard";
 
 const caracteristicas = [
   { id: 0, name: "Autonivelante" },
