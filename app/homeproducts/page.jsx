@@ -2,23 +2,21 @@ import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import { waitSeconds } from "@/src/utils/helpers";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import MainCard from "@/app/products/MainCard";
+import MainHomeCard from "@/app/homeproducts/MainHomeCard";
 
-export default async function MainProductsPage() {
-  const apiUrl = process.env.NEXT_STRAPI_URL;
-  await waitSeconds(1000); // wait for 1 second
-  const response = await fetch(apiUrl);
-  const data = await response.json();
+async function getData() {
+  await waitSeconds(1200); // wait for 1 second
+  const res = await fetch(process.env.NEXT_STRAPI_HOME_URL);
 
-  if (!data) {
-    return (
-      <div className="text-center">
-        <p>No products found.</p>
-      </div>
-    );
+  if (!res.ok) {
+    throw new Error("Error al cargar la data");
   }
 
-  const products = data.data;
+  return res.json();
+}
+
+export default async function Home() {
+  const products = await getData();
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -32,8 +30,8 @@ export default async function MainProductsPage() {
             <Container fluid>
               <div className="products__card-container productcard__text">
                 <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
-                  {products.map((item, i) => (
-                    <MainCard key={i} item={item} />
+                  {products.data.map((item, index) => (
+                    <MainHomeCard key={index} item={item} />
                   ))}
                 </div>
               </div>

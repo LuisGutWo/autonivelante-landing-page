@@ -82,7 +82,7 @@ export default function MainProjectsPage() {
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <Container className="mt_150">
-        <Breadcrumb items={[{ name: "Proyectos", href: "projects" }]} />
+        <Breadcrumb items={[{ name: "Proyectos", href: "projects" }]} /> 
 
         <section className="py-5">
           {projects.map((item, i) => (
@@ -114,8 +114,12 @@ export default function MainProjectsPage() {
                 </div>
 
                 <div className={`col-12 col-sm-6 ${i % 2 ? "order-sm-1" : ""}`}>
-                  <figure onClick={() => openGallery(item)} className="projects__img">
-                    <Image src={item.thumbnail} alt={item.name} />
+                  <figure onClick={() => openGallery(item)}>
+                    <Image
+                      src={item.thumbnail}
+                      alt={item.name}
+                      className={styles.projects__img}
+                    />
                   </figure>
                 </div>
               </div>

@@ -21,7 +21,7 @@ export default function HeaderAux(props) {
                             <div className="logo-box">
                                 <Link href="/">
                                     <figure className="logo">
-                                        <Image src="assets/images/logo_horizontal.png" alt="" />
+                                        <Image src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/logo_horizontal.png?alt=media&token=6ae9fe22-0156-4a49-b178-bb8d6f80fff3" alt="" />
                                     </figure>
                                 </Link>
                             </div>
@@ -64,7 +64,7 @@ export default function HeaderAux(props) {
                         <div className="outer-box">
                             <div className="logo-box">
                                 <figure className="logo">
-                                    <Link href="/"><Image src="assets/images/logo_horizontal.png" alt="" /></Link>
+                                    <Link href="/"><Image src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/logo_horizontal.png?alt=media&token=6ae9fe22-0156-4a49-b178-bb8d6f80fff3" alt="" /></Link>
                                 </figure>
                             </div>
                             <div className="menu-area2 clearfix">

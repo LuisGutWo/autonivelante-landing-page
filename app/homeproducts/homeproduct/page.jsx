@@ -1,0 +1,35 @@
+import { Container } from "react-bootstrap";
+import Layout from "@/src/components/layout/Layout";
+import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
+import { getSingleHomeProduct } from "@/src/utils/helpers";
+import MainCardDetail from "@/app/products/MainCardDetail";
+
+export default async function SingleProduct({ searchParams }) {
+  const idString = searchParams?.id;
+  if (!idString) {
+    return <div>No se encontró el producto</div>;
+  }
+  const id = Number(idString);
+  const product = await getSingleHomeProduct(id).catch((error) => {
+    console.error(error);
+    return <div>No se encontró el producto</div>;
+  });
+
+  if (!product) {
+    return <div>No se encontró el producto</div>;
+  }
+
+  return (
+    <Layout headerStyle={4} footerStyle={1}>
+      <Container className="mt_150">
+        <Breadcrumb
+          items={[
+            { name: "Productos", href: "/#products" },
+            { name: `${product?.attributes?.title}`, href: `products/${id}` },
+          ]}
+        />
+        <MainCardDetail product={product} />
+      </Container>
+    </Layout>
+  );
+}

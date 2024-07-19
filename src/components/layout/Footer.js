@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="container">
                     <div className="copyright text-center">
                         <figure className="footer-logo">
-                            <Image src="assets/images/logo_horizontal.png" alt="Autonivelante" />
+                            <Image src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/logo_horizontal.png?alt=media&token=6ae9fe22-0156-4a49-b178-bb8d6f80fff3" alt="Autonivelante" />
                         </figure>
                     </div>
                 </div>

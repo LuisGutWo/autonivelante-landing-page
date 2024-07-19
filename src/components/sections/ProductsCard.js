@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import MainCard from "@/app/products/MainCard";
+import MainHomeCard from "@/app/homeproducts/MainHomeCard";
 import { waitSeconds } from "@/src/utils/helpers";
 
 export default async function ProductsCard() {
@@ -37,7 +37,7 @@ export default async function ProductsCard() {
 
           <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4  align-items-center">
             {products.map((item, i) => (
-              <MainCard key={i} item={item} />
+              <MainHomeCard key={i} item={item} />
             ))}
           </div>
         </div>
