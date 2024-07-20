@@ -9,7 +9,7 @@
 }
 
 .detailproducts__card-box {
-  margin-top: 2rem;
+  margin-top: 4rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -29,10 +29,9 @@
   border-radius: 5px;
 }
 .detailmain__card {
-  border-radius: 0;
-  border: none;
   height: 100%;
   width: 100%;
+  border: none;
   padding: 1.5rem;
 }
 .detailmain__img-box {
@@ -41,29 +40,24 @@
   border: none;
   height: 100%;
   width: 100%;
-  padding: 0;
+  padding: 2rem;
 
   .card-img-top {
-    margin-top: 5rem;
+    margin: 3rem 0;
     width: 30rem;
     height: 33rem;
     object-fit: contain;
   }
 }
 .detailcard-body {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 1rem;
-
-    li {
-      font-size: 0.8rem;
-    }
-  }
+  height: 100%;
 }
+
 .detailproductcard__title {
   font-size: 1.75rem;
 }
@@ -133,55 +127,53 @@
 
 .products__card-maincontent {
   .main__card {
-    height: 100%;
-    max-width: 17rem;
+    min-width: 21rem;
     width: 100%;
+    min-height: 38rem;
+    height: 100%;
     background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/card-backgroun-shape.png?alt=media&token=224caadb-c4fa-47cd-9421-165c92b61671);
     background-repeat: no-repeat;
-    background-size: 17rem;
+    background-size: contain;
     background-position: top;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     border-style: none;
     box-shadow: rgba(0, 0, 0, 0.248) 0px 5px 15px;
 
     .main__card-img-container {
-      padding-top: 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
       overflow: hidden;
 
       .card-img-top {
-        width: 85%;
-        margin: 0;
         object-fit: contain;
+        max-width: 16rem;
+        padding: 2rem 0 0 0;
       }
     }
 
     .card-body {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
-      padding: 0 3rem;
-      margin-top: 0.8rem;
-      max-height: 9rem;
+      max-width: 18rem;
+      width: 100%;
+      max-height: 10rem;
+      height: 100%;
+      padding-top: 2rem;
 
       .card-title {
         text-align: center;
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-        padding: 0;
       }
       .card-price {
         font-size: 1.5rem;
       }
     }
     .buttons__card {
-      margin: 1rem 0;
+      margin: 2rem 0 1rem 0;
       background-color: #fff;
       display: flex;
       flex-direction: column;
@@ -204,6 +196,14 @@
         align-items: center;
       }
     }
+  }
+  .main__card:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.01);
+    cursor: pointer;
   }
 }
 
@@ -231,7 +231,7 @@
 }
 @media screen and (min-width: 769px) {
   /* detail card section product 1 */
-  .products__card-maincontent {
+  /* .products__card-maincontent {
     .main__card {
       max-width: 22rem;
       background-size: 23rem;
@@ -271,12 +271,12 @@
         }
       }
     }
-  }
-  .maincard__section {
+  } */
+  /* .maincard__section {
     height: 100%;
     margin-bottom: 5rem;
     width: 100vw;
-  }
+  } */
   .Breadcrumb_breadcrumb__2WlKU {
     font-size: 100%;
   }
@@ -292,32 +292,15 @@
   }
 
   .detailmain__card {
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    width: 100%;
     padding: 2rem 0;
 
     .detailcard-body {
-      display: flex;
-      flex-direction: column;
       padding: 3rem 6rem 2rem 1rem;
-      width: 100%;
-
-      h4 {
-        font-size: 1.7rem;
-      }
-      h5 {
-        font-size: 1.1rem;
-      }
-      p {
-        font-size: 0.9rem;
-      }
     }
   }
-  .products__card-maincontent {
+  /* .products__card-maincontent {
     height: 85vh;
-  }
+  } */
 
   .list__item {
     height: 18px;

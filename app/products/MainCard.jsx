@@ -18,27 +18,38 @@ export default function ProductsCard({ item }) {
     >
       {item && (
         <div className="card main__card">
-          <div className="main__card-img-container">
-            {item.attributes.image && (
+          <Link
+            href={{
+              pathname: "/products/product",
+              query: { id: item?.id },
+            }}
+            key={item.id}
+            className="main__card-img-container"
+          >
+            {item.attributes?.image && (
               <Image
+                style={{ width: "100%", height: "100%" }}
                 src={item.attributes.image}
                 className="card-img-top"
                 alt="..."
               />
             )}
-          </div>
+          </Link>
           <div className="card-body">
             {item.attributes.title && (
-              <h4 className="card-title fw-bold">{item.attributes.title}</h4>
+              <h3 className="card-title fw-bold">{item.attributes.title}</h3>
             )}
             <div className="card-price fw-bold">
-              {item.attributes.price ? formatPrice(item.attributes.price) : '-'}
+              {item.attributes.price ? formatPrice(item.attributes.price) : "-"}
             </div>
           </div>
           <div className="buttons__card">
             {item.id && (
               <Link
-                href={{ pathname: "/products/product", query: { id: item?.id } }}
+                href={{
+                  pathname: "/products/product",
+                  query: { id: item?.id },
+                }}
                 key={item.id}
                 className="btn btn-outline-primary btn-lg"
               >

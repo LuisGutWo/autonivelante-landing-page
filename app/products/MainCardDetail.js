@@ -12,6 +12,10 @@ export default function Home({ product }) {
   const handleCloseProductSend = () => setShowProductSend(false);
   const handleShowProductSend = () => setShowProductSend(true);
 
+  if (!product) {
+    return null;
+  }
+
   return (
     <section className="detailproducts__card-box">
       <Container fluid className="detailproducts__card-maincontent">
@@ -20,10 +24,11 @@ export default function Home({ product }) {
           style={{
             width: "100%",
             height: "100%",
-            backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/white_circle_bg.png?alt=media&token=6434adda-bb60-43ba-a345-f92d4aac073b)",
+            backgroundImage:
+              "url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/white_circle_bg.png?alt=media&token=6434adda-bb60-43ba-a345-f92d4aac073b)",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            backgroundSize: "32rem",
+            backgroundSize: "29rem",
           }}
         >
           <Image
@@ -38,20 +43,27 @@ export default function Home({ product }) {
         </div>
         <div className="card detailmain__card">
           <div className="detailcard-body">
-            <h4 className="fw-bold pb-3">
+            <h2 className="fw-bold pb-3">
               {product?.attributes?.title ?? "Product Title"}
-            </h4>
-            <h5 className="fs_11 fw-bold mb-2">
-              {product?.attributes?.subtitle ?? "Product Subtitle"}
+            </h2>
+            <h5 className="fw-bold mb_25">
+              {product?.attributes?.subtitle ?? ""}
             </h5>
-            <p className="fs_11">{product?.attributes?.desc ?? "Product Description"}</p>
-            <p className="fs_11 mt-3 mb-3">Caracteristicas :</p>
+            <p className="fs_15">
+              {product?.attributes?.desc ?? "Product Description"}
+            </p>
+            <p className="fs_15 mt-3 mb-3">Caracteristicas :</p>
+
+            <ul className="fs_15 mt-3 mb-3">
+              {product?.attributes?.characteristics?.children?.map((text, i) => (
+                <li key={i}>{text}</li>
+              ))}
+            </ul>
+
             <div className="detailcard-price fw-bold">
-              {product?.attributes?.price ? (
-                formatPrice(product?.attributes?.price)
-              ) : (
-                <span>Sin precio</span>
-              )}
+              {product?.attributes?.price
+                ? formatPrice(product?.attributes?.price)
+                : "Sin precio"}
             </div>
             <div className="buttons__card d-flex flex-column">
               <Button

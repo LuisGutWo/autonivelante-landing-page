@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import { Button, Image, Modal } from "react-bootstrap";
-
+import Link from "next/link";
+import { formatPrice } from "@/src/utils/formatPrice";
 
 export default function ProductsCardHome({ item }) {
   const [showProductSend, setShowProductSend] = useState(false);
@@ -18,46 +18,57 @@ export default function ProductsCardHome({ item }) {
     >
       {item && (
         <div className="card main__card">
-          <div className="main__card-img-container">
+          <Link
+            href={{
+              pathname: "/homeproducts/homeproduct",
+              query: { id: item?.id },
+            }}
+            key={item.id}
+            className="main__card-img-container"
+          >
             {item.attributes?.image && (
               <Image
+                style={{ width:"100%", height:"100%" }}
                 src={item.attributes.image}
                 className="card-img-top"
                 alt="..."
               />
             )}
-          </div>
+          </Link>
           <div className="card-body">
             {item.attributes?.title && (
-              <h4 className="card-title fw-bold">{item.attributes.title}</h4>
+              <h3 className="card-title fw-bold">{item.attributes.title}</h3>
             )}
             <div className="card-price fw-bold">
-              {item.attributes.price ? item.attributes.price : "-"}
+              {item.attributes?.price
+                ? formatPrice(item.attributes?.price)
+                : "-"}
             </div>
           </div>
           <div className="buttons__card">
             {item.id && (
               <Link
-                href={{ pathname: "/homeproducts/homeproduct", query: { id: item?.id } }}
+                href={{
+                  pathname: "/homeproducts/homeproduct",
+                  query: { id: item?.id },
+                }}
                 key={item.id}
-                className="btn btn-outline-primary btn-lg"
+                className="btn btn-outline-primary btn-lg d-flex flex-row justify-content-center gap-3 justify-content-center"
               >
-                <b>
-                  Ver detalle
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    className="bi bi-copy ms-4"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
-                    />
-                  </svg>
-                </b>
+                <b className="fs-5">Ver detalle</b>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  className="bi bi-copy ms-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                  />
+                </svg>
               </Link>
             )}
 

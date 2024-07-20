@@ -1,5 +1,5 @@
 "use client";
-// import VideoPopup from '@/components/elements/VideoPopup'
+import VideoPopup from '@/components/elements/VideoPopup'
 import Link from "next/link";
 import Layout from "@/src/components/layout/Layout";
 import { Container } from "react-bootstrap";

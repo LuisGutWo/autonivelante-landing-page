@@ -21,7 +21,7 @@ export default async function SingleProduct({ searchParams }) {
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
-      <Container className="mt_150">
+      <Container className="mt_150 mb_200">
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },
