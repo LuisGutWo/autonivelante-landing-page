@@ -1,5 +1,4 @@
 "use client";
-import VideoPopup from '@/components/elements/VideoPopup'
 import Link from "next/link";
 import Layout from "@/src/components/layout/Layout";
 import { Container } from "react-bootstrap";
@@ -41,11 +40,11 @@ const ModalVideoPage = () => {
                   fill="white"
                   fillRule="evenodd"
                   stroke="white"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeMiterlimit="10"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                   className="bi bi-x-lg"
                   viewBox="0 0 16 16"
                 >

@@ -5,6 +5,8 @@ import Link from "next/link";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 import { formatPrice } from "@/src/utils/formatPrice";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { List } from "react-content-loader";
 
 export default function Home({ product }) {
   const [showProductSend, setShowProductSend] = useState(false);
@@ -54,11 +56,11 @@ export default function Home({ product }) {
             </p>
             <p className="fs_15 mt-3 mb-3">Caracteristicas :</p>
 
-            <ul className="fs_15 mt-3 mb-3">
-              {product?.attributes?.characteristics?.children?.map((text, i) => (
-                <li key={i}>{text}</li>
-              ))}
-            </ul>
+            <div className="text-dark">
+              <BlocksRenderer
+                content={product?.attributes?.characteristics}
+              />
+            </div>
 
             <div className="detailcard-price fw-bold">
               {product?.attributes?.price

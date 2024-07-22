@@ -34,7 +34,6 @@ export default function Services() {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            loopFillGroupWithBlank={true}
             navigation={true}
             className="mySwiper"
             keyboard={true}

@@ -37,7 +37,7 @@ export default function ProductsCard({ item }) {
           </Link>
           <div className="card-body">
             {item.attributes.title && (
-              <h3 className="card-title fw-bold">{item.attributes.title}</h3>
+              <h3 className="card-title fw_bold pb-3">{item.attributes.title}</h3>
             )}
             <div className="card-price fw-bold">
               {item.attributes.price ? formatPrice(item.attributes.price) : "-"}
