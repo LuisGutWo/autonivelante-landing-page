@@ -29,18 +29,18 @@ export default function ProductsCard({ item }) {
             {item.attributes?.image && (
               <Image
                 style={{ width: "100%", height: "100%" }}
-                src={item.attributes.image}
+                src={item.attributes?.image}
                 className="card-img-top"
                 alt="..."
               />
             )}
           </Link>
           <div className="card-body">
-            {item.attributes.title && (
+            {item.attributes?.title && (
               <h3 className="card-title fw_bold pb-3">{item.attributes.title}</h3>
             )}
             <div className="card-price fw-bold">
-              {item.attributes.price ? formatPrice(item.attributes.price) : "-"}
+              {item.attributes?.price ? formatPrice(item.attributes.price) : "-"}
             </div>
           </div>
           <div className="buttons__card">

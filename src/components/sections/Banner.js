@@ -10,9 +10,9 @@ export default function Banner() {
             <div className="banner__container">
                 <div className="container-item p_relative">
                     <div className="content-box" >
-                        <h2 className="wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1000ms">
+                        <h1 className="wow fadeInLeft animated fs_40 fw_sbold mb-5 mt-5 text-light" data-wow-delay="00ms" data-wow-duration="1000ms">
                             Somos expertos<br />en nivelar superficies<br />industriales y<br />residenciales
-                        </h2>
+                        </h1>
                         <div className="btn-box wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <Link href="/contact-page" className="theme-btn-one">Contáctanos
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-arrow-right-short ms-2" viewBox="0 0 16 16">
