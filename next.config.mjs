@@ -27,13 +27,13 @@ const nextConfig = {
     NEXT_URL:
       "https://autonivelante-products-default-rtdb.firebaseio.com/products.json",
     NEXT_STRAPI_URL:
-      "https://a337-201-189-196-246.ngrok-free.app/api/autonivelante-products?populate=*",
+      "http://localhost:1337/api/autonivelante-products?populate=*",
     NEXT_STRAPI_HOME_URL:
-      "https://a337-201-189-196-246.ngrok-free.app/api/autonivelante-home-products?populate=*",
+      "http://localhost:1337/api/autonivelante-home-products?populate=*",
     NEXT_STRAPI_PROJECTS_URL:
-      "https://a337-201-189-196-246.ngrok-free.app/api/autonivelante-projects?populate=*",
+      "http://localhost:1337/api/autonivelante-projects?populate=*",
     NGROK_AUTHTOKEN:
-      "authtoken: 2jJMjf9IQ51Y4YpxJS8vP1EGyEm_5qW5zG4ofWP2uFxWkcCj5 node index.js",
+      "2jJMjf9IQ51Y4YpxJS8vP1EGyEm_5qW5zG4ofWP2uFxWkcCj5 node index.js",
   },
 };
 
