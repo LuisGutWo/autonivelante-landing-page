@@ -1,19 +1,17 @@
 "use client";
+import React from "react";
 import { Container } from "react-bootstrap";
-import "swiper/css/thumbs";
-import { productsListPage } from "@/src/config/productsListPage";
-import MainCard from "@/app/products/MainCard";
-
 import Carousel from "react-multi-carousel";
+import MainCard from "@/app/products/MainCard";
+import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 
-export default function Home() {
-
+const Home = ({ products }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 3, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -21,7 +19,7 @@ export default function Home() {
       slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 564, min: 0 },
+      breakpoint: { max: 464, min: 0 },
       items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
@@ -31,37 +29,25 @@ export default function Home() {
     <section id="carousel" className="carousel__page">
       <div className="grey__square"></div>
       <div className="carousel__main-section">
-        <Container className="carousel__container">
+        <Container>
           <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={false}
             responsive={responsive}
-            additionalTransfrom={0}
-            arrows={true}
-            autoPlay={true}
-            autoPlaySpeed={9000}
-            customTransition="all 5s linear"
-            centerMode={false}
-            containerClass="container-with-dots"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            draggable
-            focusOnSelect={true}
+            ssr={false} // means to render carousel on server-side.
             infinite={true}
-            keyBoardControl
-            minimumTouchDrag={80}
-            pauseOnHover={true}
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={true}
-            renderDotsOutside={true}
-            className="swiper"
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl={false}
-            shouldResetAutoplay
-            showDots={true}
-            sliderClass=""
-            slidesToSlide
-            swipeable={true}
+            keyBoardControl={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            customTransition="3000ms ease-in-out"
+            transitionDuration={6000}
+            containerClass="carousel__container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
           >
-            {productsListPage.map((item, i) => (
+            {products.map((item, i) => (
               <MainCard key={i} item={item} />
             ))}
           </Carousel>
@@ -69,4 +55,6 @@ export default function Home() {
       </div>
     </section>
   );
-}
+};
+
+export default Home;

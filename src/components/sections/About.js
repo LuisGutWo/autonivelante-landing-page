@@ -1,7 +1,5 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
-import ModalVideo from "@/src/components/common/ModalVideo";
 import { Button } from "react-bootstrap";
 
 const caracteristicas = [
@@ -13,6 +11,22 @@ const caracteristicas = [
 ];
 
 export default function About() {
+  const renderCaracteristicas = caracteristicas.map((caracteristica) => (
+    <li key={caracteristica.id}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="6"
+        height="6"
+        fill="currentColor"
+        className="bi bi-circle-fill pe-1"
+        viewBox="0 0 16 16"
+      >
+        <circle cx="8" cy="8" r="8" />
+      </svg>
+      {caracteristica.name}
+    </li>
+  ));
+
   return (
     <section id="about-section" className="about__section p_relative">
       <div className="auto-container">
@@ -40,23 +54,7 @@ export default function About() {
                       en:
                       <br />
                       <br />
-                      <ul>
-                        {caracteristicas.map((caracteristica) => (
-                          <li key={caracteristica.id}>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="6"
-                              height="6"
-                              fill="currentColor"
-                              className="bi bi-circle-fill pe-1"
-                              viewBox="0 0 16 16"
-                            >
-                              <circle cx="8" cy="8" r="8" />
-                            </svg>
-                            {caracteristica.name}
-                          </li>
-                        ))}
-                      </ul>
+                      <ul>{renderCaracteristicas}</ul>
                     </div>
                   </div>
 

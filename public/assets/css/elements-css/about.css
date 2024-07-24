@@ -1,5 +1,5 @@
 .about__section {
-  padding: 0 0 7rem 0;
+  padding: 0;
   background-image: url(../../images/resource/about-bs-image-mobile.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -154,7 +154,8 @@
 @media screen and (min-width: 769px) {
   .about__section {
     background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/about_bg_image.jpg?alt=media&token=2dbfb3a9-98ce-4738-8489-f4b22bafa650);
-    background-position: center;
+    background-position: top;
+    margin-top: 7rem;
   }
   .about__main-column {
     width: 70%;
@@ -249,7 +250,7 @@
 @media screen and (min-width: 1260px) {
   .about__main-column {
     width: 40%;
-    margin-top: 18rem;
+    margin-top: 6rem;
     margin-left: 10rem;
   }
 }

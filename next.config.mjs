@@ -5,14 +5,21 @@ const nextConfig = {
     domains: ["firebasestorage.googleapis.com"],
   },
   async rewrites() {
-    return [
-      {
-        source: "/products/:id",
-        destination: "/products/[id]",
-        source: "/card-detail-1/:id",
-        destination: "/card-detail-1",
-      },
-    ];
+    try {
+      return [
+        {
+          source: "/products/:id",
+          destination: "/products/[id]",
+        },
+        {
+          source: "/homeproducts/:id",
+          destination: "/homeproducts/[id]",
+        },
+      ];
+    } catch (error) {
+      console.error("Error in rewrites function: ", error);
+      return [];
+    }
   },
   env: {
     NEXT_SERVICE_ID: "service_3k8blmt",

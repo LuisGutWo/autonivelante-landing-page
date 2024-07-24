@@ -10,7 +10,7 @@ import Contact from "@/src/components/sections/Contact";
 import { waitSeconds } from "@/src/utils/helpers";
 
 export default async function Home() {
-  await waitSeconds(1000);
+  await waitSeconds(1500);
 
   return (
     <Layout headerStyle={3} footerStyle={1}>

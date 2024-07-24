@@ -1,9 +1,7 @@
 import Layout from "@/src/components/layout/Layout";
 import Contact from "@/src/components/sections/Contact";
-import { waitSeconds } from "@/src/utils/helpers";
 
-export default async function ContactPage() {
-  await waitSeconds();
+export default function ContactPage() {
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <div>

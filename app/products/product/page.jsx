@@ -3,6 +3,7 @@ import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/app/products/MainCardDetail";
+import CarouselComponent from "@/src/components/sections/CarouselComponent";
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
@@ -30,6 +31,7 @@ export default async function SingleProduct({ searchParams }) {
         />
         <MainCardDetail product={product} />
       </Container>
+      <CarouselComponent />
     </Layout>
   );
 }
