@@ -16,7 +16,7 @@ export default function ProductsCard({ item }) {
       data-wow-delay="05ms"
       data-wow-duration="1000ms"
     >
-      {item && (
+      {item.id && (
         <div className="card main__card">
           <Link
             href={{
@@ -26,10 +26,10 @@ export default function ProductsCard({ item }) {
             key={item.id}
             className="main__card-img-container"
           >
-            {item.attributes?.image && (
+            {item.attributes.image && (
               <Image
                 style={{ width: "100%", height: "100%" }}
-                src={item.attributes?.image}
+                src={item.attributes.image}
                 className="card-img-top"
                 alt="..."
               />
@@ -37,10 +37,12 @@ export default function ProductsCard({ item }) {
           </Link>
           <div className="card-body">
             {item.attributes?.title && (
-              <h3 className="card-title fw_bold pb-3">{item.attributes.title}</h3>
+              <h3 className="card-title fw_bold pb-3">
+                {item.attributes.title}
+              </h3>
             )}
             <div className="card-price fw-bold">
-              {item.attributes?.price ? formatPrice(item.attributes.price) : "-"}
+              {item.attributes.price ? formatPrice(item.attributes.price) : "-"}
             </div>
           </div>
           <div className="buttons__card">
