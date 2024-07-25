@@ -115,8 +115,9 @@
   }
 }
 .contactcard__text-two {
-  padding: 4rem;
+  padding: 2rem;
   background-color: #f3f5f7;
+  border: #b8b8b8 solid 4px;
   grid-area: form;
 }
 .contact-style {
@@ -225,6 +226,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    border: none;
   }
   .form__contact {
     margin: 0;

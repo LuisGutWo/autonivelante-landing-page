@@ -4,7 +4,7 @@ import { waitSeconds } from "@/src/utils/helpers";
 export default async function CarouselComponent() {
   const products = await fetch(process.env.NEXT_STRAPI_URL)
     .then((response) => response.json())
-    .catch((error) => {
+    .catch(() => {
       throw new Error("Error al cargar la data");
     });
 
