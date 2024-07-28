@@ -24,6 +24,11 @@
 @import url("elements-css/video.css");
 @import url("elements-css/error.css");
 @import url("elements-css/productcard.css");
+@import url("elements-css/cart.css");
+@import url("elements-css/checkout.css");
+@import url("elements-css/shop-details.css");
+@import url("elements-css/shop.css");
+@import url("elements-css/projects.module.css");
 /*** 
 
 ====================================================================
@@ -1623,6 +1628,28 @@ img {
   margin-bottom: 10px;
 }
 
+/**cart count styles **/
+.count-products {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  bottom: 52%;
+  left: 53%;
+
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: solid black 1.5px;
+  width: 23px;
+  height: 23px;
+
+  border-radius: 50%;
+}
+
+#contador-productos {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 /** mobile-menu **/
 
 .nav-outer .mobile-nav-toggler {
@@ -2753,7 +2780,6 @@ div#mCSB_1_container {
     max-width: 19rem;
     width: 100%;
   }
-  
 }
 
 @media only screen and (max-width: 991px) {
