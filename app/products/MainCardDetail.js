@@ -1,18 +1,13 @@
 "use client";
-import { useState } from "react";
-import { Button, Container, Image, Modal } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 import Link from "next/link";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 import { formatPrice } from "@/src/utils/formatPrice";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { ShoppingBag } from "lucide-react";
 
 export default function Home({ product }) {
-  const [showProductSend, setShowProductSend] = useState(false);
-
-  const handleCloseProductSend = () => setShowProductSend(false);
-  const handleShowProductSend = () => setShowProductSend(true);
-
   if (!product) {
     return null;
   }
@@ -79,54 +74,13 @@ export default function Home({ product }) {
               {price ? formatPrice(price) : "Sin precio"}
             </div>
             <div className="buttons__card d-flex flex-column">
-              <Button
-                onClick={handleShowProductSend}
-                className="btn btn-primary btn-lg d-flex justify-content-center gap-3"
+              <Link
+                href="/cart"
+                className="btn btn-primary btn-lg d-flex justify-content-center align-items-center gap-3 w-100"
               >
-                Agregar al carro
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  className="bi bi-bag-heart"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"
-                  />
-                </svg>
-              </Button>
-              <Modal show={showProductSend} onHide={handleCloseProductSend}>
-                <Modal.Header closeButton></Modal.Header>
-                <Modal.Body style={{ fontSize: "1.5rem" }}>
-                  Gracias por visitarnos...
-                  <br />
-                  <br /> escríbenos al WhatsApp
-                  <br /> o envíanos un email para estar en contacto.
-                  <br />
-                  <br /> Gracias{" "}
-                </Modal.Body>
-                <Modal.Footer>
-                  <Link
-                    href="/products"
-                    variant="primary"
-                    onClick={handleCloseProductSend}
-                    className="btn btn-secondary"
-                  >
-                    Volver
-                  </Link>
-                  <Link
-                    href="/contact-page"
-                    variant="primary"
-                    onClick={handleCloseProductSend}
-                    className="btn btn-primary"
-                  >
-                    Contáctanos
-                  </Link>
-                </Modal.Footer>
-              </Modal>
+                <b>Agregar al carro</b>
+                <ShoppingBag />
+              </Link>
             </div>
           </div>
         </div>
