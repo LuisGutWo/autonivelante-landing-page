@@ -2,7 +2,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
-import MainCard from "@/app/products/MainCard";
+import MainCard from "@/app/MainCard";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 
@@ -46,8 +46,8 @@ const Home = ({ products }) => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
         >
-          {products.map((item, i) => (
-            <MainCard key={i} item={item} />
+          {products.data?.map((product, i) => (
+            <MainCard key={i} product={product} />
           ))}
         </Carousel>
       </Container>

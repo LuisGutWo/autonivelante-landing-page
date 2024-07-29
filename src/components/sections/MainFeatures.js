@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const caracteristicas = [
   { id: 0, name: "Fácil preparación y colocación." },

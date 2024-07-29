@@ -34,7 +34,13 @@ export default function MobileMenu(props) {
         <nav className="menu-box">
           <div className="nav-logo">
             <Link href="/">
-              <Image src="/assets/images/logo_horizontal.png" alt="" width={150} />
+              <Image
+                src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Group%2045.png?alt=media&token=827170a8-1063-46de-b7bf-db0ae19e3058"
+                className="img-fluid"
+                height={50}
+                width={150}
+                alt="autonivelante Mobile Navbar Logo"
+              />
             </Link>
           </div>
 

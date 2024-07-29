@@ -6,15 +6,6 @@ import { getData } from "@/src/lib/getData";
 
 export default async function Home() {
   const products = (await getData(process.env.NEXT_STRAPI_URL)) ?? [];
-  console.log(products);
-
-  if (!products || !products.data) {
-    return (
-      <div>
-        <h1>No se encontró el proyecto</h1>
-      </div>
-    );
-  }
 
   return (
     <Layout headerStyle={4} footerStyle={1}>

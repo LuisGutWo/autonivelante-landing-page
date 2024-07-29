@@ -24,7 +24,10 @@ export default function Header(props) {
                   <figure className="logo">
                     <Image
                       src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Group%2045.png?alt=media&token=827170a8-1063-46de-b7bf-db0ae19e3058"
-                      alt=""
+                      className="img-fluid"
+                      width={200}
+                      height={50}
+                      alt="Autonivelante main navbar Logo"
                     />
                   </figure>
                 </Link>
@@ -72,7 +75,10 @@ export default function Header(props) {
                   <figure className="logo">
                     <Image
                       src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Group%2052.png?alt=media&token=ec59cd9b-219d-4e66-a64e-7cc615a896a7"
-                      alt=""
+                      className="img-fluid"
+                      width={200}
+                      height={50}
+                      alt="autonivelante Navbar Logo"
                     />
                   </figure>
                 </Link>

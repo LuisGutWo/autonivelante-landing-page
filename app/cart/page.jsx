@@ -2,31 +2,27 @@
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import CartProduct from "@/app/cart/CartProduct";
 import Link from "next/link";
-import React from "react";
 import { useSelector } from "react-redux";
 import { Container } from "react-bootstrap";
-import { formatPrice } from "@/src/utils/formatPrice";
 import Layout from "@/src/components/layout/Layout";
 import CartCount from "@/src/components/common/CartCount";
+import { formatPrice } from "@/src/utils/formatPrice";
 
 export default function Cart() {
-  //Selecciona los items del cart
   const cartItems = useSelector((store) => store.cart);
-
-  //Calcula el subtotal
   const subTotal = cartItems.reduce((acc, currentItem) => {
     return acc + currentItem.price * currentItem.qty;
   }, 0);
 
-  console.log(cartItems);
+  const total = subTotal;
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <section className="detailproducts__card-box">
         <Breadcrumb
           items={[
-            { name: "Productos", href: "products" },
-            { name: "Carrito", href: "cart" },
+            { name: "Productos", href: "/products" },
+            { name: "Carrito", href: "/cart" },
           ]}
         />
         <Container
@@ -45,8 +41,8 @@ export default function Cart() {
             </article>
             <div className="d-flex flex-column justify-content-between align-items-center">
               {cartItems.length > 0 ? (
-                cartItems.map((item, i) => (
-                  <CartProduct key={i} cartItem={item} />
+                cartItems.map((cartItem) => (
+                  <CartProduct key={cartItem.id} cartItem={cartItem} />
                 ))
               ) : (
                 <h1>No hay productos en tu carrito</h1>
@@ -61,11 +57,11 @@ export default function Cart() {
             </h2>
             <div className="d-flex align-items-center justify-content-between pb-6">
               <span>Subtotal </span>
-              <span>{formatPrice(subTotal)}</span>
+              <span>{formatPrice(total)}</span>
             </div>
             <div className="d-flex align-items-center justify-content-between py-4">
               <span>Total </span>
-              <span>{formatPrice(subTotal)}</span>
+              <span>{formatPrice(total)}</span>
             </div>
             <Link href="#" className="btn btn-primary w-100">
               Continuar con la orden

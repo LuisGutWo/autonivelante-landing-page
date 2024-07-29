@@ -1706,11 +1706,6 @@ type-check@^0.4.0, type-check@~0.4.0:
   dependencies:
     prelude-ls "^1.2.1"
 
-typescript@^5.5.4:
-  version "5.5.4"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-5.5.4.tgz"
-  integrity sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==
-
 uncontrollable@^7.2.1:
   version "7.2.1"
   resolved "https://registry.npmjs.org/uncontrollable/-/uncontrollable-7.2.1.tgz"

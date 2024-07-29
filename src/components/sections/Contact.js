@@ -1,23 +1,14 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import {
-  Button,
-  Col,
-  Container,
-  Image,
-  Row,
-  Modal,
-  Form,
-} from "react-bootstrap";
+import { Button, Col, Container, Image, Row, Form } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function Contact() {
-  const [showEmailSend, setShowEmailSend] = useState(false);
   const form = useRef();
 
-  const handleCloseEmailSend = () => setShowEmailSend(false);
-  const handleShowEmailSend = () => setShowEmailSend(true);
+  const handleShowEmailSend = () => toast.success(" enviado con exito!");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -234,28 +225,6 @@ export default function Contact() {
                                   />
                                 </svg>
                               </Button>
-                              <Modal
-                                show={showEmailSend}
-                                onHide={handleCloseEmailSend}
-                              >
-                                <Modal.Header closeButton>
-                                  <Modal.Body>
-                                    Correo enviado con éxito!! Uno de nuestros
-                                    ejecutivos te contactara a la brevedad.
-                                    Gracias
-                                  </Modal.Body>
-                                </Modal.Header>
-                                <Modal.Footer>
-                                  <Link
-                                    href="/"
-                                    variant="primary"
-                                    onClick={handleCloseEmailSend}
-                                    className="btn btn-primary"
-                                  >
-                                    Regresar
-                                  </Link>
-                                </Modal.Footer>
-                              </Modal>
                             </Form>
                           </div>
                         </div>

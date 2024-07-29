@@ -1,13 +1,22 @@
 "use client";
-import { Container, Image } from "react-bootstrap";
-import Link from "next/link";
+import { Button, Container, Image } from "react-bootstrap";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 import { formatPrice } from "@/src/utils/formatPrice";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { ShoppingBag } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/slices/cartSlice";
+import toast from "react-hot-toast";
 
 export default function Home({ product }) {
+  const dispatch = useDispatch();
+
+  function handleAddItemToCart() {
+    dispatch(addToCart(product));
+    toast.success(`${product.attributes.title} Se agrego satisfactoriamente!`);
+  }
+
   if (!product) {
     return null;
   }
@@ -44,7 +53,7 @@ export default function Home({ product }) {
           <Image
             src={image}
             className="card-img-top"
-            alt="..."
+            alt="Card Detail Image"
             onError={(event) => {
               event.target.src =
                 "/assets/images/shop/default-product-image.png";
@@ -73,14 +82,14 @@ export default function Home({ product }) {
             <div className="detailcard-price fw-bold">
               {price ? formatPrice(price) : "Sin precio"}
             </div>
-            <div className="buttons__card d-flex flex-column">
-              <Link
-                href="/cart"
-                className="btn btn-primary btn-lg d-flex justify-content-center align-items-center gap-3 w-100"
+            <div className="buttons__card d-flex flex-column w-75">
+              <Button
+                onClick={handleAddItemToCart}
+                className="btn btn-primary btn-lg w-100 d-flex justify-content-evenly align-content-center"
               >
                 <b>Agregar al carro</b>
                 <ShoppingBag />
-              </Link>
+              </Button>
             </div>
           </div>
         </div>

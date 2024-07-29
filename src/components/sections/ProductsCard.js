@@ -1,22 +1,10 @@
 import { Container } from "react-bootstrap";
 import MainHomeCard from "@/app/homeproducts/MainHomeCard";
-import { waitSeconds } from "@/src/utils/helpers";
+import { getData } from "@/src/lib/getData";
 
 export default async function ProductsCard() {
-  const apiUrl = process.env.NEXT_STRAPI_HOME_URL;
-  await waitSeconds(1000); // wait for 1 second
-  const response = await fetch(apiUrl);
-  const data = await response.json();
+  const products = (await getData(process.env.NEXT_STRAPI_HOME_URL)) ?? [];
 
-  if (!data) {
-    return (
-      <div className="text-center">
-        <p>No products found.</p>
-      </div>
-    );
-  }
-
-  const products = data.data;
   return (
     <section
       id="products"
@@ -36,8 +24,8 @@ export default async function ProductsCard() {
           </div>
 
           <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4  align-items-center">
-            {products.map((item, i) => (
-              <MainHomeCard key={i} item={item} />
+            {products.data.map((product, i) => (
+              <MainHomeCard key={i} product={product} />
             ))}
           </div>
         </div>
