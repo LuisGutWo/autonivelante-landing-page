@@ -1,22 +1,11 @@
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
-import { waitSeconds } from "@/src/utils/helpers";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import MainHomeCard from "@/app/homeproducts/MainHomeCard";
-
-async function getData() {
-  await waitSeconds(1200); // wait for 1 second
-  const res = await fetch(process.env.NEXT_STRAPI_HOME_URL);
-
-  if (!res.ok) {
-    throw new Error("Error al cargar la data");
-  }
-
-  return res.json();
-}
+import { getData } from "@/src/lib/getData";
 
 export default async function Home() {
-  const products = await getData();
+  const products = (await getData(process.env.NEXT_STRAPI_HOME_URL)) ?? [];
 
   return (
     <Layout headerStyle={4} footerStyle={1}>

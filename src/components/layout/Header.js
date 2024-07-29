@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import { Image } from "react-bootstrap";
 import { ShoppingBag } from "lucide-react";
+import CartCount from "../common/CartCount";
 
 export default function Header(props) {
   const { scroll, isMobileMenu, handleMobileMenu, isSidebar } = props;
@@ -47,9 +48,11 @@ export default function Header(props) {
               <ul className="menu-right-content">
                 <li className="cart-box">
                   <Link href="/cart">
-                    <ShoppingBag />
+                    <ShoppingBag size={30} className="cart-icon" />
                     <div className="count-products">
-                      <span id="contador-productos">10</span>
+                      <span id="contador-productos">
+                        <CartCount />
+                      </span>
                     </div>
                   </Link>
                 </li>
@@ -87,9 +90,15 @@ export default function Header(props) {
               <ul className="menu-right-content">
                 <li className="cart-box">
                   <Link href="/cart">
-                    <ShoppingBag color="black" />
+                    <ShoppingBag
+                      color="black"
+                      size={30}
+                      className="cart-icon"
+                    />
                     <div className="count-products">
-                      <span id="contador-productos">10</span>
+                      <span id="contador-productos">
+                        <CartCount />
+                      </span>
                     </div>
                   </Link>
                 </li>

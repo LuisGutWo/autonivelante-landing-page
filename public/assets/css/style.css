@@ -1631,22 +1631,23 @@ img {
 /**cart count styles **/
 .count-products {
   position: absolute;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 52%;
   left: 53%;
 
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: solid black 1.5px;
-  width: 23px;
-  height: 23px;
+  width: 1.5rem;
+  height: 1.5rem;
 
   border-radius: 50%;
 }
 
 #contador-productos {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
