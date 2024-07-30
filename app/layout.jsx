@@ -17,12 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${inter.variable} ${jost.variable}`}>
-      <body>
-        <Providers>
+      <Providers>
+        <body>
           <Toaster position="top-center" reverseOrder={false} />
           {children}
-        </Providers>
-      </body>
+        </body>
+      </Providers>
     </html>
   );
 }

@@ -1,3 +1,4 @@
+'use client'
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
@@ -10,7 +11,7 @@ export default async function Home() {
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <Container className="mt_150">
-        <Breadcrumb items={[{ name: "Productos", href: "products" }]} />
+        <Breadcrumb items={[{ name: "Productos", href: "/products" }]} />
         <div className="d-flex justify-content-center align-items-center">
           <section
             id="products"

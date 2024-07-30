@@ -13,7 +13,7 @@ export default function ProductsCardHome({ product }) {
 
   function handleAddItemToCart() {
     dispatch(addToCart(product));
-    toast.success(`${product.attributes.title} Se agrego satisfactoriamente!`);
+    toast.success(`${product.attributes?.title} Se agrego satisfactoriamente!`);
   }
 
   return (

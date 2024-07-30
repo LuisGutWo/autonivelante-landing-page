@@ -9,7 +9,7 @@ import { Minus, Plus, Trash2 } from "lucide-react";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-// import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/utils/formatPrice";
 
 export default function CartProduct({ cartItem }) {
   const dispatch = useDispatch();
@@ -42,22 +42,22 @@ export default function CartProduct({ cartItem }) {
         </div>
         <div className="d-flex gap-3 align-items-center bg-dark p-1 b_radius_10">
           <button
-            onClick={() => handleQtyDecrement(cartItem?.id)}
+            onClick={() => handleQtyDecrement(cartItem)}
             className="btn btn-danger py-2 px-4"
           >
             <Minus />
           </button>
           <p className="d-flex flex-grow-1 py-2 px-4 text-light">{cartItem?.qty}</p>
           <button
-            onClick={() => handleQtyIncrement(cartItem?.id)}
+            onClick={() => handleQtyIncrement(cartItem)}
             className="btn btn-primary py-2 px-4"
           >
             <Plus />
           </button>
         </div>
-        <div className="d-flex align-items-center gap-2">
-          <h4>{cartItem?.price}</h4>
-          <button onClick={() => handleItemDelete(cartItem?.id)}>
+        <div className="d-flex align-items-center justify-content-between gap-2">
+          <h4>{formatPrice(cartItem?.price)}</h4>
+          <button onClick={() => handleItemDelete(cartItem)}>
             <Trash2 className="text-red-600 w-5 h-5" />
           </button>
         </div>

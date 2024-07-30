@@ -13,12 +13,10 @@ export default function Cart() {
   const subTotal = cartItems.reduce((acc, currentItem) => {
     return acc + currentItem.price * currentItem.qty;
   }, 0);
-
-  const total = subTotal;
-
+ 
   return (
     <Layout headerStyle={4} footerStyle={1}>
-      <section className="detailproducts__card-box">
+      <Container className="mt_150">
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },
@@ -41,8 +39,8 @@ export default function Cart() {
             </article>
             <div className="d-flex flex-column justify-content-between align-items-center">
               {cartItems.length > 0 ? (
-                cartItems.map((cartItem) => (
-                  <CartProduct key={cartItem.id} cartItem={cartItem} />
+                cartItems.map((cartItem, id) => (
+                  <CartProduct key={id} cartItem={cartItem.attributes} />
                 ))
               ) : (
                 <h1>No hay productos en tu carrito</h1>
@@ -57,18 +55,18 @@ export default function Cart() {
             </h2>
             <div className="d-flex align-items-center justify-content-between pb-6">
               <span>Subtotal </span>
-              <span>{formatPrice(total)}</span>
+              <span>{formatPrice(subTotal)}</span>
             </div>
             <div className="d-flex align-items-center justify-content-between py-4">
               <span>Total </span>
-              <span>{formatPrice(total)}</span>
+              <span>{formatPrice(subTotal)}</span>
             </div>
             <Link href="#" className="btn btn-primary w-100">
               Continuar con la orden
             </Link>
           </div>
         </Container>
-      </section>
+      </Container>
     </Layout>
   );
 }
