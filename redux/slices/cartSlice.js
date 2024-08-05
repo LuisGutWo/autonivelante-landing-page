@@ -33,7 +33,7 @@ const cartSlice = createSlice({
   reducers: {
     //Slice para agregar al carro
     addToCart: (store, action) => {
-      const { id, title, price, image } = action.payload;
+      const { id, attributes: title, price, image } = action.payload;
       // Check if the item already exists in the cart
       const existingItem = store.find((item) => item.id === id);
 
@@ -42,7 +42,7 @@ const cartSlice = createSlice({
         existingItem.qty += 1;
       } else {
         // If the item doesn't exist, add it to the cart
-        store.push({ id, title, price, qty: 1, image });
+        store.push({ id, attributes: title, price, qty: 1, image });
       }
 
       saveState(store);
@@ -75,11 +75,11 @@ const cartSlice = createSlice({
     decrementQty: (store, action) => {
       const cartId = action.payload;
       const cartItem = store.find((item) => item.id === cartId);
-
       if (cartItem && cartItem.qty > 1) {
         cartItem.qty -= 1;
-        saveState(store);
       }
+
+      saveState(store);
 
       return store;
     },

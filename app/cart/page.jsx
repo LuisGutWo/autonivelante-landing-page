@@ -11,9 +11,9 @@ import { formatPrice } from "@/src/utils/formatPrice";
 export default function Cart() {
   const cartItems = useSelector((store) => store.cart);
   const subTotal = cartItems.reduce((acc, currentItem) => {
-    return acc + currentItem.price * currentItem.qty;
+    return acc + currentItem.attributes?.price * currentItem.qty;
   }, 0);
- 
+
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <Container className="mt_150">
@@ -39,8 +39,8 @@ export default function Cart() {
             </article>
             <div className="d-flex flex-column justify-content-between align-items-center">
               {cartItems.length > 0 ? (
-                cartItems.map((cartItem, id) => (
-                  <CartProduct key={id} cartItem={cartItem.attributes} />
+                cartItems.map((item, i) => (
+                  <CartProduct key={i} cartItem={item} />
                 ))
               ) : (
                 <h1>No hay productos en tu carrito</h1>
