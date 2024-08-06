@@ -8,6 +8,8 @@ import { getData } from "@/src/lib/getData";
 export default async function Home() {
   const products = (await getData(process.env.NEXT_STRAPI_URL)) ?? [];
 
+  if (!products) return <div>No se encontraron los productos</div>;
+
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <Container className="mt_150">
