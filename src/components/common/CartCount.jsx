@@ -17,11 +17,7 @@ export default function CartCount() {
   }, [cart]);
 
   if (cartLength > 0) {
-    return (
-      <span>
-        {totalQuantity}
-      </span>
-    );
+    return <span>{totalQuantity}</span>;
   }
 
   return <span>0</span>;

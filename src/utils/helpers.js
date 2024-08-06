@@ -1,7 +1,5 @@
-export const delayPageLoad = (time = 1500) => {
-  // Using a while loop instead of setTimeout for better performance
-  const start = performance.now();
-  while (performance.now() - start < time);
+export const waitSeconds = (time = 1500) => {
+  return new Promise((resolve) => setTimeout(resolve, time));
 };
 
 const getProductData = async () => {

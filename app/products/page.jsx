@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
