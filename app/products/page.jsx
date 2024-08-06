@@ -6,9 +6,8 @@ import MainCard from "@/app/MainCard";
 import { getData } from "@/src/lib/getData";
 
 export default async function Home() {
-  const products = (await getData(process.env.NEXT_STRAPI_URL)) ?? [];
-
-  if (!products) return <div>No se encontraron los productos</div>;
+  const response = await getData(process.env.NEXT_STRAPI_URL);
+  const products = response.data || [];
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -22,7 +21,7 @@ export default async function Home() {
             <Container fluid>
               <div className="products__card-container productcard__text">
                 <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
-                  {products.data.map((product, i) => (
+                  {products.map((product, i) => (
                     <MainCard key={i} product={product} />
                   ))}
                 </div>
