@@ -82,7 +82,7 @@ export default function MainProjectsPage() {
   return (
     <Layout headerStyle={4} footerStyle={1}>
       <Container className="mt_150">
-        <Breadcrumb items={[{ name: "Proyectos", href: "projects" }]} /> 
+        <Breadcrumb items={[{ name: "Proyectos", href: "projects" }]} />
 
         <section className="py-5">
           {projects.map((item, i) => (

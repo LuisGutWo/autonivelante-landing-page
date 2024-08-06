@@ -7,10 +7,10 @@ import MainFeatures from "@/src/components/sections/MainFeatures";
 import ProductsCard from "@/src/components/sections/ProductsCard";
 import Contact from "@/src/components/sections/Contact";
 
-import { waitSeconds } from "@/src/utils/helpers";
+import { delayPageLoad } from "@/src/utils/helpers";
 
 export default async function Home() {
-  await waitSeconds(1500);
+  delayPageLoad(1500);
 
   return (
     <Layout headerStyle={3} footerStyle={1}>
