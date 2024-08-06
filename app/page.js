@@ -7,11 +7,7 @@ import MainFeatures from "@/src/components/sections/MainFeatures";
 import ProductsCard from "@/src/components/sections/ProductsCard";
 import Contact from "@/src/components/sections/Contact";
 
-import { delayPageLoad } from "@/src/utils/helpers";
-
 export default async function Home() {
-  delayPageLoad(1500);
-
   return (
     <Layout headerStyle={3} footerStyle={1}>
       <Banner />
