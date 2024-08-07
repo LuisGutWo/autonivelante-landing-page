@@ -1,13 +1,23 @@
-"use client";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import MainCard from "@/app/MainCard";
-import { getData } from "@/src/lib/getData";
+
+async function getData() {
+  const products = await fetch(process.env.NEXT_STRAPI_URL);
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!products.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return products.json();
+}
 
 export default async function Home() {
-  const response = await getData(process.env.NEXT_STRAPI_URL);
-  const products = response.data || [];
+  const products = await getData();
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -21,7 +31,7 @@ export default async function Home() {
             <Container fluid>
               <div className="products__card-container productcard__text">
                 <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
-                  {products.map((product, i) => (
+                  {products.data.map((product, i) => (
                     <MainCard key={i} product={product} />
                   ))}
                 </div>

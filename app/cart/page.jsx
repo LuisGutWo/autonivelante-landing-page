@@ -3,7 +3,7 @@ import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import CartProduct from "@/app/cart/CartProduct";
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import CartCount from "@/src/components/common/CartCount";
 import { formatPrice } from "@/src/utils/formatPrice";
@@ -34,7 +34,7 @@ export default function Cart() {
             <div className="row clearfix">
               <div className="col-lg-12 col-md-12 col-sm-12 table-column">
                 <div className="table-outer">
-                  <table className="cart-table">
+                  <Table className="cart-table">
                     <thead className="cart-header">
                       <tr>
                         <th>&nbsp;</th>
@@ -54,7 +54,7 @@ export default function Cart() {
                         <CartProductEmpty />
                       )}
                     </tbody>
-                  </table>
+                  </Table>
                 </div>
               </div>
               <div className="othre-content">

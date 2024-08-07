@@ -35,7 +35,7 @@ export default function ProductsCardHome({ product }) {
             style={{ width: "100%", height: "100%" }}
             src={product.attributes.image}
             className="card-img-top"
-            alt="..."
+            alt="Current product Image"
           />
         </Link>
         <div className="card-body">

@@ -1,5 +1,4 @@
 "use client";
-import React, { useCallback } from "react";
 import {
   decrementQty,
   incrementQty,
@@ -15,25 +14,23 @@ import { Button } from "react-bootstrap";
 export default function CartProduct({ cartItem }) {
   const dispatch = useDispatch();
 
-  const handleItemDelete = useCallback(() => {
-    dispatch(removeFromCart(cartItem.id));
-    toast.success(`${cartItem.attributes?.title} was removed from the cart`);
-  }, [dispatch, cartItem]);
-
-  const handleQtyIncrement = useCallback(() => {
-    dispatch(incrementQty(cartItem.id));
-  }, [dispatch, cartItem]);
-
-  const handleQtyDecrement = useCallback(() => {
-    dispatch(decrementQty(cartItem.id));
-  }, [dispatch, cartItem]);
+  function handleItemDelete(cartId) {
+    dispatch(removeFromCart(cartId));
+    toast.success(`${cartItem.attributes?.title} se removió con éxito`);
+  }
+  function handleQtyIncrement(cartId) {
+    dispatch(incrementQty(cartId));
+  }
+  function handleQtyDecrement(cartId) {
+    dispatch(decrementQty(cartId));
+  }
 
   return (
     <tr>
       <td colSpan="4" className="prod-column">
         <div className="column-box">
           <Button
-            onClick={handleItemDelete}
+            onClick={() => handleItemDelete(cartItem.id)}
             className="bg-transparent border-0"
           >
             <Trash2 className="text-danger" />
@@ -56,13 +53,19 @@ export default function CartProduct({ cartItem }) {
       <td className="qty">
         <div className="item-quantity">
           <div className="cart__items-qty d-flex align-items-center p-1 b_radius_10 b_shadow_3 mx-5">
-            <Button onClick={handleQtyDecrement} className="btn py-1 px-2">
+            <Button
+              onClick={() => handleQtyDecrement(cartItem.id)}
+              className="btn py-1 px-2"
+            >
               <Minus />
             </Button>
             <p className="d-flex justify-content-center align-items-center flex-grow-1 text-center">
               {cartItem?.qty}
             </p>
-            <Button onClick={handleQtyIncrement} className="btn py-1 px-2">
+            <Button
+              onClick={() => handleQtyIncrement(cartItem.id)}
+              className="btn py-1 px-2"
+            >
               <Plus />
             </Button>
           </div>

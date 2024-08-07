@@ -1,9 +1,21 @@
 import { Container } from "react-bootstrap";
 import MainHomeCard from "@/app/homeproducts/MainHomeCard";
-import { getData } from "@/src/lib/getData";
+
+async function getData() {
+  const products = await fetch(process.env.NEXT_STRAPI_HOME_URL);
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!products.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return products.json();
+}
 
 export default async function ProductsCard() {
-  const products = (await getData(process.env.NEXT_STRAPI_HOME_URL)) ?? [];
+  const products = await getData();
 
   return (
     <section
