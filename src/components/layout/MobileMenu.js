@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useCallback, useState } from "react";
 import { Image } from "react-bootstrap";
 import { menuList } from "@/src/config/menu";
+import { ShoppingBag } from "lucide-react";
+import CartCount from "../common/CartCount";
 
 export default function MobileMenu(props) {
   const { isSidebar, handleMobileMenu, handleSidebar } = props;
@@ -42,6 +44,19 @@ export default function MobileMenu(props) {
                 alt="autonivelante Mobile Navbar Logo"
               />
             </Link>
+          </div>
+
+          <div>
+            <div className="mb-4 text-center">
+              <Link href="/cart">
+                <ShoppingBag color="white" size={30} className="cart-icon" />
+                <div className="count-products-mobile">
+                  <span id="contador-productos-mobile">
+                    <CartCount />
+                  </span>
+                </div>
+              </Link>
+            </div>
           </div>
 
           <div className="menu-outer">

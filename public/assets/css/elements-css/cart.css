@@ -21,14 +21,12 @@
 
 .cart-section .cart-table thead tr th {
   position: relative;
-  min-width: 110px;
-  padding: 29px 15px 27px 0px;
   color: #222;
-  font-size: 20px;
+  font-size: 0.8rem;
   line-height: 28px;
   font-family: var(--jost);
-  font-weight: 500;
-  text-align: center;
+  font-weight: 400;
+  text-align: start;
 }
 
 .cart-section .cart-table tbody tr {
@@ -47,9 +45,10 @@
 .cart-section .cart-table tbody tr .prod-column .column-box {
   min-height: 100px;
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1rem;
   position: relative;
   padding: 1rem;
 }
@@ -63,8 +62,7 @@
   position: relative;
   left: 0;
   top: 0;
-  width: 110px;
-  height: 110px;
+  width: 3rem;
   background: #f1f1f1;
 }
 
@@ -97,10 +95,10 @@
 .cart-section .cart-table tbody tr td.price {
   text-align: center;
   align-content: center;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1rem;
   font-weight: 500;
-  padding: 27px 50px 27px 48px;
+  padding: 1rem 0;
   color: #222;
 }
 
@@ -117,6 +115,7 @@
   align-content: center;
   align-items: center;
   position: relative;
+  padding-right: 2rem;
 }
 
 .cart-section
@@ -226,8 +225,9 @@
 .cart-section .cart-table .prod-title h4 {
   position: relative;
   display: inline-block;
-  font-size: 20px;
-  line-height: 28px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 20px;
   color: #222;
   font-weight: 500;
 }
@@ -312,4 +312,107 @@
   width: 100%;
   margin-top: 5px;
   box-shadow: none;
+}
+
+/*Responsive Section */
+@media only screen and (min-width: 992px) {
+  .cart-section .cart-table tbody tr .prod-column .column-box .prod-thumb {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+    background: #f1f1f1;
+  }
+  .cart-section .cart-table tbody tr .prod-column .column-box {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    position: relative;
+    padding: 1rem;
+  }
+  .cart-section .cart-table thead tr th {
+    text-align: center;
+  }
+};
+
+@media only screen and (min-width: 767px) {
+  .cart-section .othre-content .coupon-box {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .cart-section .cart-table thead tr th {
+    position: relative;
+    min-width: 110px;
+    padding: 29px 15px 27px 0px;
+    color: #222;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: var(--jost);
+    font-weight: 500;
+    text-align: center;
+  }
+  .cart-section .cart-table .cart-header {
+    background-color: #015c9320;
+    border-radius: 5px 5px 0 0;
+  }
+  .cart-section .cart-table tbody tr .prod-column .column-box {
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    position: relative;
+    padding: 1rem;
+  }
+  .cart-section .cart-table tbody tr .prod-column .column-box .prod-thumb img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .cart-section .cart-table tbody tr .prod-column .column-box .prod-thumb {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+    background: #f1f1f1;
+  }
+  .cart-section .cart-table tbody tr .prod-column .column-box .title {
+    padding-left: 20px;
+  }
+  .cart-section .cart-table .prod-title h4 {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 28px;
+    color: #222;
+    font-weight: 500;
+  }
+  .cart-section .cart-table tbody tr td.price {
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    padding: 27px 50px 27px 48px;
+    color: #222;
+  }
+  .cart-section .cart-table tbody tr td.qty {
+    align-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 479px) {
+  .cart-section .othre-content .coupon-box button {
+    width: 100%;
+  }
 }

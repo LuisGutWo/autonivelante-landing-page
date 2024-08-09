@@ -49,10 +49,13 @@ export default function CartProduct({ cartItem }) {
           </div>
         </div>
       </td>
-      <td className="price">{formatPrice(cartItem.attributes?.price)}</td>
+      <td className="price">
+        <span className="pe-3">{formatPrice(cartItem.attributes?.price * cartItem?.qty)}</span>
+        <span className="text-primary">(x{cartItem.qty})</span>
+      </td>
       <td className="qty">
         <div className="item-quantity">
-          <div className="cart__items-qty d-flex align-items-center p-1 b_radius_10 b_shadow_3 mx-5">
+          <div className="cart__items-qty d-flex align-items-center p-1 b_radius_10 b_shadow_3">
             <Button
               onClick={() => handleQtyDecrement(cartItem.id)}
               className="btn py-1 px-2"
