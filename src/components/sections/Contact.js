@@ -2,12 +2,16 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { Button, Col, Container, Image, Row, Form } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { formatPrice } from "@/src/utils/formatPrice";
 
 export default function Contact() {
   const form = useRef();
-  const handleShowEmailSend = () => toast.success(" enviado con exito!");
+  const cart = useSelector((state) => state.cart);
+  // const handleShowEmailSend = () =>
+  //   toast.success(" enviado con exito!");
 
   const arrowRightSvg = (
     <svg
@@ -109,6 +113,7 @@ export default function Contact() {
       )
       .then(
         () => {
+          toast.success(" enviado con exito!");
           console.log("SUCCESS!");
         },
         (error) => {
@@ -253,12 +258,24 @@ export default function Contact() {
                                   name="message"
                                   as="textarea"
                                   placeholder="Mensaje"
-                                  rows={3}
+                                  rows={6}
+                                  value={cart
+                                    .map(
+                                      (cartItem) =>
+                                        `${cartItem.qty} - ${
+                                          cartItem.attributes?.title
+                                        } - (${formatPrice(
+                                          cartItem.attributes?.price
+                                        )}) = ${formatPrice(
+                                          cartItem.attributes?.price *
+                                            cartItem?.qty
+                                        )}`
+                                    )
+                                    .join("\n")}
                                 />
                               </Form.Group>
 
                               <Button
-                                onClick={handleShowEmailSend}
                                 className="theme-btn theme-btn-one"
                                 style={{ width: "100%", marginTop: "4rem" }}
                                 value="Send"
