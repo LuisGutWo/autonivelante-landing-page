@@ -5,7 +5,7 @@ import { Button, Col, Container, Image, Row, Form } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/config/formatPrice";
 
 export default function Contact() {
   const form = useRef();

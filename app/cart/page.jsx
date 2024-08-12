@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { Button, Container, Table } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import CartCount from "@/src/components/common/CartCount";
-import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/config/formatPrice";
 import CartProductEmpty from "@/app/cart/CartProductEmpty";
 
 export default function Cart() {

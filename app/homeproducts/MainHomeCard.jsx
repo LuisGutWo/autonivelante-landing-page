@@ -1,7 +1,7 @@
 "use client";
 import { Button, Image } from "react-bootstrap";
 import Link from "next/link";
-import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/config/formatPrice";
 import { Files } from "lucide-react";
 import { ShoppingBag } from "lucide-react";
 import { useDispatch } from "react-redux";

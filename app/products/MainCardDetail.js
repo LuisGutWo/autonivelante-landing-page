@@ -2,7 +2,7 @@
 import { Button, Container, Image } from "react-bootstrap";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
-import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/config/formatPrice";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { ShoppingBag } from "lucide-react";
 import { useDispatch } from "react-redux";

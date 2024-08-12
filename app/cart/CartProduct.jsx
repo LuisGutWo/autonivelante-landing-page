@@ -7,7 +7,7 @@ import {
 import { Minus, Plus, Trash2 } from "lucide-react";
 import Image from "next/image";
 import toast from "react-hot-toast";
-import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/config/formatPrice";
 import { useDispatch } from "react-redux";
 import { Button } from "react-bootstrap";
 

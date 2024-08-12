@@ -728,7 +728,7 @@ img {
 .fixed-header2 .sticky-header2 {
   z-index: 999;
   opacity: 1;
-  visibility: hidden;
+  visibility: visible;
   -ms-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
   -op-animation-name: fadeInDown;
@@ -1671,7 +1671,6 @@ img {
   font-size: 1rem;
   font-weight: bold;
 }
-
 
 /** mobile-menu **/
 

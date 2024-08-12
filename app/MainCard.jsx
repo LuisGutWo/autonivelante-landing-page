@@ -3,7 +3,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Button, Image } from "react-bootstrap";
-import { formatPrice } from "@/src/utils/formatPrice";
+import { formatPrice } from "@/src/config/formatPrice";
 import { Files } from "lucide-react";
 import { ShoppingBag } from "lucide-react";
 import { addToCart } from "@/redux/slices/cartSlice";
