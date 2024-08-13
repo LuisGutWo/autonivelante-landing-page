@@ -287,6 +287,7 @@ export default function Contact() {
                                         )}`
                                     )
                                     .join("\n")}
+                                    readOnly
                                 />
                               </Form.Group>
 
