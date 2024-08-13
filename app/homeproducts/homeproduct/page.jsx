@@ -6,15 +6,22 @@ import MainCardDetail from "@/app/products/product/MainCardDetail";
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
-  const id = Number(idString);
+  if (!idString) {
+    return <div>No se encontró el producto</div>;
+  }
+
+  const id = parseInt(idString, 10);
   const product = await getSingleHomeProduct(id).catch((error) => {
     console.error(error);
-    return <div>No se encontró el producto</div>;
+    return null;
   });
 
   if (!product) {
     return <div>No se encontró el producto</div>;
   }
+
+  const { attributes } = product;
+  const { title } = attributes ?? {};
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -22,7 +29,7 @@ export default async function SingleProduct({ searchParams }) {
         <Breadcrumb
           items={[
             { name: "Productos", href: "/#products" },
-            { name: `${product?.attributes?.title}`, href: `products/${id}` },
+            { name: title, href: `products/${id}` },
           ]}
         />
         <MainCardDetail product={product} />
