@@ -117,6 +117,7 @@ export default function Contact() {
           console.log("SUCCESS!");
         },
         (error) => {
+          toast.error("Algo salio mal.");
           console.log("FAILED...", error.text);
         }
       );
@@ -257,8 +258,8 @@ export default function Contact() {
                                 <Form.Control
                                   name="message"
                                   as="textarea"
-                                  placeholder="Mensaje"
-                                  rows={6}
+                                  placeholder="Productos seleccionados"
+                                  rows={4}
                                   value={cart
                                     .map(
                                       (cartItem) =>
@@ -272,6 +273,16 @@ export default function Contact() {
                                         )}`
                                     )
                                     .join("\n")}
+                                />
+                              </Form.Group>
+                              <Form.Group
+                                className="mb-3"
+                                controlId="exampleForm.ControlTextarea1"
+                              >
+                                <Form.Control
+                                  placeholder="mensaje"
+                                  as="textarea"
+                                  rows={3}
                                 />
                               </Form.Group>
 

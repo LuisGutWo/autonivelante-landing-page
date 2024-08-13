@@ -121,10 +121,10 @@
   bottom: 0;
   background-image: linear-gradient(
     to top,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.13),
-    rgba(79, 79, 79, 0.386),
-    rgba(0, 0, 0, 0.624)
+    rgba(62, 62, 62, 0),
+    rgba(53, 53, 53, 0.254),
+    rgba(50, 50, 50, 0.487),
+    rgba(0, 0, 0, 0.897)
   );
 }
 

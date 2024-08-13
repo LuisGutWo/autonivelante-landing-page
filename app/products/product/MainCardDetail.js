@@ -14,7 +14,7 @@ export default function Home({ product }) {
 
   function handleAddItemToCart() {
     dispatch(addToCart(product));
-    toast.success(`${product.attributes.title} Se agrego satisfactoriamente!`);
+    toast.success(`${product.attributes.title} Se agrego satisfactoriamente al carrito!`);
   }
 
   if (!product) {

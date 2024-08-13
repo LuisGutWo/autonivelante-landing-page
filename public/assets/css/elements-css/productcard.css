@@ -117,9 +117,6 @@
 /* MainCard Styles */
 
 /* products__card-box comes from productsCard section */
-.products__card-box {
-  height: 100%;
-}
 
 .products__card-maincontent {
   .main__card {
@@ -145,8 +142,8 @@
 
       .card-img-top {
         object-fit: contain;
-        max-width: 16rem;
-        padding: 2rem 0 0 0;
+        width: 15rem;
+        padding: 0;
       }
     }
 

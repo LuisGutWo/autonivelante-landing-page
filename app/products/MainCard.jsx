@@ -13,7 +13,7 @@ export default function ProductsCard({ product }) {
 
   function handleAddItemToCart() {
     dispatch(addToCart(product));
-    toast.success(`${product.attributes.title} Se agrego satisfactoriamente!`);
+    toast.success(`${product.attributes.title} Se agrego satisfactoriamente al carrito!`);
   }
 
   return (
@@ -32,10 +32,11 @@ export default function ProductsCard({ product }) {
           className="main__card-img-container"
         >
           <Image
-            style={{ width: "100%", height: "100%" }}
+            height={20}
+            width={10}
             src={product.attributes.image}
             className="card-img-top"
-            alt="..."
+            alt="Product card main Image"
           />
         </Link>
         <div className="card-body">

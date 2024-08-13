@@ -46,7 +46,7 @@ export default function Layout(props) {
             handleMobileMenu={handleMobileMenu}
           />
         ) : null}
-        {headerStyle === 4 ? (
+        {!headerStyle || headerStyle === 4 ? (
           <HeaderAux
             scroll={scroll}
             isMobileMenu={isMobileMenu}

@@ -16,7 +16,7 @@ export default function CartProduct({ cartItem }) {
 
   function handleItemDelete(cartId) {
     dispatch(removeFromCart(cartId));
-    toast.success(`${cartItem.attributes?.title} se removió con éxito`);
+    toast.success(`${cartItem.attributes?.title} se removió con éxito del carrito`);
   }
   function handleQtyIncrement(cartId) {
     dispatch(incrementQty(cartId));
@@ -26,7 +26,7 @@ export default function CartProduct({ cartItem }) {
   }
 
   return (
-    <tr>
+    <tr className="w_200">
       <td colSpan="4" className="prod-column">
         <div className="column-box">
           <Button

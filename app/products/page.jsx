@@ -30,7 +30,7 @@ export default async function Home() {
           >
             <Container fluid>
               <div className="products__card-container productcard__text">
-                <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
+                <div className="d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
                   {products.data.map((product, i) => (
                     <MainCard key={i} product={product} />
                   ))}

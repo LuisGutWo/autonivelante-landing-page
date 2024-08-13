@@ -28,8 +28,8 @@ export default function Banner() {
         muted
       >
         <source
-          src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/autonivelante_bg_video.mp4?alt=media&token=82033e63-9eeb-4802-a5d3-2b9bdd19e5fb"
-          type="video/mp4"
+          src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Untitled%20(700%20x%20840%20px)%20(520%20x%20642%20px).webm?alt=media&token=7e7001d5-0216-450f-a1e3-db8ee3c3259a"
+          type="video/webm"
         />
       </video>
       <div className="banner__container">

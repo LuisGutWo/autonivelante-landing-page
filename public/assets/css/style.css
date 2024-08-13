@@ -39,7 +39,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  border: none;
   outline: none;
 }
 
@@ -3035,6 +3034,9 @@ div#mCSB_1_container {
 }
 
 @media only screen and (max-width: 767px) {
+  .sticky-header2 {
+    display: none;
+  }
   .banner-carousel .content-box h2 {
     font-size: 40px;
     line-height: 50px;

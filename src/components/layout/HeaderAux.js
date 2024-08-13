@@ -66,7 +66,7 @@ export default function HeaderAux(props) {
 
         {/* Sticky Header */}
         <div
-          className={`sticky-header2 ${scroll ? "animated slideInDown" : ""}`}
+          className={`sticky-header2 ${scroll && ""}`}
         >
           <div className="auto-container">
             <div className="outer-box">
