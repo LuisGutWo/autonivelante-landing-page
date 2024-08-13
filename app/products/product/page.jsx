@@ -9,34 +9,26 @@ const NotFoundProduct = () => <div>No se encontró el producto</div>;
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
-  if (!idString) {
-    return <NotFoundProduct />;
-  }
+  if (!idString) return <NotFoundProduct />;
 
   const id = Number(idString);
 
-  try {
-    const product = await getSingleProduct(id);
-    if (!product) {
-      return <NotFoundProduct />;
-    }
+  const product = await getSingleProduct(id).catch(() => null);
 
-    return (
-      <Layout headerStyle={4} footerStyle={1}>
-        <Container className="mt_150 mb_200">
-          <Breadcrumb
-            items={[
-              { name: "Productos", href: "/products" },
-              { name: `${product?.attributes?.title}`, href: `products/${id}` },
-            ]}
-          />
-          <MainCardDetail product={product} />
-        </Container>
+  if (!product) return <NotFoundProduct />;
+
+  return (
+    <Layout headerStyle={4} footerStyle={1}>
+      <Container className="mt_150 mb_200">
+        <Breadcrumb
+          items={[
+            { name: "Productos", href: "/products" },
+            { name: `${product?.attributes?.title}`, href: `products/${id}` },
+          ]}
+        />
+        <MainCardDetail product={product} />
         <CarouselComponent />
-      </Layout>
-    );
-  } catch (error) {
-    console.error(error);
-    return <NotFoundProduct />;
-  }
+      </Container>
+    </Layout>
+  );
 }
