@@ -11,8 +11,6 @@ import { current } from "@reduxjs/toolkit";
 export default function Contact() {
   const form = useRef();
   const cart = useSelector((state) => state.cart);
-  // const handleShowEmailSend = () =>
-  //   toast.success(" enviado con exito!");
 
   const arrowRightSvg = (
     <svg
@@ -287,7 +285,7 @@ export default function Contact() {
                                         )}`
                                     )
                                     .join("\n")}
-                                    readOnly
+                                  readOnly
                                 />
                               </Form.Group>
 
