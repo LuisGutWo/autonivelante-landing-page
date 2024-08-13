@@ -1,18 +1,9 @@
 const nextConfig = {
-  // output: 'export',
-
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "firebasestorage.googleapis.com",
-      },
-    ],
-  },
+  output: "export",
 
   async rewrites() {
     try {
-      return [
+      const rewrites = [
         {
           source: "/products/:id",
           destination: "/products/[id]",
@@ -22,11 +13,29 @@ const nextConfig = {
           destination: "/homeproducts/[id]",
         },
       ];
+
+      if (!rewrites) {
+        console.error(
+          "Error in rewrites function: rewrites is null or undefined"
+        );
+        return [];
+      }
+
+      return rewrites;
     } catch (error) {
       console.error("Error in rewrites function: ", error);
       return [];
     }
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+      },
+    ],
+  },
+
   env: {
     NEXT_SERVICE_ID: "service_3k8blmt",
     NEXT_TEMPLATE_ID: "template_c7njbme",
