@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import MainCard from "@/app/MainCard";
+import MainCard from "@/app/products/MainCard";
 
 async function getData() {
   const products = await fetch(process.env.NEXT_STRAPI_URL);

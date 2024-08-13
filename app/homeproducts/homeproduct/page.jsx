@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleHomeProduct } from "@/src/utils/helpers";
-import MainCardDetail from "@/app/products/MainCardDetail";
+import MainCardDetail from "@/app/products/product/MainCardDetail";
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
