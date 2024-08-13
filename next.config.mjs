@@ -1,8 +1,8 @@
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  trailingSlash: true,
-  compress: true,
+  // reactStrictMode: true,
+  // swcMinify: true,
+  // trailingSlash: true,
+  // compress: true,
 
   // output: "standalone",
   // output: "export",
@@ -10,7 +10,7 @@ const nextConfig = {
   // output: "shared",
   // output: "client",
   // output: "serverless",
-  output: "hybrid",
+  // output: "hybrid",
   // output: "service-worker",
 
   async rewrites() {
