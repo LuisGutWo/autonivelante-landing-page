@@ -4,27 +4,16 @@ import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/app/products/product/MainCardDetail";
 import CarouselComponent from "@/src/components/sections/CarouselComponent";
-import { useNavigation } from "next/navigation";
-
-export async function getStaticPaths() {
-  // Lógica para obtener todos los IDs de productos
-  const paths = [{ params: { product: "products/product" } }];
-  return { paths, fallback: false };
-}
-export async function getStaticProps({ params }) {
-  // Lógica para obtener los datos del producto basado en params.product
-  const productData = { id: params.product, name: "Producto Ejemplo" };
-  return { props: { product: productData } };
-}
 
 const NotFoundProduct = () => <div>No se encontró el producto</div>;
 
-export default async function SingleProduct({ products }) {
-  if (!products) {
+export default async function SingleProduct({ searchParams }) {
+  const idString = searchParams?.id;
+  if (!idString) {
     return <NotFoundProduct />;
   }
 
-  const id = Number(products);
+  const id = Number(idString);
 
   try {
     const product = await getSingleProduct(id);
