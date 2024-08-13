@@ -5,7 +5,7 @@ const nextConfig = {
   // compress: true,
 
   // output: "standalone",
-  // output: "export",
+   output: "export",
   // output: "server",
   // output: "shared",
   // output: "client",

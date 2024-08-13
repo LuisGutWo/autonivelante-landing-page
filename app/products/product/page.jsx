@@ -5,10 +5,12 @@ import { getSingleProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/app/products/product/MainCardDetail";
 import CarouselComponent from "@/src/components/sections/CarouselComponent";
 
+const NotFoundProduct = () => <div>No se encontró el producto</div>;
+
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
   if (!idString) {
-    return <div>No se encontró el producto</div>;
+    return <NotFoundProduct />;
   }
 
   const id = Number(idString);
@@ -16,7 +18,7 @@ export default async function SingleProduct({ searchParams }) {
   try {
     const product = await getSingleProduct(id);
     if (!product) {
-      throw new Error("No se encontró el producto");
+      return <NotFoundProduct />;
     }
 
     return (
@@ -34,13 +36,7 @@ export default async function SingleProduct({ searchParams }) {
       </Layout>
     );
   } catch (error) {
-    const product = await getSingleProduct(id).catch((error) => {
-      console.error(error);
-      return <div>No se encontró el producto</div>;
-    });
-
-    if (!product) {
-      return <div>No se encontró el producto</div>;
-    }
+    console.error(error);
+    return <NotFoundProduct />;
   }
 }
