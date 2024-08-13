@@ -4,7 +4,7 @@ import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/app/products/product/MainCardDetail";
 import CarouselComponent from "@/src/components/sections/CarouselComponent";
-import { useRouter } from "next/router";
+import { useNavigation } from "next/navigation";
 
 export async function getStaticPaths() {
   // Lógica para obtener todos los IDs de productos
