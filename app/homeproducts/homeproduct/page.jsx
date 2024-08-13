@@ -6,9 +6,6 @@ import MainCardDetail from "@/app/products/product/MainCardDetail";
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
-  if (!idString) {
-    return <div>No se encontró el producto</div>;
-  }
   const id = Number(idString);
   const product = await getSingleHomeProduct(id).catch((error) => {
     console.error(error);

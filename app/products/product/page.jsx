@@ -7,9 +7,6 @@ import CarouselComponent from "@/src/components/sections/CarouselComponent";
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
-  if (!idString) {
-    return <div>No se encontró el producto</div>;
-  }
   const id = Number(idString);
   const product = await getSingleProduct(id).catch((error) => {
     console.error(error);
