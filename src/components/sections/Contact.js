@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { formatPrice } from "@/src/config/formatPrice";
+import { current } from "@reduxjs/toolkit";
 
 export default function Contact() {
   const form = useRef();
@@ -253,7 +254,20 @@ export default function Contact() {
                               </Form.Group>
                               <Form.Group
                                 className="mb-3"
-                                controlId="exampleForm.ControlTextarea1"
+                                controlId="formBasicCurrentMessage"
+                              >
+                                <Form.Control
+                                  name="user_message"
+                                  as="textarea"
+                                  placeholder="Motivo de contacto"
+                                  rows={3}
+                                  value={current.value}
+                                  required
+                                />
+                              </Form.Group>
+                              <Form.Group
+                                className="mb-3"
+                                controlId="formBasicMessage"
                               >
                                 <Form.Control
                                   name="message"
@@ -273,17 +287,6 @@ export default function Contact() {
                                         )}`
                                     )
                                     .join("\n")}
-                                />
-                              </Form.Group>
-                              <Form.Group
-                                className="mb-3"
-                                controlId="exampleForm.ControlTextarea2"
-                              >
-                                <Form.Control
-                                name="current_message"
-                                  placeholder="mensaje"
-                                  as="textarea"
-                                  rows={3}
                                 />
                               </Form.Group>
 
