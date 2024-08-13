@@ -256,7 +256,7 @@ export default function Contact() {
                                 controlId="exampleForm.ControlTextarea1"
                               >
                                 <Form.Control
-                                  name="user_cart"
+                                  name="message"
                                   as="textarea"
                                   placeholder="Productos seleccionados"
                                   rows={4}
@@ -273,10 +273,6 @@ export default function Contact() {
                                         )}`
                                     )
                                     .join("\n")}
-                                  disabled
-                                  required
-                                  style={{ resize: "none" }}
-                                  
                                 />
                               </Form.Group>
                               <Form.Group
@@ -284,7 +280,7 @@ export default function Contact() {
                                 controlId="exampleForm.ControlTextarea2"
                               >
                                 <Form.Control
-                                  name="message"
+                                name="current_message"
                                   placeholder="mensaje"
                                   as="textarea"
                                   rows={3}
