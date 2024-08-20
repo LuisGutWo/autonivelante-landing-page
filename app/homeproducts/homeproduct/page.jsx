@@ -3,12 +3,13 @@ import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleHomeProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/app/products/product/MainCardDetail";
+import NotFoundPage from "@/app/NotFoundPage";
+
+const NotFoundProduct = () => <NotFoundPage />;
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
-  if (!idString) {
-    return <div>No se encontró el producto</div>;
-  }
+  if (!idString) return <NotFoundProduct />;
 
   const id = parseInt(idString, 10);
   const product = await getSingleHomeProduct(id).catch((error) => {
@@ -16,9 +17,7 @@ export default async function SingleProduct({ searchParams }) {
     return null;
   });
 
-  if (!product) {
-    return <div>No se encontró el producto</div>;
-  }
+  if (!product) return <NotFoundProduct />;
 
   const { attributes } = product;
   const { title } = attributes ?? {};

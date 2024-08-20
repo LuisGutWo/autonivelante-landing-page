@@ -31,7 +31,7 @@ export default function FeaturesBanner() {
               <div className="inner-box">
                 <figure className="image-box">
                   <Image
-                    src="assets/images/banner/banner-productos.png"
+                    src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/banner-productos.png?alt=media&token=330a069b-a595-46be-830f-965d0189efb0"
                     alt=""
                   />
                   <Link href="/products" className="overlay-box">

@@ -4,18 +4,25 @@ import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/app/products/product/MainCardDetail";
 import CarouselComponent from "@/src/components/sections/CarouselComponent";
+import NotFoundPage from "@/app/NotFoundPage";
 
-const NotFoundProduct = () => <div>No se encontró el producto</div>;
+const NotFoundProduct = () => <NotFoundPage />;
 
 export default async function SingleProduct({ searchParams }) {
   const idString = searchParams?.id;
   if (!idString) return <NotFoundProduct />;
 
-  const id = Number(idString);
+  const id = parseInt(idString, 10);
 
-  const product = await getSingleProduct(id).catch(() => null);
+  const product = await getSingleProduct(id).catch((error) => {
+    console.error(error);
+    return null;
+  });
 
   if (!product) return <NotFoundProduct />;
+
+  const { attributes } = product;
+  const { title } = attributes ?? {};
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -23,7 +30,7 @@ export default async function SingleProduct({ searchParams }) {
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },
-            { name: `${product?.attributes?.title}`, href: `products/${id}` },
+            { name: title, href: `products/${id}` },
           ]}
         />
         <MainCardDetail product={product} />
