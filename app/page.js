@@ -1,11 +1,11 @@
 import Layout from "@/src/components/layout/Layout";
-import About from "@/src/components/sections/About";
-import Banner from "@/src/components/sections/Banner";
-import Services from "@/src/components/sections/Services";
-import FeaturesBanner from "@/src/components/sections/FeaturesBanner";
-import MainFeatures from "@/src/components/sections/MainFeatures";
-import ProductsCard from "@/src/components/sections/ProductsCard";
-import Contact from "@/src/components/sections/Contact";
+import About from "@/src/components/pages/About";
+import Banner from "@/src/components/pages/Banner";
+import Services from "@/src/components/pages/Services";
+import FeaturesBanner from "@/src/components/pages/FeaturesBanner";
+import MainFeatures from "@/src/components/pages/MainFeatures";
+import ProductsCard from "@/src/components/pages/ProductsCard";
+import Contact from "@/src/components/pages/Contact";
 
 export default async function Home() {
   return (

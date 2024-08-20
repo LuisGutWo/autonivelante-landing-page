@@ -8,16 +8,11 @@ import NotFoundPage from "@/app/NotFoundPage";
 
 const NotFoundProduct = () => <NotFoundPage />;
 
-export default async function SingleProduct({ searchParams }) {
-  const productId = searchParams?.id ? parseInt(searchParams.id, 10) : null;
-
-  if (!productId) return <NotFoundProduct />;
-
-  const product = await getSingleProduct(productId).catch(() => null);
-
+export default function SingleProduct({ product }) {
   if (!product) return <NotFoundProduct />;
 
-  const { title } = product.attributes || {};
+  const { attributes } = product;
+  const { title } = attributes ?? {};
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -25,7 +20,7 @@ export default async function SingleProduct({ searchParams }) {
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },
-            { name: title, href: `/products/${productId}` },
+            { name: title, href: `products/${id}` },
           ]}
         />
         <MainCardDetail product={product} />
@@ -34,3 +29,18 @@ export default async function SingleProduct({ searchParams }) {
     </Layout>
   );
 }
+export const getServerSideProps = async ({ searchParams }) => {
+  const { id: idString } = searchParams;
+  const id = parseInt(idString, 10);
+
+  if (Number.isNaN(id) || typeof idString !== "string") {
+    return { notFound: true };
+  }
+
+  try {
+    const product = await getSingleProduct(id);
+    return { props: { product } };
+  } catch {
+    return { notFound: true };
+  }
+};

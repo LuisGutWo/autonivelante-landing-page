@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import MainHomeCard from "@/app/homeproducts/MainHomeCard";
+import MainHomeCard from "@/src/components/pages/MainHomeCard";
 
 async function getData() {
   const products = await fetch(process.env.NEXT_STRAPI_HOME_URL);

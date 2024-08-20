@@ -2,25 +2,21 @@ import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { getSingleHomeProduct } from "@/src/utils/helpers";
-import MainCardDetail from "@/app/products/product/MainCardDetail";
+import MainCardDetail from "@/src/components/pages/MainCardDetail";
 import NotFoundPage from "@/app/NotFoundPage";
 
 const NotFoundProduct = () => <NotFoundPage />;
 
 export default async function SingleProduct({ searchParams }) {
-  const idString = searchParams?.id;
-  if (!idString) return <NotFoundProduct />;
+  const productId = searchParams?.id ? parseInt(searchParams.id, 10) : null;
 
-  const id = parseInt(idString, 10);
-  const product = await getSingleHomeProduct(id).catch((error) => {
-    console.error(error);
-    return null;
-  });
+  if (!productId) return <NotFoundProduct />;
+
+  const product = await getSingleHomeProduct(productId).catch(() => null);
 
   if (!product) return <NotFoundProduct />;
 
-  const { attributes } = product;
-  const { title } = attributes ?? {};
+  const { title } = product.attributes || {};
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -28,7 +24,7 @@ export default async function SingleProduct({ searchParams }) {
         <Breadcrumb
           items={[
             { name: "Productos", href: "/#products" },
-            { name: title, href: `products/${id}` },
+            { name: title, href: `products/${productId}` },
           ]}
         />
         <MainCardDetail product={product} />
