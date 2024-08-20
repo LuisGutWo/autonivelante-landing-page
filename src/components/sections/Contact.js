@@ -291,7 +291,7 @@ export default function Contact() {
 
                               <Button
                                 className="theme-btn theme-btn-one"
-                                style={{ width: "100%", marginTop: "4rem" }}
+                                style={{ width: "100%", marginTop: "1rem" }}
                                 value="Send"
                                 type="submit"
                                 name="submit-form"
