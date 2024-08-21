@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
@@ -8,16 +10,29 @@ import NotFoundPage from "@/app/NotFoundPage";
 
 const NotFoundProduct = () => <NotFoundPage />;
 
-export default async function SingleProduct({ searchParams }) {
+export default function SingleProduct({ searchParams }) {
+  const [productData, setProductData] = useState(null);
+  const [error, setError] = useState(null);
   const productId = searchParams?.id ? parseInt(searchParams.id, 10) : null;
 
-  if (!productId) return <NotFoundProduct />;
+  useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const product = await getSingleProduct(productId);
+        if (product === null) {
+          throw new Error("Product not found");
+        }
+        setProductData(product);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    fetchProductData();
+  }, [productId]);
 
-  const product = await getSingleProduct(productId).catch(() => null);
+  if (productId === null || isNaN(productId)) return <NotFoundProduct />;
 
-  if (!product) return <NotFoundProduct />;
-
-  const { title } = product.attributes || {};
+  const { title = "" } = productData?.attributes || {};
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -28,7 +43,7 @@ export default async function SingleProduct({ searchParams }) {
             { name: title, href: `/products/${productId}` },
           ]}
         />
-        <MainCardDetail product={product} />
+        <MainCardDetail product={productData} />
         <CarouselComponent />
       </Container>
     </Layout>
