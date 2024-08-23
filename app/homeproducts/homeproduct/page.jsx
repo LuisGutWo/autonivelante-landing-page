@@ -9,29 +9,29 @@ import NotFoundPage from "@/app/NotFoundPage";
 
 const NotFoundProduct = () => <NotFoundPage />;
 
-export default function SingleProduct({ searchParams }) {
-  const [productData, setProductData] = useState(null);
+export default function SingleHomeProduct({ searchParams }) {
+  const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
   const productId = searchParams?.id ? parseInt(searchParams.id, 10) : null;
 
   useEffect(() => {
-    const fetchProductData = async () => {
+    const fetchProduct = async () => {
       try {
-        const product = await getSingleHomeProduct(productId);
-        if (product === null) {
+        const data = await getSingleHomeProduct(productId);
+        if (data === null) {
           throw new Error("Product not found");
         }
-        setProductData(product);
+        setProduct(data);
       } catch (error) {
         setError(error);
       }
     };
-    fetchProductData();
+    fetchProduct();
   }, [productId]);
 
   if (productId === null || isNaN(productId)) return <NotFoundProduct />;
 
-  const { title = "" } = productData?.attributes || {};
+  const { title = "" } = product?.attributes || {};
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -42,7 +42,7 @@ export default function SingleProduct({ searchParams }) {
             { name: title, href: `/products/${productId}` },
           ]}
         />
-        <MainCardDetail product={productData} />
+        <MainCardDetail product={product} />
       </Container>
     </Layout>
   );
