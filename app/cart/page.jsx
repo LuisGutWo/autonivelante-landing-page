@@ -11,12 +11,9 @@ import CartProductEmpty from "@/src/components/pages/CartProductEmpty";
 
 export default function Cart() {
   const cartItems = useSelector((store) => store.cart);
-  const subTotal = cartItems.reduce(
-    (acc, { attributes: { price }, qty }) => acc + price * qty,
-    0
-  );
-
-  const cartHasItems = cartItems.length > 0;
+  const subTotal = cartItems?.reduce((acc, { attributes: { price }, qty }) => acc + price * qty, 0) || 0;
+  
+  const cartHasItems = cartItems?.length > 0;
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -46,12 +43,12 @@ export default function Cart() {
                       </tr>
                     </thead>
                     <tbody>
-                      {cartHasItems ? (
+                      {!cartHasItems ? (
+                        <CartProductEmpty />
+                      ) : (
                         cartItems.map((item, i) => (
                           <CartProduct key={i} cartItem={item} />
                         ))
-                      ) : (
-                        <CartProductEmpty />
                       )}
                     </tbody>
                   </Table>

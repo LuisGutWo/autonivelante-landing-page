@@ -24,10 +24,7 @@ export default function ProductsCard({ product }) {
     >
       <div className="card main__card">
         <Link
-          href={{
-            pathname: "/products/product",
-            query: { id: product.id },
-          }}
+          href={`/products/${product.id}`}
           key={product.id}
           className="main__card-img-container"
         >
@@ -49,10 +46,7 @@ export default function ProductsCard({ product }) {
         </div>
         <div className="buttons__card">
           <Link
-            href={{
-              pathname: "/products/product",
-              query: { id: product.id },
-            }}
+            href={`/products/${product.id}`}
             key={product.id}
             className="btn btn-outline-primary btn-lg d-flex justify-content-evenly align-content-center gap-4 ps-4"
           >

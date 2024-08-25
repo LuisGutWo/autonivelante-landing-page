@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
@@ -7,6 +6,8 @@ import { getSingleProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/src/components/pages/MainCardDetail";
 import CarouselComponent from "@/src/components/pages/CarouselComponent";
 import NotFoundPage from "@/app/NotFoundPage";
+import { useEffect, useState } from "react";
+import Preloader from "@/src/components/elements/Preloader";
 
 const NotFoundProduct = () => <NotFoundPage />;
 
@@ -15,24 +16,27 @@ export default function SingleProduct({ searchParams }) {
   const [error, setError] = useState(null);
   const productId = searchParams?.id ? parseInt(searchParams.id, 10) : null;
 
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const data = await getSingleProduct(productId);
-        if (data === null) {
-          throw new Error("Product not found");
-        }
-        setProduct(data);
-      } catch (error) {
-        setError(error);
+  if (productId === null || isNaN(productId) || productId < 0) {
+    return <NotFoundProduct />;
+  }
+  const fetchProduct = async () => {
+    try {
+      const data = await getSingleProduct(productId);
+      if (data === null) {
+        throw new Error("Product not found");
       }
-    };
+      setProduct(data);
+    } catch (error) {
+      setError(error);
+    }
+  };
+
+  useEffect(() => {
     fetchProduct();
   }, [productId]);
 
-  if (productId === null || isNaN(productId)) return <NotFoundProduct />;
-
-  const { title = "" } = product?.attributes || {};
+  const productAttributes = product?.attributes;
+  const title = productAttributes === null ? "" : productAttributes?.title;
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -43,7 +47,13 @@ export default function SingleProduct({ searchParams }) {
             { name: title, href: `/products/${productId}` },
           ]}
         />
-        <MainCardDetail product={product} />
+        {product === null ? (
+          <p>
+            Cargando... <Preloader />
+          </p>
+        ) : (
+          <MainCardDetail product={product} />
+        )}
         <CarouselComponent />
       </Container>
     </Layout>
