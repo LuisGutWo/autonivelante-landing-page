@@ -19,24 +19,29 @@ export default function SingleHomeProduct({ searchParams }) {
     return <NotFoundProduct />;
   }
 
-  const fetchProduct = async () => {
-    try {
-      const data = await getSingleHomeProduct(productId);
-      if (data === null) {
-        throw new Error("Product not found");
-      }
-      setProduct(data);
-    } catch (error) {
-      setError(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const data = await getSingleHomeProduct(productId);
+        if (data === null) {
+          throw new Error("Product not found");
+        }
+        setProduct(data);
+      } catch (error) {
+        console.error(error);
+        setError(error);
+      }
+    };
+
     fetchProduct();
   }, [productId]);
 
   const productAttributes = product?.attributes;
-  const title = productAttributes === null ? "" : productAttributes?.title;
+  if (!productAttributes) {
+    return <NotFoundProduct />;
+  }
+
+  const title = productAttributes?.title || "";
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
