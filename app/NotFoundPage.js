@@ -9,7 +9,15 @@ export default function Error404() {
           <div className="auto-container">
             <div className="inner-box">
               <figure className="error-image">
-                <Image src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/error-1.png?alt=media&token=784ac3a0-7b41-4653-9e06-2f675be9e3fe" alt="" />
+                <Image src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/error-1.png?alt=media&token=784ac3a0-7b41-4653-9e06-2f675be9e3fe"
+                alt=""
+                width={300}
+                height={300}  
+                className="w-100"
+                layout="responsive"
+                objectFit="contain"
+                
+                />
               </figure>
               <h2>
                 Oops! Esta pagina no esta disponible...

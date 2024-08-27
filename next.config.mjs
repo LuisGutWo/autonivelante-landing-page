@@ -1,32 +1,32 @@
 const nextConfig = {
   // output: "export",
 
-  async rewrites() {
-    try {
-      const rewrites = [
-        {
-          source: "/products/:id",
-          destination: "/products/[id]",
-        },
-        {
-          source: "/homeproducts/:id",
-          destination: "/homeproducts/[id]",
-        },
-      ];
+  // async rewrites() {
+  //   try {
+  //     const rewrites = [
+  //       {
+  //         source: "/products/:id",
+  //         destination: "/products/[id]",
+  //       },
+  //       {
+  //         source: "/homeproducts/:id",
+  //         destination: "/homeproducts/[id]",
+  //       },
+  //     ];
 
-      if (!rewrites) {
-        console.error(
-          "Error in rewrites function: rewrites is null or undefined"
-        );
-        return [];
-      }
+  //     if (!rewrites) {
+  //       console.error(
+  //         "Error in rewrites function: rewrites is null or undefined"
+  //       );
+  //       return [];
+  //     }
 
-      return rewrites;
-    } catch (error) {
-      console.error("Error in rewrites function: ", error);
-      return [];
-    }
-  },
+  //     return rewrites;
+  //   } catch (error) {
+  //     console.error("Error in rewrites function: ", error);
+  //     return [];
+  //   }
+  // },
   images: {
     remotePatterns: [
       {

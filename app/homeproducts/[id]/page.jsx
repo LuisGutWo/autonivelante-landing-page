@@ -10,14 +10,10 @@ import Preloader from "@/src/components/elements/Preloader";
 
 const NotFoundProduct = () => <NotFoundPage />;
 
-export default function SingleHomeProduct({ searchParams }) {
+export default function SingleHomeProduct({ params }) {
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
-  const productId = searchParams?.id ? parseInt(searchParams.id, 10) : null;
-
-  if (productId === null || isNaN(productId) || productId < 0) {
-    return <NotFoundProduct />;
-  }
+  const productId = params?.id ? parseInt(params.id, 10) : null;
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -33,14 +29,26 @@ export default function SingleHomeProduct({ searchParams }) {
       }
     };
 
-    fetchProduct();
+    if (productId !== null && !isNaN(productId) && productId >= 0) {
+      fetchProduct();
+    } else {
+      setError(new Error("ID del producto es invalido"));
+    }
   }, [productId]);
 
-  const productAttributes = product?.attributes;
-  if (!productAttributes) {
+  if (error) {
     return <NotFoundProduct />;
   }
 
+  if (!product) {
+    return (
+      <p>
+        Cargando... <Preloader />
+      </p>
+    );
+  }
+
+  const productAttributes = product.attributes;
   const title = productAttributes?.title || "";
 
   return (
@@ -52,14 +60,7 @@ export default function SingleHomeProduct({ searchParams }) {
             { name: title, href: `/homeproducts/${productId}` },
           ]}
         />
-        {product === null ? (
-          <p>
-            Cargando...
-            <Preloader />
-          </p>
-        ) : (
-          <MainCardDetail product={product} />
-        )}
+        <MainCardDetail product={product} />
       </Container>
     </Layout>
   );
