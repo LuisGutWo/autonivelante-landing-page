@@ -3,21 +3,18 @@ import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import MainHomeCard from "@/src/components/pages/MainHomeCard";
 
-async function getData() {
-  const products = await fetch(process.env.NEXT_STRAPI_HOME_URL);
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+async function getHomeProducts() {
+  const response = await fetch(process.env.NEXT_STRAPI_HOME_URL);
 
-  if (!products.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
+  if (!response.ok) {
+    throw new Error("Failed to fetch home products");
   }
 
-  return products.json();
+  return response.json();
 }
 
-export default async function Home() {
-  const products = await getData();
+export default async function HomeProducts() {
+  const homeProducts = await getHomeProducts();
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -30,8 +27,8 @@ export default async function Home() {
           >
             <div className="products__card-container productcard__text">
               <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
-                {products.data.map((item, index) => (
-                  <MainHomeCard key={index} product={item} />
+                {homeProducts.data.map((homeProduct, index) => (
+                  <MainHomeCard key={index} product={homeProduct} />
                 ))}
               </div>
             </div>

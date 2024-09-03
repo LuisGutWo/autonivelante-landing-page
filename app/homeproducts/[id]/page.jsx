@@ -1,55 +1,15 @@
-"use client";
-import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import { getSingleHomeProduct } from "@/src/utils/helpers";
 import MainCardDetail from "@/src/components/pages/MainCardDetail";
-import NotFoundPage from "@/app/NotFoundPage";
-import Preloader from "@/src/components/elements/Preloader";
+import { fetchHomeProduct } from "@/src/lib/api";
 
-const NotFoundProduct = () => <NotFoundPage />;
+export default async function SingleHomeProduct({ params }) {
+  const product = await fetchHomeProduct(params.id).then(({ data }) => data[params.id]);
 
-export default function SingleHomeProduct({ params }) {
-  const [product, setProduct] = useState(null);
-  const [error, setError] = useState(null);
-  const productId = params?.id ? parseInt(params.id, 10) : null;
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const data = await getSingleHomeProduct(productId);
-        if (data === null) {
-          throw new Error("Product not found");
-        }
-        setProduct(data);
-      } catch (error) {
-        console.error(error);
-        setError(error);
-      }
-    };
-
-    if (productId !== null && !isNaN(productId) && productId >= 0) {
-      fetchProduct();
-    } else {
-      setError(new Error("ID del producto es invalido"));
-    }
-  }, [productId]);
-
-  if (error) {
-    return <NotFoundProduct />;
+  if (!product || !product.attributes) {
+    return <div>Product not found</div>;
   }
-
-  if (!product) {
-    return (
-      <p>
-        Cargando... <Preloader />
-      </p>
-    );
-  }
-
-  const productAttributes = product.attributes;
-  const title = productAttributes?.title || "";
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
@@ -57,7 +17,10 @@ export default function SingleHomeProduct({ params }) {
         <Breadcrumb
           items={[
             { name: "Productos", href: "/#products" },
-            { name: title, href: `/homeproducts/${productId}` },
+            {
+              name: product.attributes.title,
+              href: "/#products",
+            },
           ]}
         />
         <MainCardDetail product={product} />
@@ -65,3 +28,4 @@ export default function SingleHomeProduct({ params }) {
     </Layout>
   );
 }
+

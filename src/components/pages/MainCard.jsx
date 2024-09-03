@@ -11,9 +11,20 @@ import { addToCart } from "@/redux/slices/cartSlice";
 export default function ProductsCard({ product }) {
   const dispatch = useDispatch();
 
+  if (!product || !product.attributes) {
+    return null;
+  }
+
   function handleAddItemToCart() {
-    dispatch(addToCart(product));
-    toast.success(`${product.attributes.title} Se agrego satisfactoriamente al carrito!`);
+    try {
+      dispatch(addToCart(product));
+      toast.success(
+        `Se agrego satisfactoriamente ${product.attributes.title} al carrito!`
+      );
+    } catch (error) {
+      console.error(error);
+      toast.error("Ocurrió un error al agregar el producto al carrito");
+    }
   }
 
   return (
@@ -34,6 +45,10 @@ export default function ProductsCard({ product }) {
             src={product.attributes.image}
             className="card-img-top"
             alt="Product card main Image"
+            onError={(event) => {
+              event.target.src =
+                "/assets/images/shop/default-product-image.png";
+            }}
           />
         </Link>
         <div className="card-body">

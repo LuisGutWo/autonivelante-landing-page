@@ -1,5 +1,6 @@
 "use client";
 import { Button, Container, Image } from "react-bootstrap";
+import PropTypes from 'prop-types';
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 import { formatPrice } from "@/src/config/formatPrice";
@@ -9,12 +10,14 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
 import toast from "react-hot-toast";
 
-export default function Home({ product }) {
+export default function MainCardDetail({ product }) {
   const dispatch = useDispatch();
 
   function handleAddItemToCart() {
     dispatch(addToCart(product));
-    toast.success(`${product.attributes.title} Se agrego satisfactoriamente al carrito!`);
+    toast.success(
+      `${product.attributes.title} Se agrego satisfactoriamente al carrito!`
+    );
   }
 
   if (!product) {
@@ -97,3 +100,6 @@ export default function Home({ product }) {
     </section>
   );
 }
+MainCardDetail.propTypes = {
+  product: PropTypes.object.isRequired,
+};

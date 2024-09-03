@@ -46,8 +46,9 @@ export default function ProductsCardHome({ product }) {
         </div>
         <div className="buttons__card">
           <Link
-            href={`/homeproducts/${product.id}`}
             key={product.id}
+            href={`/homeproducts/${product.id}`}
+            as={`/homeproducts/${product.id}`}
             className="btn btn-outline-primary btn-lg d-flex justify-content-evenly align-content-center gap-4 ps-4"
           >
             <b className="fs-5">Ver detalle</b>
