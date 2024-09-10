@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import MainHomeCard from "@/src/components/pages/MainHomeCard";
+import MainHomeCard from "@/src/components/elements/cards/MainHomeCard";
 
 async function getData() {
   const products = await fetch(process.env.NEXT_STRAPI_HOME_URL);
@@ -36,8 +36,8 @@ export default async function ProductsCard() {
           </div>
 
           <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4  align-items-center">
-            {products.data.map((product, i) => (
-              <MainHomeCard key={i} product={product} />
+            {products.data.map((product, index) => (
+              <MainHomeCard key={index} product={product} />
             ))}
           </div>
         </div>

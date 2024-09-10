@@ -1,13 +1,13 @@
 "use client";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import CartProduct from "@/src/components/pages/CartProduct";
+import CartProduct from "@/src/components/elements/cart/CartProduct";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { Button, Container, Table } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import CartCount from "@/src/components/common/CartCount";
 import { formatPrice } from "@/src/config/formatPrice";
-import CartProductEmpty from "@/src/components/pages/CartProductEmpty";
+import CartProductEmpty from "@/src/components/elements/cart/CartProductEmpty";
 
 export default function Cart() {
   const cartItems = useSelector((store) => store.cart);

@@ -1,6 +1,6 @@
 "use client";
 import { Button, Container, Image } from "react-bootstrap";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 import { formatPrice } from "@/src/config/formatPrice";
@@ -14,14 +14,15 @@ export default function MainCardDetail({ product }) {
   const dispatch = useDispatch();
 
   function handleAddItemToCart() {
-    dispatch(addToCart(product));
-    toast.success(
-      `${product.attributes.title} Se agrego satisfactoriamente al carrito!`
-    );
-  }
-
-  if (!product) {
-    return null;
+    try {
+      dispatch(addToCart(product));
+      toast.success(
+        `Se agrego satisfactoriamente ${product.attributes.title} al carrito!`
+      );
+    } catch (error) {
+      console.error(error);
+      toast.error("Ocurrió un error al agregar el producto al carrito");
+    }
   }
 
   const { attributes } = product;

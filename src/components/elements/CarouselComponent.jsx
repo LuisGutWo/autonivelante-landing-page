@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import CarouselPage from "./CarouselPage";
+import CarouselPage from "./carousel/CarouselPage";
 
 export default function CarouselComponent() {
   const [data, setData] = React.useState(null);

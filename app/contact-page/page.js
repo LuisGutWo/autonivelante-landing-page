@@ -1,6 +1,6 @@
 import Layout from "@/src/components/layout/Layout";
-import Contact from "@/src/components/pages/Contact";
-import ContactGoogleMap from "@/src/components/pages/ContactGoogleMap";
+import Contact from "@/src/components/layout/Contact";
+import ContactGoogleMap from "@/src/components/layout/ContactGoogleMap";
 
 export default function ContactPage() {
   return (

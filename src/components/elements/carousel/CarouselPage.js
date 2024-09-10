@@ -2,7 +2,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
-import MainCard from "@/src/components/pages/MainCard";
+import MainCard from "@/src/components/elements/cards/MainCard";
 import "swiper/css/thumbs";
 import "react-multi-carousel/lib/styles.css";
 

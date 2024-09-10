@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Menu from "../pages/Menu";
+import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import { Image } from "react-bootstrap";
 import { ShoppingBag } from "lucide-react";

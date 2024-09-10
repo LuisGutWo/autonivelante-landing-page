@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import MainCardDetail from "@/src/components/pages/MainCardDetail";
-import CarouselComponent from "@/src/components/pages/CarouselComponent";
+import MainCardDetail from "@/src/components/elements/cards/MainCardDetail";
+import CarouselComponent from "@/src/components/elements/CarouselComponent";
 import { fetchProduct } from "@/src/lib/api";
 
 export default async function SingleProduct({ params }) {
