@@ -21,11 +21,11 @@ const nextConfig = {
     NEXT_MESSAGING_SENDER_ID: "116110783649",
     NEXT_APP_ID: "1:116110783649:web:fca681105f3ec82b9d2ce0",
     NEXT_URL:
-      "https://autonivelante-products-default-rtdb.firebaseio.com/products.json",
+      "https://autonivelante-strapi-server.onrender.com/api",
     NEXT_STRAPI_URL:
-      "https://autonivelante-strapi-server.onrender.com/api/autonivelante-products?populate=*",
+      "https://autonivelante-strapi-server.onrender.com/api/autonivelante-products?sort=id&populate=*",
     NEXT_STRAPI_HOME_URL:
-      "https://autonivelante-strapi-server.onrender.com/api/autonivelante-home-products?populate=*",
+      "https://autonivelante-strapi-server.onrender.com/api/autonivelante-home-products?sort=id&populate=*",
     NEXT_STRAPI_PROJECTS_URL:
       "https://autonivelante-strapi-server.onrender.com/api/autonivelante-projects?populate=*",
     NGROK_AUTHTOKEN:

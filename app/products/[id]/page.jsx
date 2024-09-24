@@ -3,11 +3,11 @@ import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import MainCardDetail from "@/src/components/elements/cards/MainCardDetail";
 import CarouselComponent from "@/src/components/elements/CarouselComponent";
-import { fetchProduct } from "@/src/lib/api";
+import { fetchProductData } from "@/src/lib/api";
 
 export default async function SingleProduct({ params }) {
   try {
-    const response = await fetchProduct(params.id);
+    const response = await fetchProductData(params.id);
     const product = response.data[params.id];
 
     if (!product || !product.attributes) {

@@ -8,7 +8,7 @@ import { Files } from "lucide-react";
 import { ShoppingBag } from "lucide-react";
 import { addToCart } from "@/redux/slices/cartSlice";
 
-export default function ProductsCard({ product }) {
+export default function ProductsCard({ product, index }) {
   const dispatch = useDispatch();
 
   if (!product || !product.attributes) {
@@ -29,6 +29,7 @@ export default function ProductsCard({ product }) {
 
   return (
     <section
+      key={index}
       className="products__card-maincontent wow fadeIn animated"
       data-wow-delay="05ms"
       data-wow-duration="1000ms"
@@ -36,7 +37,7 @@ export default function ProductsCard({ product }) {
       <div className="card main__card">
         <Link
           href={`/products/${product.id}`}
-          key={product.id}
+          key={index}
           className="main__card-img-container"
         >
           <Image
@@ -62,7 +63,7 @@ export default function ProductsCard({ product }) {
         <div className="buttons__card">
           <Link
             href={`/products/${product.id}`}
-            key={product.id}
+            key={index}
             className="btn btn-outline-primary btn-lg d-flex justify-content-evenly align-content-center gap-4 ps-4"
           >
             <b className="fs-5">Ver detalle</b>

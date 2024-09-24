@@ -2,19 +2,10 @@ import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import MainHomeCard from "@/src/components/elements/cards/MainHomeCard";
-
-async function getHomeProducts() {
-  const response = await fetch(process.env.NEXT_STRAPI_HOME_URL);
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch home products");
-  }
-
-  return response.json();
-}
+import { fetchHomeProducts } from "@/src/lib/api";
 
 export default async function HomeProducts() {
-  const homeProducts = await getHomeProducts();
+  const homeProducts = await fetchHomeProducts();
   const products = homeProducts.data;  
 
   return (

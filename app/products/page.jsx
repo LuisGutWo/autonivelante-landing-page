@@ -2,19 +2,11 @@ import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import MainCard from "@/src/components/elements/cards/MainCard";
-
-async function getProductsData() {
-  const response = await fetch(process.env.NEXT_STRAPI_URL);
-
-  if (!response.ok) {
-    throw new Error("Fallo en la carga de datos");
-  }
-
-  return response.json();
-}
+import { fetchProducts } from "@/src/lib/api";
 
 export default async function Home() {
-  const products = await getProductsData();
+  const mainProducts = await fetchProducts();
+  const products = mainProducts.data;  
 
   if (!products) {
     return null;
@@ -32,7 +24,7 @@ export default async function Home() {
             <Container fluid>
               <div className="products__card-container productcard__text">
                 <div className="d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
-                  {products.data.map((product, index) => (
+                  {products.map((product, index) => (
                     <MainCard key={index} product={product} />
                   ))}
                 </div>
