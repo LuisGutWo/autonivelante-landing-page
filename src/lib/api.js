@@ -1,26 +1,45 @@
 export async function fetchProducts() {
-  const res = await fetch(process.env.NEXT_STRAPI_URL);
-  const data = await res.json();
-  return data;
-}
-
-export async function fetchProductData(id) {
-  const res = await fetch(`${process.env.NEXT_STRAPI_URL}${id}`);
-  const data = await res.json();
-  return data;
-}
-
-export async function fetchHomeProducts() {
-  const res = await fetch(process.env.NEXT_STRAPI_HOME_URL);
-  const data = await res.json();
-  return data;
-}
-
-export async function fetchHomeProduct(id) {
-  const res = await fetch(`${process.env.NEXT_STRAPI_HOME_URL}${id}`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch product");
+  if (!process.env.NEXT_STRAPI_URL) {
+    throw new Error(
+      "fetchProducts: NEXT_STRAPI_URL is not defined. Make sure you have set the environment variable."
+    );
   }
-  const product = await res.json();
-  return product;
+
+  const res = await fetch(process.env.NEXT_STRAPI_URL);
+
+  if (!res.ok) {
+    throw new Error(
+      `fetchProducts: Failed to fetch products, status: ${res.status}`
+    );
+  }
+
+  const data = await res.json();
+  if (!data) {
+    throw new Error("fetchProducts: No data was returned from the API");
+  }
+
+  return data;
+}
+
+export async function fetchHomeProduct() {
+  if (!process.env.NEXT_STRAPI_HOME_URL) {
+    throw new Error(
+      "fetchProducts: NEXT_STRAPI_URL is not defined. Make sure you have set the environment variable."
+    );
+  }
+
+  const res = await fetch(process.env.NEXT_STRAPI_HOME_URL);
+
+  if (!res.ok) {
+    throw new Error(
+      `fetchProducts: Failed to fetch products, status: ${res.status}`
+    );
+  }
+
+  const data = await res.json();
+  if (!data) {
+    throw new Error("fetchProducts: No data was returned from the API");
+  }
+
+  return data;
 }

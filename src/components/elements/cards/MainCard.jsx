@@ -11,11 +11,18 @@ import { addToCart } from "@/redux/slices/cartSlice";
 export default function ProductsCard({ product, index }) {
   const dispatch = useDispatch();
 
-  if (!product || !product.attributes) {
+  if (!product || !product?.attributes) {
     return null;
   }
 
   function handleAddItemToCart() {
+    if (!product || !product?.attributes) {
+      console.error(
+        "Ocurrió un error al intentar agregar el producto al carrito"
+      );
+      return;
+    }
+
     try {
       dispatch(addToCart(product));
       toast.success(
@@ -37,13 +44,25 @@ export default function ProductsCard({ product, index }) {
       <div className="card main__card">
         <Link
           href={`/products/${product.id}`}
-          key={index}
           className="main__card-img-container"
+          title={product.attributes?.title}
+          aria-label={product.attributes?.title}
+          tabIndex="0"
+          key={product.id}
+          role="button"
+          onError={(event) => {
+            event.target.src =
+              "/assets/images/shop/default-product-image.png";
+          }}
+          onMouseOver={(event) => {
+            event.target.src = product.attributes?.image;
+          }}
+
         >
           <Image
             height={20}
             width={10}
-            src={product.attributes.image}
+            src={product.attributes?.image}
             className="card-img-top"
             alt="Product card main Image"
             onError={(event) => {
@@ -54,16 +73,16 @@ export default function ProductsCard({ product, index }) {
         </Link>
         <div className="card-body">
           <h3 className="card-title fw_bold pb-3">
-            {product.attributes.title}
+            {product.attributes?.title}
           </h3>
           <div className="card-price fw-bold">
-            {formatPrice(product.attributes.price)}
+            {formatPrice(product.attributes?.price)}
           </div>
         </div>
         <div className="buttons__card">
           <Link
             href={`/products/${product.id}`}
-            key={index}
+            key={product.id}
             className="btn btn-outline-primary btn-lg d-flex justify-content-evenly align-content-center gap-4 ps-4"
           >
             <b className="fs-5">Ver detalle</b>
