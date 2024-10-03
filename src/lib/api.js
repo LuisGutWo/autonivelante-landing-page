@@ -21,7 +21,7 @@ export async function fetchProducts() {
   return data;
 }
 
-export async function fetchHomeProduct() {
+export async function fetchHomeProducts() {
   if (!process.env.NEXT_STRAPI_HOME_URL) {
     throw new Error(
       "fetchProducts: NEXT_STRAPI_URL is not defined. Make sure you have set the environment variable."

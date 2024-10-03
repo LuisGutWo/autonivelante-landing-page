@@ -4,7 +4,7 @@ import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import { notFound } from "next/navigation";
 import Preloader from "@/src/components/elements/Preloader";
-import { fetchHomeProduct } from "@/src/lib/api";
+import { fetchHomeProducts } from "@/src/lib/api";
 
 // Usa React.lazy para cargar los componentes de forma diferida
 const MainCardDetail = lazy(() =>
@@ -13,7 +13,7 @@ const MainCardDetail = lazy(() =>
 
 export default async function SingleHomeProduct({ params }) {
   try {
-    const response = await fetchHomeProduct(params.id);
+    const response = await fetchHomeProducts(params.id);
     const product = response?.data?.[params.id - 1];
 
     if (!product || !product?.attributes) {
@@ -33,10 +33,7 @@ export default async function SingleHomeProduct({ params }) {
             ]}
           />
           <Suspense fallback={<Preloader />}>
-            <MainCardDetail
-              product={product}
-              key={product.id}
-            />
+            <MainCardDetail product={product} key={product.id} />
           </Suspense>
         </Container>
       </Layout>
