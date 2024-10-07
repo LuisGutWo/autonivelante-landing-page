@@ -11,6 +11,20 @@ const MainCardDetail = lazy(() =>
   import("@/src/components/elements/cards/MainCardDetail")
 );
 
+export async function generateStaticParams() {
+  try {
+    const response = await fetchHomeProducts();
+    const products = response?.data || [];
+
+    return products.map((product, index) => ({
+      id: (index - 1).toString(),
+    }));
+  } catch (error) {
+    console.error("generateStaticParams:", error);
+    return [];
+  }
+}
+
 export default async function SingleHomeProduct({ params }) {
   try {
     const response = await fetchHomeProducts(params.id);

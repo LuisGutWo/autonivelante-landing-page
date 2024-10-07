@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from "react";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
-import { fetchProducts } from "@/src/lib/api";
 import Preloader from "@/src/components/elements/Preloader";
+import { fetchProducts } from "@/src/lib/api";
 
 // Usa React.lazy para cargar los componentes de forma diferida
 const MainCardDetail = lazy(() =>
@@ -12,6 +12,20 @@ const MainCardDetail = lazy(() =>
 const CarouselComponent = lazy(() =>
   import("@/src/components/elements/CarouselComponent")
 );
+
+export async function generateStaticParams() {
+  try {
+    const response = await fetchProducts();
+    const products = response?.data || [];
+
+    return products.map((product, index) => ({
+      id: (index - 1).toString(),
+    }));
+  } catch (error) {
+    console.error("generateStaticParams:", error);
+    return [];
+  }
+}
 
 export default async function SingleProduct({ params }) {
   try {

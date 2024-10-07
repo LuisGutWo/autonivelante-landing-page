@@ -37,10 +37,10 @@ export default function CartProduct({ cartItem }) {
           </Button>
 
           <Image
-            src={cartItem.attributes?.image}
+            src={cartItem?.attributes?.image}
             width={100}
             height={100}
-            alt={cartItem.attributes?.title}
+            alt={cartItem?.attributes?.title}
             className="prod-thumb"
           />
 
