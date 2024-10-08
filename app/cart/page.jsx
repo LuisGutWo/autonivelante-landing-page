@@ -11,13 +11,17 @@ import CartProductEmpty from "@/src/components/elements/cart/CartProductEmpty";
 
 export default function Cart() {
   const cartItems = useSelector((store) => store.cart);
-  const subTotal = cartItems?.reduce((acc, { attributes: { price }, qty }) => acc + price * qty, 0) || 0;
-  
+  const subTotal =
+    cartItems?.reduce(
+      (acc, { attributes: { price }, qty }) => acc + price * qty,
+      0
+    ) || 0;
+
   const cartHasItems = cartItems?.length > 0;
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
-      <Container className="mt_150">
+      <Container className="mt_150 px-5">
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },
@@ -29,7 +33,7 @@ export default function Cart() {
         <section className="cart-section p_relative">
           <div className="auto-container">
             <div className="row clearfix">
-              <div className="col-lg-12 col-md-12 col-sm-12 table-column">
+              <div className="col-lg-12 col-md-12 col-sm-12 table-column d-flex justify-content-center align-items-center">
                 <div className="table-outer">
                   <Table className="cart-table">
                     <thead className="cart-header">
@@ -55,13 +59,7 @@ export default function Cart() {
                 </div>
               </div>
               <div className="othre-content">
-                <div className="coupon-box">
-                  <input type="text" placeholder="Código del Cupón..." />
-                  <Button type="button" className="theme-btn-one">
-                    Validar Cupón
-                  </Button>
-                </div>
-                <div className="update-btn">
+                <div className="ms-auto pe-4">
                   <Link href="/cart">
                     <Button type="button" className="theme-btn-two text-light">
                       Actualizar Carrito

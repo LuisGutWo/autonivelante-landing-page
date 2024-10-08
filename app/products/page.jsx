@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
-      <Container className="mt_150">
+      <Container className="mt_150 px-4">
         <Breadcrumb items={[{ name: "Productos", href: "/products" }]} />
         <div className="d-flex justify-content-center align-items-center">
           <section
@@ -23,7 +23,7 @@ export default async function Home() {
           >
             <Container fluid>
               <div className="products__card-container productcard__text">
-                <div className="d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
+                <div className="outer-container d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
                   {products.map((product, index) => (
                     <MainCard key={index} product={product} />
                   ))}

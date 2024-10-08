@@ -16,7 +16,9 @@ export default function CartProduct({ cartItem }) {
 
   function handleItemDelete(cartId) {
     dispatch(removeFromCart(cartId));
-    toast.success(`${cartItem.attributes?.title} se removió con éxito del carrito`);
+    toast.success(
+      `${cartItem.attributes?.title} se removió con éxito del carrito`
+    );
   }
   function handleQtyIncrement(cartId) {
     dispatch(incrementQty(cartId));
@@ -41,7 +43,6 @@ export default function CartProduct({ cartItem }) {
             width={100}
             height={100}
             alt={cartItem?.attributes?.title}
-            className="prod-thumb"
           />
 
           <div className="prod-title">
@@ -50,7 +51,9 @@ export default function CartProduct({ cartItem }) {
         </div>
       </td>
       <td className="price">
-        <span className="pe-3">{formatPrice(cartItem.attributes?.price * cartItem?.qty)}</span>
+        <span className="pe-3">
+          {formatPrice(cartItem.attributes?.price * cartItem?.qty)}
+        </span>
         <span className="text-primary">(x{cartItem.qty})</span>
       </td>
       <td className="qty">

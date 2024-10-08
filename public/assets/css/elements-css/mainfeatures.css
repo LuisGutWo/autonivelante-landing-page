@@ -210,9 +210,6 @@
     width: 50%;
     padding-top: 0;
   }
-  .auto-container {
-    margin-left: 0 !important;
-  }
   .content-column {
     margin-bottom: 8rem;
   }
@@ -297,7 +294,7 @@
 @media screen and (min-width: 1260px) {
   .mainfeat-section {
     margin: 8rem 0 6rem 0;
-    height: 100vh;
+    height: 85vh;
 
     .bg-layer {
       padding: 3.5rem;
@@ -311,9 +308,8 @@
   }
   .featcard__text {
     justify-content: flex-start;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 4rem 0;
     width: 50%;
-    padding-top: 0;
   }
 
   .featcard__text:before {

@@ -28,7 +28,7 @@ export default function MainFeatures() {
     <Container>
       <section className="mainfeat-section p_relative">
         <div
-          className="bg-layer wow fadeInRight animated"
+          className="bg-layer wow fadeIn animated"
           data-wow-delay="00ms"
           data-wow-duration="1000ms"
           style={{ backgroundColor: "#015c93" }}
@@ -45,7 +45,7 @@ export default function MainFeatures() {
           </p>
         </div>
         <div
-          className="auto-container wow fadeInLeft animated"
+          className="auto-container wow fadeIn animated"
           data-wow-delay="00ms"
           data-wow-duration="1000ms"
         >
@@ -80,7 +80,7 @@ export default function MainFeatures() {
           </div>
         </div>
         <div
-          className="outer-box wow fadeInUp animated"
+          className="outer-box wow fadeIn animated"
           data-wow-delay="00ms"
           data-wow-duration="1000ms"
         >

@@ -25,8 +25,8 @@ export default function Header(props) {
                     <Image
                       src="https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/Group%2045.png?alt=media&token=827170a8-1063-46de-b7bf-db0ae19e3058"
                       className="img-fluid"
-                      width={200}
-                      height={50}
+                      width={100}
+                      height={100}
                       alt="Autonivelante main navbar Logo"
                     />
                   </figure>
@@ -51,7 +51,7 @@ export default function Header(props) {
               <ul className="menu-right-content">
                 <li className="cart-box">
                   <Link href="/cart">
-                    <ShoppingBag size={30} className="cart-icon" />
+                    <ShoppingBag size={23} className="cart-icon" />
                     <div className="count-products">
                       <span id="contador-productos">
                         <CartCount />
@@ -68,7 +68,7 @@ export default function Header(props) {
         <div
           className={`sticky-header ${scroll ? "animated slideInDown" : ""}`}
         >
-          <div className="auto-container">
+          <div className="outer-container">
             <div className="outer-box">
               <div className="logo-box">
                 <Link href="/">
@@ -98,7 +98,7 @@ export default function Header(props) {
                   <Link href="/cart">
                     <ShoppingBag
                       color="black"
-                      size={30}
+                      size={25}
                       className="cart-icon"
                     />
                     <div className="count-products">

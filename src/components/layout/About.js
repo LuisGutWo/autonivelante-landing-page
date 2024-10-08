@@ -58,7 +58,7 @@ export default function About() {
 
   return (
     <section id="about-section" className="about__section p_relative">
-      <div className="auto-container">
+      <div className="outer-container">
         <div className="row clearfix">
           <div className="col-lg-6 col-md-12 col-sm-13 image-column ml_0 about__main-column">
             <div className="image_block">

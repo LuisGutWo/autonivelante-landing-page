@@ -51,7 +51,7 @@ export default function HeaderAux(props) {
               <ul className="menu-right-content">
                 <li className="cart-box">
                   <Link href="/cart">
-                    <ShoppingBag />
+                    <ShoppingBag size={23} />
                     <div className="count-products">
                       <span id="contador-productos">
                         <CartCount />
@@ -68,7 +68,7 @@ export default function HeaderAux(props) {
         <div
           className={`sticky-header2 ${scroll && ""}`}
         >
-          <div className="auto-container">
+          <div className="outer-container">
             <div className="outer-box">
               <div className="logo-box">
                 <figure className="logo">
@@ -99,7 +99,7 @@ export default function HeaderAux(props) {
                     <ShoppingBag />
                     <div className="count-products">
                       <span id="contador-productos">
-                        <CartCount size={30} className="cart-icon" />
+                        <CartCount size={25} className="cart-icon" />
                       </span>
                     </div>
                   </Link>

@@ -16,7 +16,7 @@
   display: block;
   overflow: hidden;
   border-radius: 5px;
-  width: 100%;
+  width: min(80%, 70rem);
   left: 0;
   box-shadow: rgba(0, 0, 0, 0.203) 0px 25px 50px -12px;
 }
@@ -25,7 +25,6 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: none;
   height: auto;
   transition: all 500ms ease;
 }

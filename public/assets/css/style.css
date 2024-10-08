@@ -89,7 +89,7 @@ body {
 }
 .auto-container {
   position: static;
-  max-width: 100vw;
+  max-width: clamp(20rem, 70vw, 460.25rem);
   width: 100%;
   padding: 0px 15px;
   margin: 0 auto;
@@ -955,11 +955,11 @@ img {
 }
 
 .main-header .outer-box .logo-box .logo {
-  width: 80%;
+  width: 70%;
 }
 
 .main-header .outer-box .logo-box .logo img {
-  width: 100%;
+  width: min(80%, 300px);
 }
 
 .main-header .menu-right-content {
@@ -1639,8 +1639,8 @@ img {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: solid black 1.5px;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
 
   border-radius: 50%;
 }
