@@ -21,7 +21,7 @@ export default function Cart() {
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
-      <Container className="mt_150 px-5">
+      <Container className="mt_150 cart-container">
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },

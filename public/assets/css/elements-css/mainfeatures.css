@@ -90,8 +90,10 @@
 }
 .featcard__content {
   display: flex;
+  width: 100%;
   flex-direction: column;
   flex-grow: 1;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1.5rem;
   align-items: flex-start;
@@ -110,6 +112,7 @@
 }
 .featcard__content p {
   text-align: left;
+  font-size: 0.7rem;
   text-overflow: ellipsis;
   display: flex;
   flex-direction: row;

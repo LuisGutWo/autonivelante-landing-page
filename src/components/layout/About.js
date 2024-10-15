@@ -16,7 +16,7 @@ export default function About() {
       xmlns="http://www.w3.org/2000/svg"
       width="33"
       height="33"
-      fill="currentColor"
+      fill="dark"
       className="bi bi-arrow-right-short"
       viewBox="0 0 16 16"
     >
@@ -90,11 +90,7 @@ export default function About() {
                   <section className="aboutcard__buttons">
                     <div className="aboutcard__buttons-btn-video">
                       <Link href="/modalvideo">
-                        <Button
-                          variant="outline-light"
-                          size="lg"
-                          className="w-100"
-                        >
+                        <Button size="lg" className="theme-btn-one w-100">
                           <p>Reproducir video</p>
                           {playVideoSvg}
                         </Button>
@@ -103,11 +99,9 @@ export default function About() {
                     <div className="aboutcard__buttons-btn-contact">
                       <Link href="/contact-page">
                         <Button
-                          variant="outline-dark"
-                          size="lg"
-                          className="w-100"
+                          size="lg" className="theme-btn-tree"
                         >
-                          <p>Contáctanos</p>
+                          <p className="text-dark">Contáctanos</p>
                           {arrowRightSvg}
                         </Button>{" "}
                       </Link>
