@@ -15,10 +15,26 @@ export async function generateStaticParams() {
   try {
     const response = await fetchHomeProducts();
     const products = response?.data || [];
+    if (!Array.isArray(products)) {
+      console.error(
+        "generateStaticParams: response.data is not an array",
+        response
+      );
+      return [];
+    }
 
-    return products.map((product, index) => ({
-      id: (index - 1).toString(),
-    }));
+    return products.map((product, index) => {
+      if (!product) {
+        console.error(
+          "generateStaticParams: product is null or undefined",
+          index,
+          products
+        );
+        return { id: "-1" };
+      }
+
+      return { id: (index - 1).toString() };
+    });
   } catch (error) {
     console.error("generateStaticParams:", error);
     return [];
@@ -28,10 +44,25 @@ export async function generateStaticParams() {
 export default async function SingleHomeProduct({ params }) {
   try {
     const response = await fetchHomeProducts(params.id);
-    const product = response?.data?.[params.id - 1];
+    const products = response?.data;
 
-    if (!product || !product?.attributes) {
-      return <div>Product not found</div>;
+    if (!Array.isArray(products)) {
+      console.error(
+        "SingleHomeProduct: response.data is not an array",
+        response
+      );
+      return notFound();
+    }
+
+    const product = products[params.id - 1];
+
+    if (!product || !product.attributes) {
+      console.error(
+        "SingleHomeProduct: product is null or undefined",
+        params.id,
+        products
+      );
+      return notFound();
     }
 
     return (

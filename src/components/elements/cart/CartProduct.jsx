@@ -40,8 +40,13 @@ export default function CartProduct({ cartItem }) {
 
           <Image
             src={cartItem?.attributes?.image}
+            className="img-fluid"
+            priority
+            unoptimized
             width={100}
             height={100}
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 100px) 100vw, 100px"
             alt={cartItem?.attributes?.title}
           />
 
