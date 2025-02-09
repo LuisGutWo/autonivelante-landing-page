@@ -6,10 +6,10 @@ import { fetchProducts } from "@/src/lib/api";
 
 export default async function Home() {
   const mainProducts = await fetchProducts();
-  const products = mainProducts.data;  
+  const products = mainProducts?.data || [];
 
   if (!products) {
-    return null;
+    return <div>Loading...</div>;
   }
 
   return (
@@ -24,8 +24,8 @@ export default async function Home() {
             <Container fluid>
               <div className="products__card-container productcard__text">
                 <div className="outer-container d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
-                  {products.map((product, index) => (
-                    <MainCard key={index} product={product} />
+                  {products.map((product) => (
+                    <MainCard key={product.id} product={product} />
                   ))}
                 </div>
               </div>

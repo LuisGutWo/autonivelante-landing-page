@@ -60,8 +60,8 @@ export default function ProductsCard({ product, index }) {
 
         >
           <Image
-            height={20}
-            width={10}
+            height={200}
+            width={100}
             src={product.attributes?.image}
             className="card-img-top"
             alt="Product card main Image"

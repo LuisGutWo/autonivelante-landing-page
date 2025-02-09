@@ -1,26 +1,28 @@
 "use client";
+import { Minus, Plus, Trash2 } from "lucide-react";
+import Image from "next/image";
+import toast from "react-hot-toast";
+
+import { formatPrice } from "@/src/config/formatPrice";
+import { useDispatch } from "react-redux";
+import { Button } from "react-bootstrap";
+
 import {
   decrementQty,
   incrementQty,
   removeFromCart,
 } from "@/redux/slices/cartSlice";
-import { Minus, Plus, Trash2 } from "lucide-react";
-import Image from "next/image";
-import toast from "react-hot-toast";
-import { formatPrice } from "@/src/config/formatPrice";
-import { useDispatch } from "react-redux";
-import { Button } from "react-bootstrap";
 
 export default function CartProduct({ cartItem }) {
   const dispatch = useDispatch();
 
-  function handleItemDelete(cartId) {
+  function handleDeleteItem(cartId) {
     dispatch(removeFromCart(cartId));
     toast.success(
       `${cartItem.attributes?.title} se removió con éxito del carrito`
     );
   }
-  function handleQtyIncrement(cartId) {
+  function handleIncrementQty(cartId) {
     dispatch(incrementQty(cartId));
   }
   function handleQtyDecrement(cartId) {
@@ -32,14 +34,14 @@ export default function CartProduct({ cartItem }) {
       <td colSpan="4" className="prod-column">
         <div className="column-box">
           <Button
-            onClick={() => handleItemDelete(cartItem.id)}
+            onClick={() => handleDeleteItem(cartItem.id)}
             className="bg-transparent border-0"
           >
             <Trash2 className="text-danger" />
           </Button>
 
           <Image
-            src={cartItem?.attributes?.image}
+            src={cartItem?.attributes?.image || "/default-image.jpg"}
             className="img-fluid"
             priority
             unoptimized
@@ -47,7 +49,7 @@ export default function CartProduct({ cartItem }) {
             height={100}
             style={{ objectFit: "cover" }}
             sizes="(max-width: 100px) 100vw, 100px"
-            alt={cartItem?.attributes?.title}
+            alt={cartItem?.attributes?.title || "Product Image"}
           />
 
           <div className="prod-title">
@@ -65,7 +67,15 @@ export default function CartProduct({ cartItem }) {
         <div className="item-quantity">
           <div className="cart__items-qty d-flex align-items-center p-1 b_radius_10 b_shadow_3">
             <Button
-              onClick={() => handleQtyDecrement(cartItem.id)}
+              onClick={() => {
+                if (cartItem.qty === 1) {
+                  if (confirm("Desea eliminar este producto?")) {
+                    handleDeleteItem(cartItem.id);
+                  }
+                } else {
+                  handleQtyDecrement(cartItem.id);
+                }
+              }}
               className="btn py-1 px-2"
             >
               <Minus />
@@ -74,7 +84,7 @@ export default function CartProduct({ cartItem }) {
               {cartItem?.qty}
             </p>
             <Button
-              onClick={() => handleQtyIncrement(cartItem.id)}
+              onClick={() => handleIncrementQty(cartItem.id)}
               className="btn py-1 px-2"
             >
               <Plus />

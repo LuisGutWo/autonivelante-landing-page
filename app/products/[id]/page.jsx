@@ -16,29 +16,27 @@ const CarouselComponent = lazy(() =>
 export async function generateStaticParams() {
   try {
     const response = await fetchProducts();
-    const products = response?.data || [];
+    if (!response || !response.data) {
+      console.error("generateStaticParams: invalid response", response);
+      return [];
+    }
+    
+    const products = response.data;
     if (!Array.isArray(products)) {
-      console.error(
-        "generateStaticParams: response.data is not an array",
-        response
-      );
+      console.error("generateStaticParams: response.data is not an array", response);
       return [];
     }
 
     return products.map((product, index) => {
       if (!product) {
-        console.error(
-          "generateStaticParams: product is null or undefined",
-          index,
-          products
-        );
+        console.error("generateStaticParams: product is null or undefined", index, products);
         return { id: "-1" };
       }
 
       return { id: index.toString() };
     });
   } catch (error) {
-    console.error("generateStaticParams:", error);
+    console.error("generateStaticParams: error fetching products", error);
     return [];
   }
 }
@@ -47,20 +45,24 @@ export default async function SingleProduct({ params }) {
   try {
     const response = await fetchProducts(params.id);
     const products = response?.data || [];
+
+    if (!Array.isArray(products)) {
+      console.error("SingleProduct: response.data is not an array", response);
+      return <div>Product not found</div>;
+    }
+
     const product = products[params.id - 1];
 
-    if (!Array.isArray(products) || !product || !product?.attributes) {
+    if (!product || !product?.attributes) {
       console.error(
-        "SingleProduct: ",
-        !Array.isArray(products)
-          ? "response.data is not an array"
-          : !product
-          ? "product is null or undefined"
-          : "product.attributes is null or undefined",
+        "SingleProduct: product or product.attributes is null or undefined",
         response
       );
       return <div>Product not found</div>;
     }
+
+    const { id, attributes } = product;
+    const { title } = attributes;
 
     return (
       <Layout headerStyle={4} footerStyle={1}>
@@ -68,21 +70,12 @@ export default async function SingleProduct({ params }) {
           <Breadcrumb
             items={[
               { name: "Productos", href: "/products" },
-              {
-                name: product?.attributes?.title,
-                href: `/products/${product?.id}`,
-              },
+              { name: title, href: `/products/${id}` },
             ]}
           />
           <Suspense fallback={<Preloader />}>
-            <MainCardDetail
-              product={product}
-              key={`main-card-${product?.id}`}
-            />
-            <CarouselComponent
-              product={product}
-              key={`carousel-${product?.id}`}
-            />
+            <MainCardDetail product={product} key={`main-card-${id}`} />
+            <CarouselComponent product={product} key={`carousel-${id}`} />
           </Suspense>
         </Container>
       </Layout>

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Button, Image } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import { formatPrice } from "@/src/config/formatPrice";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
@@ -16,20 +17,24 @@ export default function ProductsCardHome({ product, index }) {
   }
 
   const handleAddItemToCart = () => {
-    if (product && product.attributes) {
-      try {
-        dispatch(addToCart(product));
-        toast.success(
-          `${product.attributes.title} Se agrego satisfactoriamente al carrito!`
-        );
-      } catch (error) {
-        console.error(error);
-        toast.error("Ocurrió  un error al agregar el producto al carrito");
-      }
-    } else {
+    if (!product || !product.attributes) {
       console.error(
-        "Ocurrió un error al intentar agregar el producto al carrito"
+        "Ocurrió un error al intentar agregar el producto al carrito, producto o sus atributos son nulos"
       );
+      return;
+    }
+
+    try {
+      dispatch(addToCart(product));
+      toast.success(
+        `${product.attributes.title} Se agrego satisfactoriamente al carrito!`
+      );
+    } catch (error) {
+      console.error(
+        "Ocurrió un error al agregar el producto al carrito",
+        error
+      );
+      toast.error("Ocurrió un error al agregar el producto al carrito");
     }
   };
 
@@ -45,10 +50,20 @@ export default function ProductsCardHome({ product, index }) {
           key={index}
           href={`/homeproducts/${product.id}`}
           className="main__card-img-container"
+          title={product.attributes?.title}
+          aria-label={product.attributes?.title}
+          tabIndex="0"
+          role="button"
+          onError={(event) => {
+            event.target.src = "/assets/images/shop/default-product-image.png";
+          }}
+          onMouseOver={(event) => {
+            event.target.src = product.attributes?.image;
+          }}
         >
           <Image
-            height={20}
-            width={10}
+            height={200}
+            width={200}
             src={product.attributes?.image}
             className="card-img-top"
             alt="Product card main Image"
@@ -86,4 +101,3 @@ export default function ProductsCardHome({ product, index }) {
     </section>
   );
 }
-
