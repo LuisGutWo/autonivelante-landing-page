@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Container } from "react-bootstrap";
 import Layout from "@/src/components/layout/Layout";
+import { notFound } from "next/navigation";
 import Breadcrumb from "@/src/components/common/Breadcrumb/Breadcrumb";
 import Preloader from "@/src/components/elements/Preloader";
 import { fetchProducts } from "@/src/lib/api";
@@ -16,24 +17,26 @@ const CarouselComponent = lazy(() =>
 export async function generateStaticParams() {
   try {
     const response = await fetchProducts();
-    if (!response || !response.data) {
-      console.error("generateStaticParams: invalid response", response);
-      return [];
-    }
-    
-    const products = response.data;
+    const products = response?.data || [];
     if (!Array.isArray(products)) {
-      console.error("generateStaticParams: response.data is not an array", response);
+      console.error(
+        "generateStaticParams: response.data is not an array",
+        response
+      );
       return [];
     }
 
     return products.map((product, index) => {
-      if (!product) {
-        console.error("generateStaticParams: product is null or undefined", index, products);
+      if (!product || !product.id) {
+        console.error(
+          "generateStaticParams: product or product.id is null or undefined",
+          index,
+          products
+        );
         return { id: "-1" };
       }
 
-      return { id: index.toString() };
+      return { id: (index - 1).toString() };
     });
   } catch (error) {
     console.error("generateStaticParams: error fetching products", error);
@@ -48,21 +51,39 @@ export default async function SingleProduct({ params }) {
 
     if (!Array.isArray(products)) {
       console.error("SingleProduct: response.data is not an array", response);
-      return <div>Product not found</div>;
+      return notFound();
     }
 
-    const product = products[params.id - 1];
+    const productIndex = Number(params.id) - 1;
+    const product = products[productIndex];
 
     if (!product || !product?.attributes) {
       console.error(
         "SingleProduct: product or product.attributes is null or undefined",
         response
       );
-      return <div>Product not found</div>;
+      return notFound();
     }
 
     const { id, attributes } = product;
+
+    if (!attributes) {
+      console.error(
+        "SingleProduct: product.attributes is null or undefined",
+        product
+      );
+      return notFound();
+    }
+
     const { title } = attributes;
+
+    if (!title) {
+      console.error(
+        "SingleProduct: product.attributes.title is null or undefined",
+        product
+      );
+      return <div>Product not found</div>;
+    }
 
     return (
       <Layout headerStyle={4} footerStyle={1}>

@@ -44,24 +44,18 @@ export async function generateStaticParams() {
 export default async function SingleHomeProduct({ params }) {
   try {
     const response = await fetchHomeProducts(params.id);
-    const products = response?.data;
+    const products = response?.data || [];
 
     if (!Array.isArray(products)) {
-      console.error(
-        "SingleHomeProduct: response.data is not an array",
-        response
-      );
+      console.error("SingleHomeProduct: response.data is not an array", response);
       return notFound();
     }
 
-    const product = products[params.id - 1];
+    const productIndex = Number(params.id) - 1;
+    const product = products[productIndex];
 
     if (!product || !product.attributes) {
-      console.error(
-        "SingleHomeProduct: product is null or undefined",
-        params.id,
-        products
-      );
+      console.error("SingleHomeProduct: product or product.attributes is null or undefined", params.id, products);
       return notFound();
     }
 
@@ -71,10 +65,7 @@ export default async function SingleHomeProduct({ params }) {
           <Breadcrumb
             items={[
               { name: "Productos", href: "/#products" },
-              {
-                name: product.attributes.title,
-                href: "/#products",
-              },
+              { name: product.attributes.title, href: "/#products" },
             ]}
           />
           <Suspense fallback={<Preloader />}>
@@ -84,7 +75,7 @@ export default async function SingleHomeProduct({ params }) {
       </Layout>
     );
   } catch (error) {
-    console.error("SingleHomeProduct:", error);
-    notFound();
+    console.error("SingleHomeProduct: Error fetching home product", error);
+    return notFound();
   }
 }
